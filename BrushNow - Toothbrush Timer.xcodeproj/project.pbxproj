@@ -12,6 +12,10 @@
 		65039EDB2141713D008D50C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65039ED92141713D008D50C3 /* Main.storyboard */; };
 		65039EDD2141713F008D50C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65039EDC2141713F008D50C3 /* Assets.xcassets */; };
 		65039EE02141713F008D50C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65039EDE2141713F008D50C3 /* LaunchScreen.storyboard */; };
+		65C1023D21469CCF000EDC56 /* BadgesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C1023C21469CCF000EDC56 /* BadgesTableViewController.swift */; };
+		65C1023F21469CE7000EDC56 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C1023E21469CE6000EDC56 /* SettingsTableViewController.swift */; };
+		65C1024121469D0B000EDC56 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C1024021469D0B000EDC56 /* TimerViewController.swift */; };
+		65C1024321469D53000EDC56 /* BadgeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C1024221469D53000EDC56 /* BadgeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		65039EDC2141713F008D50C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65039EDF2141713F008D50C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65039EE12141713F008D50C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65C1023C21469CCF000EDC56 /* BadgesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesTableViewController.swift; sourceTree = "<group>"; };
+		65C1023E21469CE6000EDC56 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		65C1024021469D0B000EDC56 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		65C1024221469D53000EDC56 /* BadgeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,10 @@
 				65039ED52141713D008D50C3 /* AppDelegate.swift */,
 				65039ED72141713D008D50C3 /* ViewController.swift */,
 				65039ED92141713D008D50C3 /* Main.storyboard */,
+				65C1024221469D53000EDC56 /* BadgeTableViewCell.swift */,
+				65C1024021469D0B000EDC56 /* TimerViewController.swift */,
+				65C1023E21469CE6000EDC56 /* SettingsTableViewController.swift */,
+				65C1023C21469CCF000EDC56 /* BadgesTableViewController.swift */,
 				65039EDC2141713F008D50C3 /* Assets.xcassets */,
 				65039EDE2141713F008D50C3 /* LaunchScreen.storyboard */,
 				65039EE12141713F008D50C3 /* Info.plist */,
@@ -135,6 +147,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65C1024121469D0B000EDC56 /* TimerViewController.swift in Sources */,
+				65C1024321469D53000EDC56 /* BadgeTableViewCell.swift in Sources */,
+				65C1023F21469CE7000EDC56 /* SettingsTableViewController.swift in Sources */,
+				65C1023D21469CCF000EDC56 /* BadgesTableViewController.swift in Sources */,
 				65039ED82141713D008D50C3 /* ViewController.swift in Sources */,
 				65039ED62141713D008D50C3 /* AppDelegate.swift in Sources */,
 			);
