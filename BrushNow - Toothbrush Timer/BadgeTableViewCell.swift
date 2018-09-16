@@ -9,6 +9,7 @@
 import UIKit
 
 class BadgeTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var completeView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
@@ -18,6 +19,7 @@ class BadgeTableViewCell: UITableViewCell {
         // Initialization code
     }
     
+    // Making description label align to top left
     override func layoutSubviews() {
         super.layoutSubviews()
         descLabel.sizeToFit()

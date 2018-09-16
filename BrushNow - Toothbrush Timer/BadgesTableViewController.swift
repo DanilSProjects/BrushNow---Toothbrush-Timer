@@ -8,6 +8,14 @@
 
 import UIKit
 
+// Global variable list of achievements
+var badges = [
+    Badge(name: "First Brush", desc: "Complete your first timed brush.", isCompleted: false),
+    Badge(name: "Rookie Brusher", desc: "Complete 10 timed brushes.", isCompleted: false),
+    Badge(name: "Dentist's BFF", desc: "Complete 100 timed brushes.", isCompleted: false),
+    Badge(name: "Maniac", desc: "Complete 1000 timed brushes.", isCompleted: false)
+]
+
 class BadgesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
@@ -34,20 +42,28 @@ class BadgesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return badges.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "badgeCell", for: indexPath) as! BadgeTableViewCell
 
-        cell.nameLabel.text = "test chievo"
-        cell.descLabel.text = "test descy"
+        // Name and desc set up
+        cell.nameLabel.text = badges[indexPath.row].name
+        cell.descLabel.text = badges[indexPath.row].desc
+        
+        // If completed, show tick, if not, show cross
+        if badges[indexPath.row].isCompleted == false {
         cell.completeView.image = UIImage(named: "cross")
+        } else {
+            cell.completeView.image = UIImage(named: "tick")
+        }
 
         return cell
     }
     
+    // Set up cell height
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100.0
     }
