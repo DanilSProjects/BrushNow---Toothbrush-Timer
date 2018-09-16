@@ -9,10 +9,18 @@
 import UIKit
 
 class BadgeTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var completeView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var descLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        descLabel.sizeToFit()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
