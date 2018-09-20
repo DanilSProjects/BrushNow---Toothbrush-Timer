@@ -18,6 +18,7 @@ class TimerViewController: ViewController {
     @IBOutlet weak var readySetLabel: UILabel!
     
     @IBOutlet weak var startButton: UIButton!
+    var numberOfBrushes = 0
     
     var time = 120
     var timer: Timer?
@@ -25,6 +26,18 @@ class TimerViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       // UserDefaults stuff
+        let loadedBrushes = UserDefaults.standard.integer(forKey: "noOfBrush")
+        let loadedFirst = UserDefaults.standard.bool(forKey: "firstBrush")
+        let loadedRookie = UserDefaults.standard.bool(forKey: "rookieBrush")
+        let loadedDentist = UserDefaults.standard.bool(forKey: "dentistsBFF")
+        let loadedManiac = UserDefaults.standard.bool(forKey: "maniac")
+        
+        numberOfBrushes = loadedBrushes
+        badges[0].isCompleted = loadedFirst
+        badges[1].isCompleted = loadedRookie
+        badges[2].isCompleted = loadedDentist
+        badges[3].isCompleted = loadedManiac
 
         // Do any additional setup after loading the view.
     }
@@ -38,6 +51,7 @@ class TimerViewController: ViewController {
         themeNameLabel.isHidden = false
         startButton.isHidden = false
         readySetLabel.isHidden = true
+    
         
         minutesLabel.text = "\(time / 60) MINUTES"
         time = 120
@@ -103,7 +117,50 @@ class TimerViewController: ViewController {
                         self.minutesLabel.isHidden = false
                         } else if self.time == 0 {
                             self.timer?.invalidate()
+                            
+                            self.numberOfBrushes += 1
+                            UserDefaults.standard.set(self.numberOfBrushes, forKey: "noOfBrush")
+                            // Switch statement for unlocking achievements
+                            switch self.numberOfBrushes {
+                                
+                                //First Brush
+                            case 1:
+                                badges[0].isCompleted = true
+                                UserDefaults.standard.set(badges[0].isCompleted, forKey: "firstBrush")
+                                
+                                // Rookie Brusher
+                            case 10:
+                                badges[1].isCompleted = true
+                                UserDefaults.standard.set(badges[1].isCompleted, forKey: "rookieBrush")
+                                
+                                // Dentist's BFF
+                            case 25:
+                                badges[2].isCompleted = true
+                                UserDefaults.standard.set(badges[2].isCompleted, forKey: "dentistsBFF")
+                                
+                                // Maniac
+                            case 50:
+                                badges[3].isCompleted = true
+                                UserDefaults.standard.set(badges[3].isCompleted, forKey: "maniac")
+                                
+                            // If nothing was unlocked
+                            default:
+                                print ("No achievements have been unlocked from this brush.")
+                            }
+                            
+                            
+                            
+                            self.timerHeadingLabel.isHidden = false
+                            self.minutesLabel.isHidden = false
+                            self.themeHeadingLabel.isHidden = false
+                            self.themeNameLabel.isHidden = false
+                            self.startButton.isHidden = false
+                            self.readySetLabel.isHidden = true
+                            
                             self.time = 120
+                            self.minutesLabel.text = "\(self.time / 60) MINUTES"
+                            
+                            
                         }
                     }
                 }

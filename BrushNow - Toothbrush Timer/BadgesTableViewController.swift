@@ -12,8 +12,8 @@ import UIKit
 var badges = [
     Badge(name: "First Brush", desc: "Complete your first timed brush.", isCompleted: false),
     Badge(name: "Rookie Brusher", desc: "Complete 10 timed brushes.", isCompleted: false),
-    Badge(name: "Dentist's BFF", desc: "Complete 100 timed brushes.", isCompleted: false),
-    Badge(name: "Maniac", desc: "Complete 1000 timed brushes.", isCompleted: false)
+    Badge(name: "Dentist's BFF", desc: "Complete 25 timed brushes.", isCompleted: false),
+    Badge(name: "Maniac", desc: "Complete 50 timed brushes.", isCompleted: false)
 ]
 
 class BadgesTableViewController: UITableViewController {
