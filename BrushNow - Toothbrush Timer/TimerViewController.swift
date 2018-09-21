@@ -57,6 +57,12 @@ class TimerViewController: ViewController {
         time = 120
         timer?.invalidate()
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        timer?.invalidate()
+        time = 120
+        minutesLabel.text = "\(time / 60) MINUTES"
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -120,6 +126,7 @@ class TimerViewController: ViewController {
                             
                             self.numberOfBrushes += 1
                             UserDefaults.standard.set(self.numberOfBrushes, forKey: "noOfBrush")
+                            print (self.numberOfBrushes)
                             // Switch statement for unlocking achievements
                             switch self.numberOfBrushes {
                                 
