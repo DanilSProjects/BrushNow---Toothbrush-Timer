@@ -9,7 +9,11 @@
 import UIKit
 
 class SettingsTableViewController: UITableViewController {
+    // Timer Set For:
+    @IBOutlet weak var timerSetForLabel: UILabel!
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,6 +41,10 @@ class SettingsTableViewController: UITableViewController {
         return 7
     }
 
+
+    @IBAction func timerStepper(_ sender: UIStepper) {
+        timerSetForLabel.text = "\(Int(sender.value).description) minutes"
+    }
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
