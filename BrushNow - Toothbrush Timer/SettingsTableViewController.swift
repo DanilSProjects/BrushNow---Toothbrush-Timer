@@ -8,6 +8,7 @@
 
 import UIKit
 
+var timeSet = 120
 class SettingsTableViewController: UITableViewController {
     // Timer Set For:
     @IBOutlet weak var timerSetForLabel: UILabel!
@@ -18,8 +19,10 @@ class SettingsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let loadedStepper = UserDefaults.standard.double(forKey: "timerStepper")
-        timerStepper.value = loadedStepper
+                timerStepper.value = loadedStepper
         timerSetForLabel.text = "\(Int(timerStepper.value).description) minutes"
+        let loadedTimeSet = UserDefaults.standard.integer(forKey: "timeSet")
+        timeSet = loadedTimeSet
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,6 +46,8 @@ class SettingsTableViewController: UITableViewController {
     @IBAction func timerStepper(_ sender: UIStepper) {
         timerSetForLabel.text = "\(Int(sender.value).description) minutes"
         UserDefaults.standard.set(sender.value, forKey: "timerStepper")
+        timeSet = Int(sender.value)*60
+        UserDefaults.standard.set(timeSet, forKey: "timeSet")
     }
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -25,7 +25,7 @@ class TimerViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        time = timeSet
        // UserDefaults stuff
         let loadedBrushes = UserDefaults.standard.integer(forKey: "noOfBrush")
         let loadedFirst = UserDefaults.standard.bool(forKey: "firstBrush")
@@ -44,6 +44,7 @@ class TimerViewController: ViewController {
     
     // Start setup
     override func viewDidAppear(_ animated: Bool) {
+        time = timeSet
         // Hiding and unhiding
         timerHeadingLabel.isHidden = false
         minutesLabel.isHidden = false
@@ -54,13 +55,14 @@ class TimerViewController: ViewController {
     
         
         minutesLabel.text = "\(time / 60) MINUTES"
-        time = 120
+        time = timeSet
+  
         timer?.invalidate()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         timer?.invalidate()
-        time = 120
+        time = timeSet
         minutesLabel.text = "\(time / 60) MINUTES"
     }
 
@@ -164,7 +166,8 @@ class TimerViewController: ViewController {
                             self.startButton.isHidden = false
                             self.readySetLabel.isHidden = true
                             
-                            self.time = 120
+                            self.time = timeSet
+                            UserDefaults.standard.set(self.time, forKey: "time")
                             self.minutesLabel.text = "\(self.time / 60) MINUTES"
                             
                             
