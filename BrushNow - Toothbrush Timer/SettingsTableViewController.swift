@@ -11,17 +11,15 @@ import UIKit
 class SettingsTableViewController: UITableViewController {
     // Timer Set For:
     @IBOutlet weak var timerSetForLabel: UILabel!
-
+    @IBOutlet weak var timerStepper: UIStepper!
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        let loadedStepper = UserDefaults.standard.double(forKey: "timerStepper")
+        timerStepper.value = loadedStepper
+        timerSetForLabel.text = "\(Int(timerStepper.value).description) minutes"
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,6 +42,7 @@ class SettingsTableViewController: UITableViewController {
 
     @IBAction func timerStepper(_ sender: UIStepper) {
         timerSetForLabel.text = "\(Int(sender.value).description) minutes"
+        UserDefaults.standard.set(sender.value, forKey: "timerStepper")
     }
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

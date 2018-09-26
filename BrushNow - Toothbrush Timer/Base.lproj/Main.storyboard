@@ -276,6 +276,7 @@
                     <navigationItem key="navigationItem" title="Settings" id="1xR-x2-8Jo"/>
                     <connections>
                         <outlet property="timerSetForLabel" destination="SJS-qm-pJ2" id="Nad-ex-9hb"/>
+                        <outlet property="timerStepper" destination="b0v-r8-cdz" id="RTw-Jz-OE7"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zqg-9E-Kqp" userLabel="First Responder" sceneMemberID="firstResponder"/>
