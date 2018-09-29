@@ -44,6 +44,7 @@ class TimerViewController: ViewController {
     
     // Start setup
     override func viewDidAppear(_ animated: Bool) {
+        print (timeSet)
         time = timeSet
         // Hiding and unhiding
         timerHeadingLabel.isHidden = false

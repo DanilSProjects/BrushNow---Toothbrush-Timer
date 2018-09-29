@@ -14,13 +14,12 @@ class SettingsTableViewController: UITableViewController {
     @IBOutlet weak var timerSetForLabel: UILabel!
     @IBOutlet weak var timerStepper: UIStepper!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         let loadedStepper = UserDefaults.standard.double(forKey: "timerStepper")
                 timerStepper.value = loadedStepper
         timerSetForLabel.text = "\(Int(timerStepper.value).description) minutes"
+        UserDefaults.standard.register(defaults: ["timeSet": 120])
         let loadedTimeSet = UserDefaults.standard.integer(forKey: "timeSet")
         timeSet = loadedTimeSet
     }
