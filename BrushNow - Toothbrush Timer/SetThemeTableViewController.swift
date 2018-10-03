@@ -1,46 +1,25 @@
 //
-//  SettingsTableViewController.swift
+//  SetThemeTableViewController.swift
 //  BrushNow - Toothbrush Timer
 //
-//  Created by Daniel on 10/9/18.
+//  Created by Daniel on 3/10/18.
 //  Copyright © 2018 Placeholder Interactive. All rights reserved.
 //
 
 import UIKit
 
-// Theme Setu[
-var origBackgroundCol = UIColor(red: 0.88, green: 0.88, blue: 0.88, alpha: 1.0)
-var themes = [Theme(name: "ORIGINAL", textColour: .black, backgroundColour: origBackgroundCol, previewImage: "origpreview"),
-              Theme(name: "OCEAN", textColour: .white, backgroundColour: .blue, previewImage: "oceanpreview"),
-              Theme(name: "GRASS", textColour: .black, backgroundColour: .green, previewImage: "grasspreview")
-]
-var selectedTheme = themes[0]
+class SetThemeTableViewController: UITableViewController {
 
-// TimeSet Setup
-var timeSet = 120
-
-class SettingsTableViewController: UITableViewController {
-    // Timer Set For:
-    @IBOutlet weak var timerSetForLabel: UILabel!
-    @IBOutlet weak var timerStepper: UIStepper!
-    
-    // Theme
-    @IBOutlet weak var themeButton: UIButton!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let loadedStepper = UserDefaults.standard.double(forKey: "timerStepper")
-                timerStepper.value = loadedStepper
-        timerSetForLabel.text = "\(Int(timerStepper.value).description) minutes"
-        UserDefaults.standard.register(defaults: ["timeSet": 120])
-        let loadedTimeSet = UserDefaults.standard.integer(forKey: "timeSet")
-        timeSet = loadedTimeSet
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        themeButton.setTitle(selectedTheme.name, for: .normal)
-    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -55,27 +34,28 @@ class SettingsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 7
-    }
-
-
-    @IBAction func timerStepper(_ sender: UIStepper) {
-        timerSetForLabel.text = "\(Int(sender.value).description) minutes"
-        UserDefaults.standard.set(sender.value, forKey: "timerStepper")
-        timeSet = Int(sender.value)*60
-        UserDefaults.standard.set(timeSet, forKey: "timeSet")
-        
+        return themes.count
     }
     
-    /*
+    // Set up cell height
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60.0
+    }
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "setThemeCell", for: indexPath) as! SetThemeTableViewCell
+        
+        cell.themePreviewView.image = UIImage(named: themes[indexPath.row].previewImage)
+        cell.themeTitleLabel.text = themes[indexPath.row].name
 
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedTheme = themes[indexPath.row]
+        dismiss(animated: true, completion: nil)
+    }
 
     /*
     // Override to support conditional editing of the table view.

@@ -204,13 +204,14 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U22-br-YSv">
-                                                    <rect key="frame" x="166" y="11" width="193" height="21"/>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Vz-kZ-Rz6">
+                                                    <rect key="frame" x="167" y="0.0" width="208" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <segue destination="ZYz-dr-aMo" kind="presentation" id="iOI-Ak-0TC"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -282,7 +283,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="1xR-x2-8Jo"/>
                     <connections>
-                        <outlet property="themeLabel" destination="U22-br-YSv" id="2t4-tw-xR9"/>
+                        <outlet property="themeButton" destination="7Vz-kZ-Rz6" id="cqX-7v-Esf"/>
                         <outlet property="timerSetForLabel" destination="SJS-qm-pJ2" id="Nad-ex-9hb"/>
                         <outlet property="timerStepper" destination="b0v-r8-cdz" id="RTw-Jz-OE7"/>
                     </connections>
@@ -290,6 +291,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zqg-9E-Kqp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2154.4000000000001" y="1434.3328335832084"/>
+        </scene>
+        <!--Theme Selection-->
+        <scene sceneID="Sd5-hL-W0h">
+            <objects>
+                <tableViewController id="pgo-Ib-fZm" customClass="SetThemeTableViewController" customModule="BrushNow___Toothbrush_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="I8g-e0-jqI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="setThemeCell" rowHeight="60" id="gin-YW-HVs" customClass="SetThemeTableViewCell" customModule="BrushNow___Toothbrush_Timer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gin-YW-HVs" id="iRt-Mf-ySJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d5U-8i-TvM">
+                                            <rect key="frame" x="16" y="0.0" width="74" height="60"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title of Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VuL-IV-dYB">
+                                            <rect key="frame" x="112" y="5" width="182" height="49"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="themePreviewView" destination="d5U-8i-TvM" id="LlT-SF-SRZ"/>
+                                    <outlet property="themeTitleLabel" destination="VuL-IV-dYB" id="9WI-x8-giL"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pgo-Ib-fZm" id="IBy-gj-YJ7"/>
+                            <outlet property="delegate" destination="pgo-Ib-fZm" id="RNe-WN-yg2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Theme Selection" id="Kjf-dj-un2"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cP6-jO-SJR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4010.4000000000001" y="2176.4617691154426"/>
         </scene>
         <!--About App-->
         <scene sceneID="yFr-rh-TOV">
@@ -394,6 +442,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMS-7B-rFI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1232.8" y="-161.46926536731635"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="K8a-wI-6Oq">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EAH-WX-Wld" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZYz-dr-aMo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7lV-1M-jNa">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pgo-Ib-fZm" kind="relationship" relationship="rootViewController" id="04f-Re-vEn"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="3071.1999999999998" y="2176.4617691154426"/>
         </scene>
     </scenes>
     <resources>

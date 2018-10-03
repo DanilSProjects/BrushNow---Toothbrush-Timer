@@ -39,16 +39,18 @@ class TimerViewController: ViewController {
         badges[2].isCompleted = loadedDentist
         badges[3].isCompleted = loadedManiac
 
+
+    }
+    
+    // Start setup
+    override func viewDidAppear(_ animated: Bool) {
         // Theme
         view.backgroundColor = selectedTheme.backgroundColour
         timerHeadingLabel.textColor = selectedTheme.textColour
         minutesLabel.textColor = selectedTheme.textColour
         themeHeadingLabel.textColor = selectedTheme.textColour
         themeNameLabel.textColor = selectedTheme.textColour
-    }
-    
-    // Start setup
-    override func viewDidAppear(_ animated: Bool) {
+        
         print (timeSet)
         time = timeSet
         // Hiding and unhiding

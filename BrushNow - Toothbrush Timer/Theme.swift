@@ -14,4 +14,5 @@ struct Theme {
     var name: String
     var textColour: UIColor
     var backgroundColour: UIColor
+    var previewImage: String
 }
