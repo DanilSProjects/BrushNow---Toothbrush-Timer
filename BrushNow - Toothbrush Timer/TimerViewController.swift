@@ -39,7 +39,12 @@ class TimerViewController: ViewController {
         badges[2].isCompleted = loadedDentist
         badges[3].isCompleted = loadedManiac
 
-        // Do any additional setup after loading the view.
+        // Theme
+        view.backgroundColor = selectedTheme.backgroundColour
+        timerHeadingLabel.textColor = selectedTheme.textColour
+        minutesLabel.textColor = selectedTheme.textColour
+        themeHeadingLabel.textColor = selectedTheme.textColour
+        themeNameLabel.textColor = selectedTheme.textColour
     }
     
     // Start setup

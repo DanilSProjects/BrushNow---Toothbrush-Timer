@@ -8,11 +8,25 @@
 
 import UIKit
 
+// Theme Setu[
+var origBackgroundCol = UIColor(red: 0.88, green: 0.88, blue: 0.88, alpha: 1.0)
+var themes = [Theme(name: "ORIGINAL", textColour: .black, backgroundColour: origBackgroundCol),
+Theme(name: "OCEAN", textColour: .white, backgroundColour: .blue),
+Theme(name: "GRASS", textColour: .black, backgroundColour: .green)
+]
+var selectedTheme = themes[0]
+
+// TimeSet Setup
 var timeSet = 120
+
 class SettingsTableViewController: UITableViewController {
     // Timer Set For:
     @IBOutlet weak var timerSetForLabel: UILabel!
     @IBOutlet weak var timerStepper: UIStepper!
+    
+    // Theme
+    @IBOutlet weak var themeLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +36,7 @@ class SettingsTableViewController: UITableViewController {
         UserDefaults.standard.register(defaults: ["timeSet": 120])
         let loadedTimeSet = UserDefaults.standard.integer(forKey: "timeSet")
         timeSet = loadedTimeSet
+        themeLabel.text = selectedTheme.name
     }
 
     override func didReceiveMemoryWarning() {

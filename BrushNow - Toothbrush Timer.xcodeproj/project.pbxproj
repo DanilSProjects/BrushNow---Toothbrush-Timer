@@ -12,6 +12,7 @@
 		65039EDB2141713D008D50C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65039ED92141713D008D50C3 /* Main.storyboard */; };
 		65039EDD2141713F008D50C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65039EDC2141713F008D50C3 /* Assets.xcassets */; };
 		65039EE02141713F008D50C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65039EDE2141713F008D50C3 /* LaunchScreen.storyboard */; };
+		652AADFF216479D90037F5C9 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652AADFE216479D90037F5C9 /* Theme.swift */; };
 		65475FBE215B9D0D00FD6CAC /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65475FBD215B9D0D00FD6CAC /* AboutViewController.swift */; };
 		65BC1301214E1D8D00E0B8E3 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BC1300214E1D8D00E0B8E3 /* Badge.swift */; };
 		65C1023D21469CCF000EDC56 /* BadgesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C1023C21469CCF000EDC56 /* BadgesTableViewController.swift */; };
@@ -28,6 +29,7 @@
 		65039EDC2141713F008D50C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65039EDF2141713F008D50C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65039EE12141713F008D50C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		652AADFE216479D90037F5C9 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		65475FBD215B9D0D00FD6CAC /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		65BC1300214E1D8D00E0B8E3 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		65C1023C21469CCF000EDC56 /* BadgesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesTableViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				65039ED52141713D008D50C3 /* AppDelegate.swift */,
 				65039ED72141713D008D50C3 /* ViewController.swift */,
 				65039ED92141713D008D50C3 /* Main.storyboard */,
+				652AADFE216479D90037F5C9 /* Theme.swift */,
 				65BC1300214E1D8D00E0B8E3 /* Badge.swift */,
 				65C1024221469D53000EDC56 /* BadgeTableViewCell.swift */,
 				65C1024021469D0B000EDC56 /* TimerViewController.swift */,
@@ -153,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				652AADFF216479D90037F5C9 /* Theme.swift in Sources */,
 				65BC1301214E1D8D00E0B8E3 /* Badge.swift in Sources */,
 				65C1024121469D0B000EDC56 /* TimerViewController.swift in Sources */,
 				65C1024321469D53000EDC56 /* BadgeTableViewCell.swift in Sources */,
