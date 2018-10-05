@@ -52,7 +52,7 @@ class TimerViewController: ViewController {
         themeHeadingLabel.textColor = selectedTheme.textColour
         themeNameLabel.textColor = selectedTheme.textColour
         themeNameLabel.text = selectedTheme.name
-        
+         
         print (timeSet)
         time = timeSet
         // Hiding and unhiding
