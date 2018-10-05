@@ -51,6 +51,7 @@ class TimerViewController: ViewController {
         minutesLabel.textColor = selectedTheme.textColour
         themeHeadingLabel.textColor = selectedTheme.textColour
         themeNameLabel.textColor = selectedTheme.textColour
+        themeNameLabel.text = selectedTheme.name
         
         print (timeSet)
         time = timeSet
