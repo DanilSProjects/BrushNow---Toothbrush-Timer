@@ -10,9 +10,7 @@ import UIKit
 
 // Theme Setu[
 var origBackgroundCol = UIColor(red: 0.88, green: 0.88, blue: 0.88, alpha: 1.0)
-var themes = [Theme(name: "ORIGINAL", textColour: .black, backgroundColour: origBackgroundCol, previewImage: "origpreview"),
-              Theme(name: "OCEAN", textColour: .white, backgroundColour: .blue, previewImage: "oceanpreview"),
-              Theme(name: "GRASS", textColour: .black, backgroundColour: .green, previewImage: "grasspreview")
+var themes = [Theme(name: "ORIGINAL", textColour: .black, backgroundColour: origBackgroundCol, previewImage: "origpreview")
 ]
 var selectedTheme = themes[0]
 

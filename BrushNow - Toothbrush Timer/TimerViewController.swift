@@ -145,11 +145,13 @@ class TimerViewController: ViewController {
                             case 1:
                                 badges[0].isCompleted = true
                                 UserDefaults.standard.set(badges[0].isCompleted, forKey: "firstBrush")
+                                themes.append(Theme(name: "OCEAN", textColour: .white, backgroundColour: .blue, previewImage: "oceanpreview"))
                                 
                                 // Rookie Brusher
                             case 10:
                                 badges[1].isCompleted = true
                                 UserDefaults.standard.set(badges[1].isCompleted, forKey: "rookieBrush")
+                                themes.append(Theme(name: "GRASS", textColour: .black, backgroundColour: .green, previewImage: "grasspreview"))
                                 
                                 // Dentist's BFF
                             case 25:
