@@ -45,6 +45,10 @@ class BadgesTableViewController: UITableViewController {
         return badges.count
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+
+        print (badges[0].isCompleted)
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "badgeCell", for: indexPath) as! BadgeTableViewCell

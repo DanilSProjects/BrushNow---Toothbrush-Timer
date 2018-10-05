@@ -38,7 +38,8 @@ class TimerViewController: ViewController {
         badges[1].isCompleted = loadedRookie
         badges[2].isCompleted = loadedDentist
         badges[3].isCompleted = loadedManiac
-
+        
+        print (numberOfBrushes)
 
     }
     
