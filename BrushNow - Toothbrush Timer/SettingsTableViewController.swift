@@ -10,7 +10,7 @@ import UIKit
 
 // Theme Setu[
 var origBackgroundCol = UIColor(red: 0.88, green: 0.88, blue: 0.88, alpha: 1.0)
-var themes = [Theme(name: "ORIGINAL", textColour: .black, backgroundColour: origBackgroundCol, previewImage: "origpreview")
+var themes = [Theme(name: "ORIGINAL", textColour: .black, backgroundColour: origBackgroundCol, buttonColour: .orange, previewImage: "origpreview")
 ]
 var selectedTheme = themes[0]
 
