@@ -26,6 +26,8 @@ class TimerViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         time = timeSet
+        startButton.layer.cornerRadius = 10
+        startButton.clipsToBounds = true
        // UserDefaults stuff
         let loadedBrushes = UserDefaults.standard.integer(forKey: "noOfBrush")
         let loadedFirst = UserDefaults.standard.bool(forKey: "firstBrush")
