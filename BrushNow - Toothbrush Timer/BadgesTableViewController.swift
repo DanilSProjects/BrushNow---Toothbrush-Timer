@@ -10,10 +10,10 @@ import UIKit
 
 // Global variable list of achievements
 var badges = [
-    Badge(name: "First Brush", desc: "Complete your first timed brush.", isCompleted: false),
-    Badge(name: "Rookie Brusher", desc: "Complete 10 timed brushes.", isCompleted: false),
-    Badge(name: "Dentist's BFF", desc: "Complete 25 timed brushes.", isCompleted: false),
-    Badge(name: "Maniac", desc: "Complete 50 timed brushes.", isCompleted: false)
+    Badge(name: "First Brush", desc: "Complete your first timed brush.", isCompleted: false, reward: "Theme: Ocean"),
+    Badge(name: "Rookie Brusher", desc: "Complete 10 timed brushes.", isCompleted: false, reward: "Theme: Grass"),
+    Badge(name: "Dentist's BFF", desc: "Complete 25 timed brushes.", isCompleted: false, reward: "Theme: Tropical"),
+    Badge(name: "Maniac", desc: "Complete 50 timed brushes.", isCompleted: false, reward: "Theme: Paper")
 ]
 
 class BadgesTableViewController: UITableViewController {
@@ -54,6 +54,7 @@ class BadgesTableViewController: UITableViewController {
         // Name and desc set up
         cell.nameLabel.text = badges[indexPath.row].name
         cell.descLabel.text = badges[indexPath.row].desc
+        cell.rewardLabel.text = "Reward: \(badges[indexPath.row].reward)"
         
         // If completed, show tick, if not, show cross
         if badges[indexPath.row].isCompleted == false {

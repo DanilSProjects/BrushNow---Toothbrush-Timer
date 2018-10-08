@@ -12,6 +12,7 @@ struct Badge {
     var name: String
     var desc: String
     var isCompleted: Bool
+    var reward: String
     // var icon maybe?
     
 }
