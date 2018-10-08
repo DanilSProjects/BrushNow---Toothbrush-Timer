@@ -55,6 +55,8 @@ class SetThemeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedTheme = themes[indexPath.row]
         dismiss(animated: true, completion: nil)
+        let encodedSelected = NSKeyedArchiver.archivedData(withRootObject: selectedTheme)
+        UserDefaults.standard.set(encodedSelected, forKey: "selectedTheme")
     }
 
     /*

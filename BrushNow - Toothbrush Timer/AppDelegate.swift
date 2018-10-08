@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let myThemeList = NSKeyedUnarchiver.unarchiveObject(with: data) as? [Theme] {
             themes = myThemeList
         } else {
-            print("There is an issue") // NOTE FOR VIEWER: THIS WILL DEFINITELY PRINT ON FIRST LAUNCH DUE TO NOT HAVING THEMES STORED IN IT YET, BUT DON'T WORRY - IT DOESN'T DO ANYTHING
+            print("There is an issue with the themes array") // NOTE FOR VIEWER: THIS WILL DEFINITELY PRINT ON FIRST LAUNCH DUE TO NOT HAVING THEMES STORED IN IT YET, BUT DON'T WORRY - IT DOESN'T DO ANYTHING
         }
         return true
     }

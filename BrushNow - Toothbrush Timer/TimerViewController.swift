@@ -42,7 +42,13 @@ class TimerViewController: ViewController {
         badges[3].isCompleted = loadedManiac
         
         print (numberOfBrushes)
-
+        
+        if let data = UserDefaults.standard.data(forKey: "selectedTheme"),
+            let myTheme = NSKeyedUnarchiver.unarchiveObject(with: data) as? Theme {
+            selectedTheme = myTheme
+        } else {
+            print("There is an issue with the selected theme") // NOTE FOR VIEWER: THIS WILL DEFINITELY PRINT ON FIRST LAUNCH DUE TO NOT HAVING THEMES STORED IN IT YET, BUT DON'T WORRY - IT DOESN'T DO ANYTHING
+        }
     }
     
     // Start setup
