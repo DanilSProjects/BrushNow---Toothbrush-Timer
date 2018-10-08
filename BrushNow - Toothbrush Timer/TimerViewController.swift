@@ -41,13 +41,19 @@ class TimerViewController: ViewController {
         badges[2].isCompleted = loadedDentist
         badges[3].isCompleted = loadedManiac
         
-        print (numberOfBrushes)
-        
         if let data = UserDefaults.standard.data(forKey: "selectedTheme"),
             let myTheme = NSKeyedUnarchiver.unarchiveObject(with: data) as? Theme {
             selectedTheme = myTheme
         } else {
             print("There is an issue with the selected theme") // NOTE FOR VIEWER: THIS WILL DEFINITELY PRINT ON FIRST LAUNCH DUE TO NOT HAVING THEMES STORED IN IT YET, BUT DON'T WORRY - IT DOESN'T DO ANYTHING
+        }
+        
+        // Retrieving a value for a key
+        if let data = UserDefaults.standard.data(forKey: "themes"),
+            let myThemeList = NSKeyedUnarchiver.unarchiveObject(with: data) as? [Theme] {
+            themes = myThemeList
+        } else {
+            print("There is an issue with the themes array") // NOTE FOR VIEWER: THIS WILL DEFINITELY PRINT ON FIRST LAUNCH DUE TO NOT HAVING THEMES STORED IN IT YET, BUT DON'T WORRY - IT DOESN'T DO ANYTHING
         }
     }
     
@@ -61,8 +67,7 @@ class TimerViewController: ViewController {
         themeNameLabel.textColor = selectedTheme.textColour
         themeNameLabel.text = selectedTheme.name
         startButton.backgroundColor = selectedTheme.buttonColour
-         
-        print (timeSet)
+        
         time = timeSet
         // Hiding and unhiding
         timerHeadingLabel.isHidden = false
@@ -88,6 +93,11 @@ class TimerViewController: ViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func save() {
+        let encodedData = NSKeyedArchiver.archivedData(withRootObject: themes)
+        UserDefaults.standard.set(encodedData, forKey: "themes")
     }
     
     // Button to start timer
@@ -147,7 +157,7 @@ class TimerViewController: ViewController {
                             
                             self.numberOfBrushes += 1
                             UserDefaults.standard.set(self.numberOfBrushes, forKey: "noOfBrush")
-                            print (self.numberOfBrushes)
+                            
                             // Switch statement for unlocking achievements
                             switch self.numberOfBrushes {
                                 
@@ -156,22 +166,26 @@ class TimerViewController: ViewController {
                                 badges[0].isCompleted = true
                                 UserDefaults.standard.set(badges[0].isCompleted, forKey: "firstBrush")
                                 themes.append(Theme(name: "OCEAN", textColour: .white, backgroundColour: .blue, buttonColour: .yellow, previewImage: "oceanpreview"))
+                                self.save()
                                 
                                 // Rookie Brusher
                             case 10:
                                 badges[1].isCompleted = true
                                 UserDefaults.standard.set(badges[1].isCompleted, forKey: "rookieBrush")
                                 themes.append(Theme(name: "GRASS", textColour: .black, backgroundColour: .green, buttonColour: .brown, previewImage: "grasspreview"))
+                                self.save()
                                 
                                 // Dentist's BFF
                             case 25:
                                 badges[2].isCompleted = true
                                 UserDefaults.standard.set(badges[2].isCompleted, forKey: "dentistsBFF")
+                                self.save()
                                 
                                 // Maniac
                             case 50:
                                 badges[3].isCompleted = true
                                 UserDefaults.standard.set(badges[3].isCompleted, forKey: "maniac")
+                                self.save()
                                 
                             // If nothing was unlocked
                             default:

@@ -20,13 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let loadedTimeSet = UserDefaults.standard.integer(forKey: "timeSet")
         timeSet = loadedTimeSet
         
-        // Retrieving a value for a key
-        if let data = UserDefaults.standard.data(forKey: "themes"),
-            let myThemeList = NSKeyedUnarchiver.unarchiveObject(with: data) as? [Theme] {
-            themes = myThemeList
-        } else {
-            print("There is an issue with the themes array") // NOTE FOR VIEWER: THIS WILL DEFINITELY PRINT ON FIRST LAUNCH DUE TO NOT HAVING THEMES STORED IN IT YET, BUT DON'T WORRY - IT DOESN'T DO ANYTHING
-        }
         return true
     }
 
@@ -51,8 +44,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         UserDefaults.standard.set(timeSet, forKey: "timeSet")
-        let encodedData = NSKeyedArchiver.archivedData(withRootObject: themes)
-        UserDefaults.standard.set(encodedData, forKey: "themes")
     }
 
 
