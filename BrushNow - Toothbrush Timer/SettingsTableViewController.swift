@@ -25,6 +25,9 @@ class SettingsTableViewController: UITableViewController {
     // Theme
     @IBOutlet weak var themeButton: UIButton!
     
+    // Notifications
+    @IBOutlet weak var setButton: UIButton!
+    @IBOutlet weak var notifTimeLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +37,8 @@ class SettingsTableViewController: UITableViewController {
         UserDefaults.standard.register(defaults: ["timeSet": 120])
         let loadedTimeSet = UserDefaults.standard.integer(forKey: "timeSet")
         timeSet = loadedTimeSet
+        setButton.layer.cornerRadius = 10
+        setButton.clipsToBounds = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
