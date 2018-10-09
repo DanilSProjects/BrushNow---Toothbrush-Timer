@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 var numberOfBrushes = 0
 
@@ -26,6 +27,11 @@ class TimerViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Asking for permission for notifications
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in
+        })
+        
         time = timeSet
         startButton.layer.cornerRadius = 10
         startButton.clipsToBounds = true

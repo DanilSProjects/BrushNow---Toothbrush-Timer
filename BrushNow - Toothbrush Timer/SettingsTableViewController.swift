@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 // Theme Setu[
 var origBackgroundCol = UIColor(red: 0.88, green: 0.88, blue: 0.88, alpha: 1.0)
@@ -125,4 +126,22 @@ class SettingsTableViewController: UITableViewController {
     }
     */
 
+    
+    /*
+     // MARK: - Notifications
+ */
+    @IBAction func setButtonPressed(_ sender: Any) {
+        let content = UNMutableNotificationContent()
+        content.title = "BrushNow Reminder"
+        content.subtitle = "Have you brushed your teeth yet?"
+        content.body = " If not, consider paying a visit to the bathroom."
+        content.badge = 1
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    }
+    
+    
 }
