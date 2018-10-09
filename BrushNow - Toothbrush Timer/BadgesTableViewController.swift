@@ -10,10 +10,10 @@ import UIKit
 
 // Global variable list of achievements
 var badges = [
-    Badge(name: "First Brush", desc: "Complete your first timed brush.", isCompleted: false, reward: "Theme: Ocean"),
-    Badge(name: "Rookie Brusher", desc: "Complete 10 timed brushes.", isCompleted: false, reward: "Theme: Grass"),
-    Badge(name: "Dentist's BFF", desc: "Complete 25 timed brushes.", isCompleted: false, reward: "Theme: Tropical"),
-    Badge(name: "Maniac", desc: "Complete 50 timed brushes.", isCompleted: false, reward: "Theme: Paper")
+    Badge(name: "First Brush", desc: "Complete your first timed brush.", isCompleted: false, reward: "Theme: Ocean", brushesNeeded: 1),
+    Badge(name: "Rookie Brusher", desc: "Complete 10 timed brushes.", isCompleted: false, reward: "Theme: Grass", brushesNeeded: 10),
+    Badge(name: "Dentist's BFF", desc: "Complete 25 timed brushes.", isCompleted: false, reward: "Theme: Tropical", brushesNeeded: 25),
+    Badge(name: "Maniac", desc: "Complete 50 timed brushes.", isCompleted: false, reward: "Theme: Paper", brushesNeeded: 50)
 ]
 
 class BadgesTableViewController: UITableViewController {
@@ -59,8 +59,13 @@ class BadgesTableViewController: UITableViewController {
         // If completed, show tick, if not, show cross
         if badges[indexPath.row].isCompleted == false {
         cell.completeView.image = UIImage(named: "cross")
+        cell.rewardLabel.textColor = .red
+        cell.tipLabel.text = "You need \(badges[indexPath.row].brushesNeeded - numberOfBrushes) more brushes!"
         } else {
             cell.completeView.image = UIImage(named: "tick")
+            let completeTColour = UIColor(red:0.12, green:0.74, blue:0.13, alpha:1.0)
+            cell.rewardLabel.textColor = completeTColour
+            cell.tipLabel.text = "Well done! You achieved it!"
         }
 
         return cell
@@ -68,7 +73,7 @@ class BadgesTableViewController: UITableViewController {
     
     // Set up cell height
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100.0
+        return 150.0
     }
 
     /*

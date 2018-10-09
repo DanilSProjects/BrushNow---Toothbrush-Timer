@@ -10,6 +10,7 @@ import UIKit
 
 class BadgeTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var rewardLabel: UILabel!
     @IBOutlet weak var completeView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!

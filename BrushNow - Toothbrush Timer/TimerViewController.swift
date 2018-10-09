@@ -8,6 +8,8 @@
 
 import UIKit
 
+var numberOfBrushes = 0
+
 class TimerViewController: ViewController {
     // Messy part for outlets
     
@@ -18,7 +20,6 @@ class TimerViewController: ViewController {
     @IBOutlet weak var readySetLabel: UILabel!
     
     @IBOutlet weak var startButton: UIButton!
-    var numberOfBrushes = 0
     
     var time = 120
     var timer: Timer?
@@ -155,11 +156,11 @@ class TimerViewController: ViewController {
                         } else if self.time == 0 {
                             self.timer?.invalidate()
                             
-                            self.numberOfBrushes += 1
-                            UserDefaults.standard.set(self.numberOfBrushes, forKey: "noOfBrush")
+                            numberOfBrushes += 1
+                            UserDefaults.standard.set(numberOfBrushes, forKey: "noOfBrush")
                             
                             // Switch statement for unlocking achievements
-                            switch self.numberOfBrushes {
+                            switch numberOfBrushes {
                                 
                                 //First Brush
                             case 1:

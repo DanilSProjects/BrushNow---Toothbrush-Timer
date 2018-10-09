@@ -13,6 +13,7 @@ struct Badge {
     var desc: String
     var isCompleted: Bool
     var reward: String
+    var brushesNeeded: Int
     // var icon maybe?
     
 }
