@@ -10,7 +10,7 @@ import UIKit
 
 // Global variable list of achievements
 var badges = [
-    Badge(name: "First Brush", desc: "Complete your first timed brush.", isCompleted: false, reward: "Theme: Ocean", brushesNeeded: 1),
+    Badge(name: "First Brush", desc: "Complete first timed brush.", isCompleted: false, reward: "Theme: Ocean", brushesNeeded: 1),
     Badge(name: "Rookie Brusher", desc: "Complete 10 timed brushes.", isCompleted: false, reward: "Theme: Grass", brushesNeeded: 10),
     Badge(name: "Dentist's BFF", desc: "Complete 25 timed brushes.", isCompleted: false, reward: "Theme: Tropical", brushesNeeded: 25),
     Badge(name: "Maniac", desc: "Complete 50 timed brushes.", isCompleted: false, reward: "Theme: Paper", brushesNeeded: 50)
@@ -73,7 +73,7 @@ class BadgesTableViewController: UITableViewController {
     
     // Set up cell height
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150.0
+        return 130.0
     }
 
     /*
