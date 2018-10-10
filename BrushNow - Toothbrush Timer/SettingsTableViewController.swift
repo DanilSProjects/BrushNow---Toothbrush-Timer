@@ -143,11 +143,6 @@ class SettingsTableViewController: UITableViewController {
         var newNotifAM = notifAM
         let newNotifPM = notifAM + 12
         
-        if notifAM == 12 {
-            newNotifAM = 0
-        } else {
-            newNotifAM = notifAM
-        }
         
         var triggerDateHour = 0
         
