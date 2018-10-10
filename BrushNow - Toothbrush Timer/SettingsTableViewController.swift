@@ -29,6 +29,10 @@ class SettingsTableViewController: UITableViewController {
     // Notifications
     @IBOutlet weak var setButton: UIButton!
     @IBOutlet weak var notifTimeLabel: UILabel!
+    @IBOutlet weak var notifStepper: UIStepper!
+    
+    var notifAM = 10
+    var notifPM = 10
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +44,7 @@ class SettingsTableViewController: UITableViewController {
         timeSet = loadedTimeSet
         setButton.layer.cornerRadius = 10
         setButton.clipsToBounds = true
+        notifTimeLabel.text = "\(notifAM)AM/\(notifPM)PM"
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -132,22 +137,28 @@ class SettingsTableViewController: UITableViewController {
  */
     @IBAction func setButtonPressed(_ sender: Any) {
         
-        let notifAM = 10
-        let notifPM = notifAM + 12
-        
         let date = Date(timeIntervalSinceNow: 0)
         let currentDateComp = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
         
+        var newNotifAM = notifAM
+        let newNotifPM = notifAM + 12
+        
+        if notifAM == 12 {
+            newNotifAM = 0
+        } else {
+            newNotifAM = notifAM
+        }
+        
         var triggerDateHour = 0
         
-        if currentDateComp.hour! <= notifPM && currentDateComp.hour! > 12 {
-            triggerDateHour = notifAM - (currentDateComp.hour! - 12)
-        } else if currentDateComp.hour! <= notifAM {
-            triggerDateHour = notifAM - currentDateComp.hour!
+        if currentDateComp.hour! <= newNotifPM && currentDateComp.hour! > 12 {
+            triggerDateHour = newNotifAM - (currentDateComp.hour! - 12)
+        } else if currentDateComp.hour! <= newNotifAM {
+            triggerDateHour = newNotifAM - currentDateComp.hour!
         } else if currentDateComp.hour! == 0 {
-            triggerDateHour = notifAM
-        } else if currentDateComp.hour! > notifAM && currentDateComp.hour! < 13 {
-            triggerDateHour = notifPM - currentDateComp.hour!
+            triggerDateHour = newNotifAM
+        } else if currentDateComp.hour! > newNotifAM && currentDateComp.hour! < 13 {
+            triggerDateHour = newNotifPM - currentDateComp.hour!
         }
         
         let triggerDateTimeInterval: TimeInterval = TimeInterval((triggerDateHour * 3600) - (currentDateComp.minute! * 60) - (currentDateComp.second!))
@@ -170,5 +181,10 @@ class SettingsTableViewController: UITableViewController {
         
     }
     
+    @IBAction func notifStepper(_ sender: UIStepper) {
+        notifAM = Int(sender.value)
+        notifPM = notifAM
+        notifTimeLabel.text = "\(notifAM)AM/\(notifPM)PM"
+    }
     
 }
