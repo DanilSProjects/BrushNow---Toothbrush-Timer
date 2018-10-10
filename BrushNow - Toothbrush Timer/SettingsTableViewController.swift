@@ -131,16 +131,39 @@ class SettingsTableViewController: UITableViewController {
      // MARK: - Notifications
  */
     @IBAction func setButtonPressed(_ sender: Any) {
+        let date = Date(timeIntervalSinceNow: 0)
+        let currentDateComp = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+        
+        var triggerDateHour = 0
+        
+        if currentDateComp.hour! <= 22 && currentDateComp.hour! > 12 {
+            triggerDateHour = 10 - (currentDateComp.hour! - 12)
+        } else if currentDateComp.hour! <= 10 {
+            triggerDateHour = 10 - currentDateComp.hour!
+        } else if currentDateComp.hour! == 0 {
+            triggerDateHour = 10
+        } else if currentDateComp.hour! > 10 && currentDateComp.hour! < 13 {
+            triggerDateHour = 22 - currentDateComp.hour!
+        }
+        
+        let triggerDateTimeInterval: TimeInterval = TimeInterval((triggerDateHour * 3600) - (currentDateComp.minute! * 60) - (currentDateComp.second!))
+        let triggerDate = Date(timeIntervalSinceNow: triggerDateTimeInterval)
+        let triggerDateComp = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: triggerDate)
+        
+        print (triggerDateComp)
+        
         let content = UNMutableNotificationContent()
         content.title = "BrushNow Reminder"
         content.subtitle = "Have you brushed your teeth yet?"
         content.body = " If not, consider paying a visit to the bathroom."
         content.badge = 1
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDateComp, repeats: false)
         
         let request = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        
+        
     }
     
     
