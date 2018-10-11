@@ -60,7 +60,13 @@ class BadgesTableViewController: UITableViewController {
         if badges[indexPath.row].isCompleted == false {
         cell.completeView.image = UIImage(named: "cross")
         cell.rewardLabel.textColor = .red
+            
+            if badges[indexPath.row].brushesNeeded == 1 {
+        cell.tipLabel.text = "You need \(badges[indexPath.row].brushesNeeded - numberOfBrushes) more brush!"
+            } else if badges[indexPath.row].brushesNeeded > 1 {
         cell.tipLabel.text = "You need \(badges[indexPath.row].brushesNeeded - numberOfBrushes) more brushes!"
+        }
+            
         } else {
             cell.completeView.image = UIImage(named: "tick")
             let completeTColour = UIColor(red:0.12, green:0.74, blue:0.13, alpha:1.0)

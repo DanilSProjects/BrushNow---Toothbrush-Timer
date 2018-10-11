@@ -37,13 +37,25 @@ class SettingsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let loadedStepper = UserDefaults.standard.double(forKey: "timerStepper")
-                timerStepper.value = loadedStepper
+        timerStepper.value = loadedStepper
+        
+        let loadedNotifStepper = UserDefaults.standard.double(forKey: "notifStepper")
+        notifStepper.value = loadedNotifStepper
+        
         timerSetForLabel.text = "\(Int(timerStepper.value).description) minutes"
         UserDefaults.standard.register(defaults: ["timeSet": 120])
         let loadedTimeSet = UserDefaults.standard.integer(forKey: "timeSet")
         timeSet = loadedTimeSet
         setButton.layer.cornerRadius = 10
         setButton.clipsToBounds = true
+        
+        UserDefaults.standard.register(defaults: ["notifAM": 10])
+        UserDefaults.standard.register(defaults: ["notifPM": 10])
+        let loadedAM = UserDefaults.standard.integer(forKey: "notifAM")
+        let loadedPM = UserDefaults.standard.integer(forKey: "notifPM")
+        notifAM = loadedAM
+        notifPM = loadedPM
+        
         notifTimeLabel.text = "\(notifAM)AM/\(notifPM)PM"
     }
     
@@ -140,7 +152,7 @@ class SettingsTableViewController: UITableViewController {
         let date = Date(timeIntervalSinceNow: 0)
         let currentDateComp = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
         
-        var newNotifAM = notifAM
+        let newNotifAM = notifAM
         let newNotifPM = notifAM + 12
         
         
@@ -168,7 +180,7 @@ class SettingsTableViewController: UITableViewController {
         content.body = " If not, consider paying a visit to the bathroom."
         content.badge = 1
         
-        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDateComp, repeats: false)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDateComp, repeats: true)
         
         let request = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
@@ -180,6 +192,9 @@ class SettingsTableViewController: UITableViewController {
         notifAM = Int(sender.value)
         notifPM = notifAM
         notifTimeLabel.text = "\(notifAM)AM/\(notifPM)PM"
+        UserDefaults.standard.set(sender.value, forKey: "notifStepper")
+        UserDefaults.standard.set(notifAM, forKey: "notifAM")
+        UserDefaults.standard.set(notifPM, forKey: "notifPM")
     }
     
 }
