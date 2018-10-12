@@ -30,6 +30,7 @@ class SettingsTableViewController: UITableViewController {
     @IBOutlet weak var setButton: UIButton!
     @IBOutlet weak var notifTimeLabel: UILabel!
     @IBOutlet weak var notifStepper: UIStepper!
+    @IBOutlet weak var cancelButton: UIButton!
     
     var notifAM = 10
     var notifPM = 10
@@ -48,6 +49,8 @@ class SettingsTableViewController: UITableViewController {
         timeSet = loadedTimeSet
         setButton.layer.cornerRadius = 10
         setButton.clipsToBounds = true
+        cancelButton.layer.cornerRadius = 10
+        cancelButton.clipsToBounds = true
         
         UserDefaults.standard.register(defaults: ["notifAM": 10])
         UserDefaults.standard.register(defaults: ["notifPM": 10])
@@ -57,6 +60,14 @@ class SettingsTableViewController: UITableViewController {
         notifPM = loadedPM
         
         notifTimeLabel.text = "\(notifAM)AM/\(notifPM)PM"
+        
+        if let data = UserDefaults.standard.data(forKey: "labelColour"),
+            let myColour = NSKeyedUnarchiver.unarchiveObject(with: data) as? UIColor {
+            notifTimeLabel.textColor = myColour
+        } else {
+            notifTimeLabel.textColor = .red
+            print("There is an issue with the label colour") // NOTE FOR VIEWER: THIS WILL DEFINITELY PRINT ON FIRST LAUNCH DUE TO NOT HAVING THEMES STORED IN IT YET, BUT DON'T WORRY - IT DOESN'T DO ANYTHING
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -85,7 +96,6 @@ class SettingsTableViewController: UITableViewController {
         UserDefaults.standard.set(sender.value, forKey: "timerStepper")
         timeSet = Int(sender.value)*60
         UserDefaults.standard.set(timeSet, forKey: "timeSet")
-        
     }
     
     /*
@@ -147,7 +157,15 @@ class SettingsTableViewController: UITableViewController {
     /*
      // MARK: - Notifications
  */
+    func save() {
+        let encodedData = NSKeyedArchiver.archivedData(withRootObject: notifTimeLabel.textColor)
+        UserDefaults.standard.set(encodedData, forKey: "labelColour")
+    }
+    
     @IBAction func setButtonPressed(_ sender: Any) {
+        let setNotificationTextCol = UIColor(red:0.12, green:0.74, blue:0.13, alpha:1.0)
+        notifTimeLabel.textColor = setNotificationTextCol
+        save()
         
         let date = Date(timeIntervalSinceNow: 0)
         let currentDateComp = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
@@ -189,12 +207,24 @@ class SettingsTableViewController: UITableViewController {
     }
     
     @IBAction func notifStepper(_ sender: UIStepper) {
+        if notifTimeLabel.textColor == .red {
         notifAM = Int(sender.value)
         notifPM = notifAM
         notifTimeLabel.text = "\(notifAM)AM/\(notifPM)PM"
         UserDefaults.standard.set(sender.value, forKey: "notifStepper")
         UserDefaults.standard.set(notifAM, forKey: "notifAM")
         UserDefaults.standard.set(notifPM, forKey: "notifPM")
+        } else {
+            print ("The notification has already been set.")
+        }
     }
+
+    
+    @IBAction func cancelPressed(_ sender: Any) {
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        notifTimeLabel.textColor = .red
+        save()
+    }
+    
     
 }

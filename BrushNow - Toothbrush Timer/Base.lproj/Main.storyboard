@@ -270,12 +270,25 @@
                                                     </connections>
                                                 </stepper>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWd-Xy-VfE">
-                                                    <rect key="frame" x="279" y="38" width="81" height="51"/>
+                                                    <rect key="frame" x="176" y="38" width="81" height="51"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.80625046655718124" green="0.80625046655718124" blue="0.80625046655718124" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <state key="normal" title="Set"/>
+                                                    <color key="backgroundColor" red="0.55922277378207019" green="0.77107788705583757" blue="0.65322375763850815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" title="Set">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="setButtonPressed:" destination="DdP-Wt-SIs" eventType="touchUpInside" id="Y0o-pn-tVE"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cA-w3-E8Z">
+                                                    <rect key="frame" x="278" y="38" width="81" height="51"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.77107788705583757" green="0.0" blue="0.021650380403326015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" title="Cancel">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="cancelPressed:" destination="DdP-Wt-SIs" eventType="touchUpInside" id="emU-GW-xqW"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -322,6 +335,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="1xR-x2-8Jo"/>
                     <connections>
+                        <outlet property="cancelButton" destination="2cA-w3-E8Z" id="k1r-oi-UPb"/>
                         <outlet property="notifStepper" destination="jb0-1L-0JW" id="8Lk-xd-bzZ"/>
                         <outlet property="notifTimeLabel" destination="O1T-ow-gAx" id="Irr-kt-obj"/>
                         <outlet property="setButton" destination="yWd-Xy-VfE" id="rc0-bH-Gup"/>
