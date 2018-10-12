@@ -215,7 +215,11 @@ class SettingsTableViewController: UITableViewController {
         UserDefaults.standard.set(notifAM, forKey: "notifAM")
         UserDefaults.standard.set(notifPM, forKey: "notifPM")
         } else {
-            print ("The notification has already been set.")
+            let alert = UIAlertController(title: "Reminder is Already Set", message: "Your reminder timing cannot be changed while it is already set. Please cancel your current timing first before changing it.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Okay", comment: "Default action"), style: .default, handler: { _ in
+                NSLog("The \"OK\" alert occured.")
+            }))
+            self.present(alert, animated: true, completion: nil)
         }
     }
 
