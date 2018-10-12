@@ -160,7 +160,7 @@ class TimerViewController: ViewController {
                 self.readySetLabel.transform = CGAffineTransform.identity
                 self.readySetLabel.alpha = 1
                 self.readySetLabel.text = "GO!"
-                self.readySetLabel.textColor = .green
+                self.readySetLabel.textColor = .black
                 let thirdAnimator = UIViewPropertyAnimator(duration: 1.5, curve: .linear, animations : {
                     self.readySetLabel.transform = CGAffineTransform(scaleX: 2, y: 2)
                     self.readySetLabel.alpha = 0
