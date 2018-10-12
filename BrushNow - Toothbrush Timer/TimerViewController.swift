@@ -107,6 +107,10 @@ class TimerViewController: ViewController {
         UserDefaults.standard.set(encodedData, forKey: "themes")
     }
     
+    func goToBadges (alert: UIAlertAction) {
+        tabBarController?.selectedIndex = 1
+    }
+    
     // Button to start timer
     @IBAction func startButtonPressed(_ sender: Any) {
         timerHeadingLabel.isHidden = true
@@ -175,6 +179,13 @@ class TimerViewController: ViewController {
                                 themes.append(Theme(name: "OCEAN", textColour: .white, backgroundColour: .blue, buttonColour: .yellow, previewImage: "oceanpreview"))
                                 self.save()
                                 
+                                let alert = UIAlertController(title: "Badge Unlocked", message: "You have unlocked 'First Brush'! View your reward at the badges page.", preferredStyle: .alert)
+                                alert.addAction(UIAlertAction(title: NSLocalizedString("Badges Page", comment: "Goes to badges tab"), style: .default, handler: self.goToBadges))
+                                alert.addAction(UIAlertAction(title: NSLocalizedString("Okay", comment: "Default action"), style: .default, handler: { _ in
+                                    print ("Alert has been dimissed.")
+                                }))
+                                self.present(alert, animated: true, completion: nil)
+                                
                                 // Rookie Brusher
                             case 10:
                                 badges[1].isCompleted = true
@@ -182,11 +193,24 @@ class TimerViewController: ViewController {
                                 themes.append(Theme(name: "GRASS", textColour: .black, backgroundColour: .green, buttonColour: .brown, previewImage: "grasspreview"))
                                 self.save()
                                 
+                                let alert = UIAlertController(title: "Badge Unlocked", message: "You have unlocked 'Rookie Brusher'! View your reward at the badges page.", preferredStyle: .alert)
+                                alert.addAction(UIAlertAction(title: NSLocalizedString("Badges Page", comment: "Goes to badges tab"), style: .default, handler: self.goToBadges))
+                                alert.addAction(UIAlertAction(title: NSLocalizedString("Okay", comment: "Default action"), style: .default, handler: { _ in
+                                    print ("Alert has been dimissed.")
+                                }))
+                                self.present(alert, animated: true, completion: nil)
                                 // Dentist's BFF
                             case 25:
                                 badges[2].isCompleted = true
                                 UserDefaults.standard.set(badges[2].isCompleted, forKey: "dentistsBFF")
                                 self.save()
+                                
+                                let alert = UIAlertController(title: "Badge Unlocked", message: "You have unlocked 'Dentist's BFF'! View your reward at the badges page.", preferredStyle: .alert)
+                                alert.addAction(UIAlertAction(title: NSLocalizedString("Badges Page", comment: "Goes to badges tab"), style: .default, handler: self.goToBadges))
+                                alert.addAction(UIAlertAction(title: NSLocalizedString("Okay", comment: "Default action"), style: .default, handler: { _ in
+                                    print ("Alert has been dimissed.")
+                                }))
+                                self.present(alert, animated: true, completion: nil)
                                 
                                 // Maniac
                             case 50:
@@ -194,6 +218,12 @@ class TimerViewController: ViewController {
                                 UserDefaults.standard.set(badges[3].isCompleted, forKey: "maniac")
                                 self.save()
                                 
+                                let alert = UIAlertController(title: "Badge Unlocked", message: "You have unlocked 'Maniac'! View your reward at the badges page.", preferredStyle: .alert)
+                                alert.addAction(UIAlertAction(title: NSLocalizedString("Badges Page", comment: "Goes to badges tab"), style: .default, handler: self.goToBadges))
+                                alert.addAction(UIAlertAction(title: NSLocalizedString("Okay", comment: "Default action"), style: .default, handler: { _ in
+                                    print ("Alert has been dimissed.")
+                                }))
+                                self.present(alert, animated: true, completion: nil)
                             // If nothing was unlocked
                             default:
                                 print ("No achievements have been unlocked from this brush.")
