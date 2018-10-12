@@ -22,8 +22,13 @@ class TimerViewController: ViewController {
     
     @IBOutlet weak var startButton: UIButton!
     
+    @IBOutlet weak var brushHintLabel: UILabel!
+    @IBOutlet weak var teethView: UIImageView!
+    
     var time = 120
     var timer: Timer?
+    var teethTimer: Timer?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +69,8 @@ class TimerViewController: ViewController {
         }
     }
     
+
+    
     // Start setup
     override func viewDidAppear(_ animated: Bool) {
         // Theme
@@ -83,7 +90,8 @@ class TimerViewController: ViewController {
         themeNameLabel.isHidden = false
         startButton.isHidden = false
         readySetLabel.isHidden = true
-    
+        brushHintLabel.isHidden = true
+        teethView.isHidden = true
         
         minutesLabel.text = "\(time / 60) MINUTES"
         time = timeSet
@@ -93,8 +101,11 @@ class TimerViewController: ViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         timer?.invalidate()
+        teethTimer?.invalidate()
         time = timeSet
         minutesLabel.text = "\(time / 60) MINUTES"
+        brushHintLabel.text = "BRUSH UPPER LEFT TEETH (FRONT)"
+        teethView.image = UIImage(named: "upperleft")
     }
 
     override func didReceiveMemoryWarning() {
@@ -113,6 +124,7 @@ class TimerViewController: ViewController {
     
     // Button to start timer
     @IBAction func startButtonPressed(_ sender: Any) {
+        
         timerHeadingLabel.isHidden = true
         minutesLabel.isHidden = true
         themeHeadingLabel.isHidden = true
@@ -158,14 +170,39 @@ class TimerViewController: ViewController {
                     self.readySetLabel.alpha = 1
                     self.readySetLabel.transform = CGAffineTransform.identity
                     self.readySetLabel.isHidden = true
+                    
+                    // Extremely messy bit for mouth (sorry not sorry)
+                    let timeTakenToChange = Double(timeSet / 13)
+                    let brushHints = ["BRUSH UPPER MIDDLE TEETH (IN FRONT)", "BRUSH UPPER RIGHT TEETH (FRONT)", "BRUSH LOWER LEFT TEETH (FRONT)", "BRUSH LOWER MIDDLE TEETH (FRONT)", "BRUSH LOWER RIGHT TEETH (FRONT)", "BRUSH UPPER LEFT TEETH (BACK)", "BRUSH UPPER MIDDLE TEETH (BACK)", "BRUSH UPPER RIGHT TEETH (BACK)", "BRUSH LOWER LEFT TEETH (BACK)", "BRUSH LOWER MIDDLE TEETH (BACK)", "BRUSH LOWER RIGHT TEETH (BACK)", "BRUSH TONGUE"]
+                    
+                    let teethImages = ["uppermiddle", "upperright", "lowerleft", "lowermiddle", "lowerright", "upperleft", "uppermiddle", "upperright", "lowerleft", "lowermiddle", "lowerright", "normal"]
+                    
+                    var arrayNo = -1
+                    
+                    self.teethTimer = Timer.scheduledTimer(withTimeInterval: timeTakenToChange, repeats: true) { (_) in
+                        if arrayNo != 11 {
+                        arrayNo += 1
+                        } else {
+                            print ("Max achieved")
+                        }
+                        self.brushHintLabel.text = brushHints[arrayNo]
+                        self.teethView.image = UIImage(named: teethImages[arrayNo])
+                    }
+                    
                     self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (_) in
                         self.minutesLabel.text = "\(timeFormatted(self.time))"
                         if self.time > 0 {
                         self.time -= 1
                         self.minutesLabel.isHidden = false
+                        self.brushHintLabel.isHidden = false
+                        self.teethView.isHidden = false
+                            
                         } else if self.time == 0 {
                             self.timer?.invalidate()
+                            self.teethTimer?.invalidate()
                             
+                            self.brushHintLabel.text = "BRUSH UPPER LEFT TEETH (FRONT)"
+                            self.teethView.image = UIImage(named: "upperleft")
                             numberOfBrushes += 1
                             UserDefaults.standard.set(numberOfBrushes, forKey: "noOfBrush")
                             
@@ -237,6 +274,8 @@ class TimerViewController: ViewController {
                             self.themeNameLabel.isHidden = false
                             self.startButton.isHidden = false
                             self.readySetLabel.isHidden = true
+                            self.brushHintLabel.isHidden = true
+                            self.teethView.isHidden = true
                             
                             self.time = timeSet
                             UserDefaults.standard.set(self.time, forKey: "time")

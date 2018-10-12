@@ -65,15 +65,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="upperleft" translatesAutoresizingMaskIntoConstraints="NO" id="ZsQ-f2-jCv">
+                                <rect key="frame" x="0.0" y="250" width="375" height="351"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BRUSH UPPER LEFT TEETH (IN FRONT)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1Q-0w-tDO">
+                                <rect key="frame" x="0.0" y="207" width="375" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.88425999365482233" green="0.88425999365482233" blue="0.88425999365482233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="qbe-2K-sMP"/>
                     </view>
                     <navigationItem key="navigationItem" title="Timer" id="gB8-Wt-yd5"/>
                     <connections>
+                        <outlet property="brushHintLabel" destination="m1Q-0w-tDO" id="9n5-xs-Alo"/>
                         <outlet property="minutesLabel" destination="lbJ-qJ-CuC" id="CAU-Mh-v3q"/>
                         <outlet property="readySetLabel" destination="TxP-9J-3jS" id="1Xf-kp-68w"/>
                         <outlet property="startButton" destination="OMj-qX-rcN" id="8Is-sJ-W9X"/>
+                        <outlet property="teethView" destination="ZsQ-f2-jCv" id="V0U-BF-W1z"/>
                         <outlet property="themeHeadingLabel" destination="ZOq-TO-wGk" id="vLO-dB-Swd"/>
                         <outlet property="themeNameLabel" destination="AAp-qR-iDC" id="HsN-Nf-OWd"/>
                         <outlet property="timerHeadingLabel" destination="LYK-SM-Ye7" id="NE9-SU-LLR"/>
@@ -524,5 +537,6 @@
         <image name="Toothbrush" width="40" height="40"/>
         <image name="cross" width="660" height="618"/>
         <image name="origpreview" width="80" height="80"/>
+        <image name="upperleft" width="1060" height="1343"/>
     </resources>
 </document>
