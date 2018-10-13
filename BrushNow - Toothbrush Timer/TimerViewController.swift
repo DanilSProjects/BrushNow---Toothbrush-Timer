@@ -240,6 +240,7 @@ class TimerViewController: ViewController {
                             case 25:
                                 badges[2].isCompleted = true
                                 UserDefaults.standard.set(badges[2].isCompleted, forKey: "dentistsBFF")
+                                themes.append(Theme(name: "TROPICAL", textColour: .black, backgroundColour: .yellow, buttonColour: .green, previewImage: "tropicalpreview"))
                                 self.save()
                                 
                                 let alert = UIAlertController(title: "Badge Unlocked", message: "You have unlocked 'Dentist's BFF'! View your reward at the badges page.", preferredStyle: .alert)
@@ -253,6 +254,7 @@ class TimerViewController: ViewController {
                             case 50:
                                 badges[3].isCompleted = true
                                 UserDefaults.standard.set(badges[3].isCompleted, forKey: "maniac")
+                                themes.append(Theme(name: "PAPER", textColour: .black, backgroundColour: .white, buttonColour: .red, previewImage: "paperpreview"))
                                 self.save()
                                 
                                 let alert = UIAlertController(title: "Badge Unlocked", message: "You have unlocked 'Maniac'! View your reward at the badges page.", preferredStyle: .alert)
