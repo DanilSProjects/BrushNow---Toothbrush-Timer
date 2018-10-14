@@ -253,9 +253,11 @@ class SettingsTableViewController: UITableViewController {
             print (notificationNo)
             UserDefaults.standard.set(notificationNo, forKey: "notifNo")
             }
+            
         } else {
             print ("Reminder already set.")
         }
+        
         
     }
     

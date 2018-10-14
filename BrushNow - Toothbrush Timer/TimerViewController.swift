@@ -49,6 +49,7 @@ class TimerViewController: ViewController {
         let loadedForgetful = UserDefaults.standard.bool(forKey: "forgetful")
         let loadedAmnesiac = UserDefaults.standard.bool(forKey: "amnesiac")
         let loadedNotif = UserDefaults.standard.integer(forKey: "notifNo")
+        let loadedEarly = UserDefaults.standard.bool(forKey: "earlyBird")
         
         notificationNo = loadedNotif
         numberOfBrushes = loadedBrushes
@@ -58,7 +59,7 @@ class TimerViewController: ViewController {
         badges[3].isCompleted = loadedManiac
         badges[4].isCompleted = loadedForgetful
         badges[5].isCompleted = loadedAmnesiac
-        
+        badges[6].isCompleted = loadedEarly
         if let data = UserDefaults.standard.data(forKey: "selectedTheme"),
             let myTheme = NSKeyedUnarchiver.unarchiveObject(with: data) as? Theme {
             selectedTheme = myTheme
@@ -87,6 +88,7 @@ class TimerViewController: ViewController {
         themeNameLabel.textColor = selectedTheme.textColour
         themeNameLabel.text = selectedTheme.name
         startButton.backgroundColor = selectedTheme.buttonColour
+        brushHintLabel.textColor = selectedTheme.textColour
         
         time = timeSet
         // Hiding and unhiding
@@ -179,7 +181,7 @@ class TimerViewController: ViewController {
                     
                     // Extremely messy bit for mouth (sorry not sorry)
                     let timeTakenToChange = Double(timeSet / 13)
-                    let brushHints = ["BRUSH UPPER MIDDLE TEETH (IN FRONT)", "BRUSH UPPER RIGHT TEETH (FRONT)", "BRUSH LOWER LEFT TEETH (FRONT)", "BRUSH LOWER MIDDLE TEETH (FRONT)", "BRUSH LOWER RIGHT TEETH (FRONT)", "BRUSH UPPER LEFT TEETH (BACK)", "BRUSH UPPER MIDDLE TEETH (BACK)", "BRUSH UPPER RIGHT TEETH (BACK)", "BRUSH LOWER LEFT TEETH (BACK)", "BRUSH LOWER MIDDLE TEETH (BACK)", "BRUSH LOWER RIGHT TEETH (BACK)", "BRUSH TONGUE"]
+                    let brushHints = ["BRUSH UPPER MIDDLE TEETH (FRONT)", "BRUSH UPPER RIGHT TEETH (FRONT)", "BRUSH LOWER LEFT TEETH (FRONT)", "BRUSH LOWER MIDDLE TEETH (FRONT)", "BRUSH LOWER RIGHT TEETH (FRONT)", "BRUSH UPPER LEFT TEETH (BACK)", "BRUSH UPPER MIDDLE TEETH (BACK)", "BRUSH UPPER RIGHT TEETH (BACK)", "BRUSH LOWER LEFT TEETH (BACK)", "BRUSH LOWER MIDDLE TEETH (BACK)", "BRUSH LOWER RIGHT TEETH (BACK)", "BRUSH TONGUE"]
                     
                     let teethImages = ["uppermiddle", "upperright", "lowerleft", "lowermiddle", "lowerright", "upperleft", "uppermiddle", "upperright", "lowerleft", "lowermiddle", "lowerright", "normal"]
                     
@@ -211,6 +213,24 @@ class TimerViewController: ViewController {
                             self.teethView.image = UIImage(named: "upperleft")
                             numberOfBrushes += 1
                             UserDefaults.standard.set(numberOfBrushes, forKey: "noOfBrush")
+                            
+                            let date = Date(timeIntervalSinceNow: 0)
+                            let currentDateComp = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+                            
+                            if currentDateComp.hour! < 6 {
+                                badges[6].isCompleted = true
+                                UserDefaults.standard.set(badges[6].isCompleted, forKey: "earlyBird")
+                                let mornColour = UIColor(red:0.97, green:0.83, blue:0.34, alpha:1.0)
+                                themes.append(Theme(name: "MORNING", textColour: .black, backgroundColour: mornColour, buttonColour: .white, previewImage: "morningpreview"))
+                                self.save()
+                                
+                                let alert = UIAlertController(title: "Badge Unlocked", message: "You have unlocked 'Early Bird'! View your reward at the badges page.", preferredStyle: .alert)
+                                alert.addAction(UIAlertAction(title: NSLocalizedString("Badges Page", comment: "Goes to badges tab"), style: .default, handler: self.goToBadges))
+                                alert.addAction(UIAlertAction(title: NSLocalizedString("Okay", comment: "Default action"), style: .default, handler: { _ in
+                                    print ("Alert has been dimissed.")
+                                }))
+                                self.present(alert, animated: true, completion: nil)
+                            }
                             
                             // Switch statement for unlocking achievements
                             switch numberOfBrushes {
