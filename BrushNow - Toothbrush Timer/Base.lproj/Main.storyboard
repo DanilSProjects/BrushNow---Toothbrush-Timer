@@ -172,7 +172,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You need 49 more brushes!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIZ-tJ-Gde">
-                                            <rect key="frame" x="133" y="69" width="212" height="21"/>
+                                            <rect key="frame" x="133" y="69" width="242" height="21"/>
                                             <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -195,6 +195,7 @@
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="lIZ-tJ-Gde" secondAttribute="trailing" id="Jwx-1H-OYq"/>
                                         <constraint firstItem="ISv-00-L1p" firstAttribute="leading" secondItem="SuE-6V-jq5" secondAttribute="trailing" constant="26" id="KT4-Wz-r4c"/>
                                         <constraint firstItem="Xbl-SW-P9k" firstAttribute="leading" secondItem="SuE-6V-jq5" secondAttribute="trailing" constant="26" id="LGj-m5-q8W"/>
                                         <constraint firstItem="lIZ-tJ-Gde" firstAttribute="leading" secondItem="SuE-6V-jq5" secondAttribute="trailing" constant="26" id="OGE-eQ-CtD"/>
@@ -257,7 +258,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2 minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJS-qm-pJ2">
-                                                    <rect key="frame" x="166" y="12" width="100" height="21"/>
+                                                    <rect key="frame" x="166" y="11" width="100" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -291,14 +292,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Theme:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8t-Ri-9UY">
-                                                    <rect key="frame" x="16" y="11" width="58" height="21"/>
+                                                    <rect key="frame" x="16" y="11" width="58" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Vz-kZ-Rz6">
-                                                    <rect key="frame" x="167" y="0.0" width="208" height="44"/>
+                                                    <rect key="frame" x="168" y="-1" width="162" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button"/>
                                                     <connections>
@@ -325,8 +326,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notification Set For:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkc-Ha-Md2">
-                                                    <rect key="frame" x="16" y="11" width="152" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reminder Set For:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkc-Ha-Md2">
+                                                    <rect key="frame" x="16" y="11" width="138" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -480,15 +481,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Insert lengthy description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSW-5l-ykM">
-                                <rect key="frame" x="16" y="64" width="343" height="445"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSW-5l-ykM">
+                                <rect key="frame" x="16" y="103" width="343" height="218"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="218" id="vOY-Ef-Wuu"/>
+                                </constraints>
+                                <string key="text">BrushNow - Toothbrush Timer is an app designed to improve dental health and dental care habits. It helps users to safely know when they have to stop brushing their teeth, with a minimum timer setting of 2 minutes (as recommended by expert), earning colourful themes as a reward for their hard work. Users can easily set reminders to remind themselves to brush their teeth, if they haven't.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This app has been made by students as part of the Swift Accelerator course." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3K-so-uZF">
+                                <rect key="frame" x="16" y="329" width="343" height="137"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="137" id="j1U-gr-dXx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swift" translatesAutoresizingMaskIntoConstraints="NO" id="7gK-bm-vD9">
+                                <rect key="frame" x="121" y="474" width="133" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4vn-IY-CX5" firstAttribute="trailing" secondItem="q3K-so-uZF" secondAttribute="trailing" constant="16" id="1Dh-BE-vHr"/>
+                            <constraint firstItem="7gK-bm-vD9" firstAttribute="leading" secondItem="4vn-IY-CX5" secondAttribute="leading" constant="121" id="Dj3-aO-uhz"/>
+                            <constraint firstItem="q3K-so-uZF" firstAttribute="top" secondItem="oSW-5l-ykM" secondAttribute="bottom" constant="8" id="Hgk-0A-aAb"/>
+                            <constraint firstItem="q3K-so-uZF" firstAttribute="leading" secondItem="4vn-IY-CX5" secondAttribute="leading" constant="16" id="Ki8-HZ-bCp"/>
+                            <constraint firstItem="4vn-IY-CX5" firstAttribute="bottom" secondItem="7gK-bm-vD9" secondAttribute="bottom" constant="16" id="Lcz-5T-IrJ"/>
+                            <constraint firstItem="oSW-5l-ykM" firstAttribute="leading" secondItem="4vn-IY-CX5" secondAttribute="leading" constant="16" id="ZsU-R5-LYC"/>
+                            <constraint firstItem="4vn-IY-CX5" firstAttribute="trailing" secondItem="7gK-bm-vD9" secondAttribute="trailing" constant="121" id="jYz-hf-OAg"/>
+                            <constraint firstItem="4vn-IY-CX5" firstAttribute="trailing" secondItem="oSW-5l-ykM" secondAttribute="trailing" constant="16" id="m7h-Mc-b58"/>
+                            <constraint firstItem="oSW-5l-ykM" firstAttribute="top" secondItem="4vn-IY-CX5" secondAttribute="top" constant="39" id="xv1-eF-LBP"/>
+                            <constraint firstItem="7gK-bm-vD9" firstAttribute="top" secondItem="q3K-so-uZF" secondAttribute="bottom" constant="8" id="zI3-t8-2dq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4vn-IY-CX5"/>
                     </view>
                     <navigationItem key="navigationItem" title="About App" id="351-1X-k8U"/>
@@ -601,6 +629,7 @@
         <image name="Toothbrush" width="40" height="40"/>
         <image name="cross" width="660" height="618"/>
         <image name="origpreview" width="80" height="80"/>
+        <image name="swift" width="256" height="256"/>
         <image name="upperleft" width="1060" height="1343"/>
     </resources>
 </document>
