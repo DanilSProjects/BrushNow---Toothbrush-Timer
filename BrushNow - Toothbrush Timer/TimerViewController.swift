@@ -46,12 +46,18 @@ class TimerViewController: ViewController {
         let loadedRookie = UserDefaults.standard.bool(forKey: "rookieBrush")
         let loadedDentist = UserDefaults.standard.bool(forKey: "dentistsBFF")
         let loadedManiac = UserDefaults.standard.bool(forKey: "maniac")
+        let loadedForgetful = UserDefaults.standard.bool(forKey: "forgetful")
+        let loadedAmnesiac = UserDefaults.standard.bool(forKey: "amnesiac")
+        let loadedNotif = UserDefaults.standard.integer(forKey: "notifNo")
         
+        notificationNo = loadedNotif
         numberOfBrushes = loadedBrushes
         badges[0].isCompleted = loadedFirst
         badges[1].isCompleted = loadedRookie
         badges[2].isCompleted = loadedDentist
         badges[3].isCompleted = loadedManiac
+        badges[4].isCompleted = loadedForgetful
+        badges[5].isCompleted = loadedAmnesiac
         
         if let data = UserDefaults.standard.data(forKey: "selectedTheme"),
             let myTheme = NSKeyedUnarchiver.unarchiveObject(with: data) as? Theme {

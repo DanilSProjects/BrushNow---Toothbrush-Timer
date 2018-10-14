@@ -18,6 +18,9 @@ var selectedTheme = themes[0]
 // TimeSet Setup
 var timeSet = 120
 
+// Notif
+var notificationNo = 0
+
 class SettingsTableViewController: UITableViewController {
     // Timer Set For:
     @IBOutlet weak var timerSetForLabel: UILabel!
@@ -162,47 +165,92 @@ class SettingsTableViewController: UITableViewController {
         UserDefaults.standard.set(encodedData, forKey: "labelColour")
     }
     
+    func goToBadges (alert: UIAlertAction) {
+        tabBarController?.selectedIndex = 1
+    }
+    
+    
     @IBAction func setButtonPressed(_ sender: Any) {
-        let setNotificationTextCol = UIColor(red:0.12, green:0.74, blue:0.13, alpha:1.0)
-        notifTimeLabel.textColor = setNotificationTextCol
-        save()
-        
-        let date = Date(timeIntervalSinceNow: 0)
-        let currentDateComp = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
-        
-        let newNotifAM = notifAM
-        let newNotifPM = notifAM + 12
-        
-        
-        var triggerDateHour = 0
-        
-        if currentDateComp.hour! <= newNotifPM && currentDateComp.hour! > 12 {
-            triggerDateHour = newNotifAM - (currentDateComp.hour! - 12)
-        } else if currentDateComp.hour! <= newNotifAM {
-            triggerDateHour = newNotifAM - currentDateComp.hour!
-        } else if currentDateComp.hour! == 0 {
-            triggerDateHour = newNotifAM
-        } else if currentDateComp.hour! > newNotifAM && currentDateComp.hour! < 13 {
-            triggerDateHour = newNotifPM - currentDateComp.hour!
+        if notifTimeLabel.textColor == .red {
+            let setNotificationTextCol = UIColor(red:0.12, green:0.74, blue:0.13, alpha:1.0)
+            notifTimeLabel.textColor = setNotificationTextCol
+            save()
+            
+            let date = Date(timeIntervalSinceNow: 0)
+            let currentDateComp = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+            
+            let newNotifAM = notifAM
+            let newNotifPM = notifAM + 12
+            
+            
+            var triggerDateHour = 0
+            
+            if currentDateComp.hour! <= newNotifPM && currentDateComp.hour! > 12 {
+                triggerDateHour = newNotifAM - (currentDateComp.hour! - 12)
+            } else if currentDateComp.hour! <= newNotifAM {
+                triggerDateHour = newNotifAM - currentDateComp.hour!
+            } else if currentDateComp.hour! == 0 {
+                triggerDateHour = newNotifAM
+            } else if currentDateComp.hour! > newNotifAM && currentDateComp.hour! < 13 {
+                triggerDateHour = newNotifPM - currentDateComp.hour!
+            }
+            
+            let triggerDateTimeInterval: TimeInterval = TimeInterval((triggerDateHour * 3600) - (currentDateComp.minute! * 60) - (currentDateComp.second!))
+            let triggerDate = Date(timeIntervalSinceNow: triggerDateTimeInterval)
+            let triggerDateComp = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: triggerDate)
+            
+            print (triggerDateComp)
+            
+            let content = UNMutableNotificationContent()
+            content.title = "BrushNow Reminder"
+            content.subtitle = "Have you brushed your teeth yet?"
+            content.body = " If not, consider paying a visit to the bathroom."
+            content.badge = 1
+            
+            let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDateComp, repeats: true)
+            
+            let request = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
+            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+            
+            notificationNo += 1
+            
+            switch notificationNo {
+            case 20:
+                badges[4].isCompleted = true
+                UserDefaults.standard.set(badges[4].isCompleted, forKey: "forgetful")
+                themes.append(Theme(name: "NIGHT", textColour: .yellow, backgroundColour: .black, buttonColour: .white, previewImage: "nightpreview"))
+                UserDefaults.standard.set(notificationNo, forKey: "notifNo")
+                self.save()
+                
+                let alert = UIAlertController(title: "Badge Unlocked", message: "You have unlocked 'Forgetful'! View your reward at the badges page.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("Badges Page", comment: "Goes to badges tab"), style: .default, handler: self.goToBadges))
+                alert.addAction(UIAlertAction(title: NSLocalizedString("Okay", comment: "Default action"), style: .default, handler: { _ in
+                    print ("Alert has been dimissed.")
+                }))
+                self.present(alert, animated: true, completion: nil)
+                
+            case 50:
+                badges[5].isCompleted = true
+                UserDefaults.standard.set(badges[5].isCompleted, forKey: "amnesiac")
+                let chocColour = UIColor(red:0.86, green:0.71, blue:0.55, alpha:1.0)
+                themes.append(Theme(name: "CHOCOLATE", textColour: .white, backgroundColour: .brown, buttonColour: chocColour, previewImage: "chocolatepreview"))
+                UserDefaults.standard.set(notificationNo, forKey: "notifNo")
+                self.save()
+                
+                let alert = UIAlertController(title: "Badge Unlocked", message: "You have unlocked 'Amnesiac'! View your reward at the badges page.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("Badges Page", comment: "Goes to badges tab"), style: .default, handler: self.goToBadges))
+                alert.addAction(UIAlertAction(title: NSLocalizedString("Okay", comment: "Default action"), style: .default, handler: { _ in
+                    print ("Alert has been dimissed.")
+                }))
+                self.present(alert, animated: true, completion: nil)
+                
+            default:
+            print (notificationNo)
+            UserDefaults.standard.set(notificationNo, forKey: "notifNo")
+            }
+        } else {
+            print ("Reminder already set.")
         }
-        
-        let triggerDateTimeInterval: TimeInterval = TimeInterval((triggerDateHour * 3600) - (currentDateComp.minute! * 60) - (currentDateComp.second!))
-        let triggerDate = Date(timeIntervalSinceNow: triggerDateTimeInterval)
-        let triggerDateComp = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: triggerDate)
-        
-        print (triggerDateComp)
-        
-        let content = UNMutableNotificationContent()
-        content.title = "BrushNow Reminder"
-        content.subtitle = "Have you brushed your teeth yet?"
-        content.body = " If not, consider paying a visit to the bathroom."
-        content.badge = 1
-        
-        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDateComp, repeats: true)
-        
-        let request = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
-        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-        
         
     }
     

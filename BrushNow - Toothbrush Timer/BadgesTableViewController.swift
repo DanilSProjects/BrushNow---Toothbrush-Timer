@@ -13,7 +13,10 @@ var badges = [
     Badge(name: "First Brush", desc: "Complete first timed brush.", isCompleted: false, reward: "Theme: Ocean", brushesNeeded: 1),
     Badge(name: "Rookie Brusher", desc: "Complete 10 timed brushes.", isCompleted: false, reward: "Theme: Grass", brushesNeeded: 10),
     Badge(name: "Dentist's BFF", desc: "Complete 25 timed brushes.", isCompleted: false, reward: "Theme: Tropical", brushesNeeded: 25),
-    Badge(name: "Maniac", desc: "Complete 50 timed brushes.", isCompleted: false, reward: "Theme: Paper", brushesNeeded: 50)
+    Badge(name: "Maniac", desc: "Complete 50 timed brushes.", isCompleted: false, reward: "Theme: Paper", brushesNeeded: 50),
+    Badge(name: "Forgetful", desc: "Set a reminder 20 times.", isCompleted: false, reward: "Theme: Night", brushesNeeded: 20 /* Reminders instead of brushes */),
+    Badge(name: "Amnesiac", desc: "Set a reminder 50 times.", isCompleted: false, reward: "Theme: Chocolate", brushesNeeded: 50 /* Reminders instead of brushes */),
+    Badge(name: "Early Bird", desc: "Complete a brush before 6am", isCompleted: false, reward: "Theme: Morning", brushesNeeded: 1)
 ]
 
 class BadgesTableViewController: UITableViewController {
@@ -61,11 +64,26 @@ class BadgesTableViewController: UITableViewController {
         cell.completeView.image = UIImage(named: "cross")
         cell.rewardLabel.textColor = .red
             
-            if badges[indexPath.row].brushesNeeded == 1 {
+            if badges[indexPath.row].name == "Forgetful" {
+                if badges[indexPath.row].brushesNeeded == 1 {
+                    cell.tipLabel.text = "You need to set \(badges[indexPath.row].brushesNeeded - notificationNo) more reminder!"
+                } else if badges[indexPath.row].brushesNeeded > 1 {
+                    cell.tipLabel.text = "You need to set \(badges[indexPath.row].brushesNeeded - notificationNo) more reminders!"
+                }
+            } else if badges[indexPath.row].name == "Amnesiac" {
+                    if badges[indexPath.row].brushesNeeded - notificationNo == 1 {
+                        cell.tipLabel.text = "You need to set \(badges[indexPath.row].brushesNeeded - notificationNo) more reminder!"
+                    } else if badges[indexPath.row].brushesNeeded - notificationNo > 1 {
+                        cell.tipLabel.text = "You need to set \(badges[indexPath.row].brushesNeeded - notificationNo) more reminders!"
+                } } else if badges[indexPath.row].name == "Early Bird" {
+                cell.tipLabel.text = "You still need to complete the brush!"
+            } else {
+            if badges[indexPath.row].brushesNeeded - numberOfBrushes == 1 {
         cell.tipLabel.text = "You need \(badges[indexPath.row].brushesNeeded - numberOfBrushes) more brush!"
-            } else if badges[indexPath.row].brushesNeeded > 1 {
+            } else if badges[indexPath.row].brushesNeeded - numberOfBrushes > 1 {
         cell.tipLabel.text = "You need \(badges[indexPath.row].brushesNeeded - numberOfBrushes) more brushes!"
         }
+            }
             
         } else {
             cell.completeView.image = UIImage(named: "tick")
@@ -76,6 +94,7 @@ class BadgesTableViewController: UITableViewController {
 
         return cell
     }
+
     
     // Set up cell height
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
