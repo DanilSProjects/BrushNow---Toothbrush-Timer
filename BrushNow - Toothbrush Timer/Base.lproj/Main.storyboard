@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -155,39 +156,59 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Achievement Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xbl-SW-P9k">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Achievement Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xbl-SW-P9k">
                                             <rect key="frame" x="133" y="7" width="184" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="fwX-eM-2ir"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reward: Theme: Ocean" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISv-00-L1p">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reward: Theme: Ocean" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISv-00-L1p">
                                             <rect key="frame" x="133" y="98" width="226" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You need 49 more brushes!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIZ-tJ-Gde">
-                                            <rect key="frame" x="133" y="69" width="242" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You need 49 more brushes!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIZ-tJ-Gde">
+                                            <rect key="frame" x="133" y="69" width="212" height="21"/>
                                             <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cross" translatesAutoresizingMaskIntoConstraints="NO" id="SuE-6V-jq5">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cross" translatesAutoresizingMaskIntoConstraints="NO" id="SuE-6V-jq5">
                                             <rect key="frame" x="8" y="27" width="99" height="95"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="95" id="BYi-nl-x1M"/>
+                                                <constraint firstAttribute="width" constant="99" id="JP8-yh-SKY"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Complete 50 timed brushes" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02w-pS-s50">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complete 50 timed brushes" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02w-pS-s50">
                                             <rect key="frame" x="133" y="39" width="242" height="50"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="KLw-WC-5yi"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ISv-00-L1p" firstAttribute="leading" secondItem="SuE-6V-jq5" secondAttribute="trailing" constant="26" id="KT4-Wz-r4c"/>
+                                        <constraint firstItem="Xbl-SW-P9k" firstAttribute="leading" secondItem="SuE-6V-jq5" secondAttribute="trailing" constant="26" id="LGj-m5-q8W"/>
+                                        <constraint firstItem="lIZ-tJ-Gde" firstAttribute="leading" secondItem="SuE-6V-jq5" secondAttribute="trailing" constant="26" id="OGE-eQ-CtD"/>
+                                        <constraint firstItem="02w-pS-s50" firstAttribute="leading" secondItem="SuE-6V-jq5" secondAttribute="trailing" constant="26" id="Oz9-CC-BjA"/>
+                                        <constraint firstItem="ISv-00-L1p" firstAttribute="top" secondItem="02w-pS-s50" secondAttribute="bottom" constant="9" id="T0g-3W-BYx"/>
+                                        <constraint firstItem="02w-pS-s50" firstAttribute="top" secondItem="Xbl-SW-P9k" secondAttribute="bottom" constant="2" id="a7L-kq-sa6"/>
+                                        <constraint firstAttribute="trailing" secondItem="Xbl-SW-P9k" secondAttribute="trailing" constant="58" id="gr0-qo-4De"/>
+                                        <constraint firstItem="SuE-6V-jq5" firstAttribute="top" secondItem="NqH-j3-kqm" secondAttribute="top" constant="27" id="hle-7p-p0M"/>
+                                        <constraint firstAttribute="trailing" secondItem="02w-pS-s50" secondAttribute="trailing" id="iVc-vw-zNm"/>
+                                        <constraint firstItem="SuE-6V-jq5" firstAttribute="leading" secondItem="NqH-j3-kqm" secondAttribute="leading" constant="8" id="lAw-v1-rQO"/>
+                                        <constraint firstItem="Xbl-SW-P9k" firstAttribute="top" secondItem="NqH-j3-kqm" secondAttribute="top" constant="7" id="lO5-iE-CyF"/>
+                                        <constraint firstItem="lIZ-tJ-Gde" firstAttribute="top" secondItem="02w-pS-s50" secondAttribute="bottom" constant="-20" id="oOI-iU-Ge6"/>
+                                        <constraint firstItem="ISv-00-L1p" firstAttribute="trailing" secondItem="NqH-j3-kqm" secondAttribute="trailingMargin" id="rlc-pa-jYq"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
