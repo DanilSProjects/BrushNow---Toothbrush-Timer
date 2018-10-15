@@ -165,6 +165,11 @@ class SettingsTableViewController: UITableViewController {
         UserDefaults.standard.set(encodedData, forKey: "labelColour")
     }
     
+    func saveTheme() {
+        let encodedData = NSKeyedArchiver.archivedData(withRootObject: themes)
+        UserDefaults.standard.set(encodedData, forKey: "themes")
+    }
+    
     func goToBadges (alert: UIAlertAction) {
         tabBarController?.selectedIndex = 1
     }
@@ -220,7 +225,7 @@ class SettingsTableViewController: UITableViewController {
                 UserDefaults.standard.set(badges[4].isCompleted, forKey: "forgetful")
                 themes.append(Theme(name: "NIGHT", textColour: .yellow, backgroundColour: .black, buttonColour: .white, previewImage: "nightpreview"))
                 UserDefaults.standard.set(notificationNo, forKey: "notifNo")
-                self.save()
+                self.saveTheme()
                 
                 let alert = UIAlertController(title: "Badge Unlocked", message: "You have unlocked 'Forgetful'! View your reward at the badges page.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: NSLocalizedString("Badges Page", comment: "Goes to badges tab"), style: .default, handler: self.goToBadges))
@@ -235,7 +240,7 @@ class SettingsTableViewController: UITableViewController {
                 let chocColour = UIColor(red:0.86, green:0.71, blue:0.55, alpha:1.0)
                 themes.append(Theme(name: "CHOCOLATE", textColour: .white, backgroundColour: .brown, buttonColour: chocColour, previewImage: "chocolatepreview"))
                 UserDefaults.standard.set(notificationNo, forKey: "notifNo")
-                self.save()
+                self.saveTheme()
                 
                 let alert = UIAlertController(title: "Badge Unlocked", message: "You have unlocked 'Amnesiac'! View your reward at the badges page.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: NSLocalizedString("Badges Page", comment: "Goes to badges tab"), style: .default, handler: self.goToBadges))
