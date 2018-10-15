@@ -12,6 +12,14 @@
 		65039EDB2141713D008D50C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65039ED92141713D008D50C3 /* Main.storyboard */; };
 		65039EDD2141713F008D50C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65039EDC2141713F008D50C3 /* Assets.xcassets */; };
 		65039EE02141713F008D50C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65039EDE2141713F008D50C3 /* LaunchScreen.storyboard */; };
+		650F7F8B217461AB0055DC1B /* Cabin-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 650F7F83217461AA0055DC1B /* Cabin-Italic.ttf */; };
+		650F7F8C217461AB0055DC1B /* Cabin-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 650F7F84217461AB0055DC1B /* Cabin-MediumItalic.ttf */; };
+		650F7F8D217461AB0055DC1B /* Cabin-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 650F7F85217461AB0055DC1B /* Cabin-Regular.ttf */; };
+		650F7F8E217461AB0055DC1B /* Cabin-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 650F7F86217461AB0055DC1B /* Cabin-Bold.ttf */; };
+		650F7F8F217461AB0055DC1B /* Cabin-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 650F7F87217461AB0055DC1B /* Cabin-SemiBold.ttf */; };
+		650F7F90217461AB0055DC1B /* Cabin-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 650F7F88217461AB0055DC1B /* Cabin-SemiBoldItalic.ttf */; };
+		650F7F91217461AB0055DC1B /* Cabin-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 650F7F89217461AB0055DC1B /* Cabin-BoldItalic.ttf */; };
+		650F7F92217461AB0055DC1B /* Cabin-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 650F7F8A217461AB0055DC1B /* Cabin-Medium.ttf */; };
 		652AADFF216479D90037F5C9 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652AADFE216479D90037F5C9 /* Theme.swift */; };
 		652AAE01216483150037F5C9 /* SetThemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652AAE00216483150037F5C9 /* SetThemeTableViewController.swift */; };
 		652AAE03216483210037F5C9 /* SetThemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652AAE02216483210037F5C9 /* SetThemeTableViewCell.swift */; };
@@ -31,6 +39,14 @@
 		65039EDC2141713F008D50C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65039EDF2141713F008D50C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65039EE12141713F008D50C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		650F7F83217461AA0055DC1B /* Cabin-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Italic.ttf"; sourceTree = "<group>"; };
+		650F7F84217461AB0055DC1B /* Cabin-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-MediumItalic.ttf"; sourceTree = "<group>"; };
+		650F7F85217461AB0055DC1B /* Cabin-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Regular.ttf"; sourceTree = "<group>"; };
+		650F7F86217461AB0055DC1B /* Cabin-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Bold.ttf"; sourceTree = "<group>"; };
+		650F7F87217461AB0055DC1B /* Cabin-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-SemiBold.ttf"; sourceTree = "<group>"; };
+		650F7F88217461AB0055DC1B /* Cabin-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		650F7F89217461AB0055DC1B /* Cabin-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-BoldItalic.ttf"; sourceTree = "<group>"; };
+		650F7F8A217461AB0055DC1B /* Cabin-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Medium.ttf"; sourceTree = "<group>"; };
 		652AADFE216479D90037F5C9 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		652AAE00216483150037F5C9 /* SetThemeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetThemeTableViewController.swift; sourceTree = "<group>"; };
 		652AAE02216483210037F5C9 /* SetThemeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetThemeTableViewCell.swift; sourceTree = "<group>"; };
@@ -87,8 +103,24 @@
 				65039EDC2141713F008D50C3 /* Assets.xcassets */,
 				65039EDE2141713F008D50C3 /* LaunchScreen.storyboard */,
 				65039EE12141713F008D50C3 /* Info.plist */,
+				650F7F822174618A0055DC1B /* Cabin */,
 			);
 			path = "BrushNow - Toothbrush Timer";
+			sourceTree = "<group>";
+		};
+		650F7F822174618A0055DC1B /* Cabin */ = {
+			isa = PBXGroup;
+			children = (
+				650F7F86217461AB0055DC1B /* Cabin-Bold.ttf */,
+				650F7F89217461AB0055DC1B /* Cabin-BoldItalic.ttf */,
+				650F7F83217461AA0055DC1B /* Cabin-Italic.ttf */,
+				650F7F8A217461AB0055DC1B /* Cabin-Medium.ttf */,
+				650F7F84217461AB0055DC1B /* Cabin-MediumItalic.ttf */,
+				650F7F85217461AB0055DC1B /* Cabin-Regular.ttf */,
+				650F7F87217461AB0055DC1B /* Cabin-SemiBold.ttf */,
+				650F7F88217461AB0055DC1B /* Cabin-SemiBoldItalic.ttf */,
+			);
+			path = Cabin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,9 +181,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				650F7F8B217461AB0055DC1B /* Cabin-Italic.ttf in Resources */,
+				650F7F8C217461AB0055DC1B /* Cabin-MediumItalic.ttf in Resources */,
+				650F7F8E217461AB0055DC1B /* Cabin-Bold.ttf in Resources */,
 				65039EE02141713F008D50C3 /* LaunchScreen.storyboard in Resources */,
+				650F7F90217461AB0055DC1B /* Cabin-SemiBoldItalic.ttf in Resources */,
+				650F7F92217461AB0055DC1B /* Cabin-Medium.ttf in Resources */,
+				650F7F91217461AB0055DC1B /* Cabin-BoldItalic.ttf in Resources */,
 				65039EDD2141713F008D50C3 /* Assets.xcassets in Resources */,
 				65039EDB2141713D008D50C3 /* Main.storyboard in Resources */,
+				650F7F8D217461AB0055DC1B /* Cabin-Regular.ttf in Resources */,
+				650F7F8F217461AB0055DC1B /* Cabin-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

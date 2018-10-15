@@ -10,6 +10,20 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Cabin-Bold.ttf">
+            <string>Cabin-Bold</string>
+        </array>
+        <array key="Cabin-Medium.ttf">
+            <string>Cabin-Medium</string>
+        </array>
+        <array key="Cabin-MediumItalic.ttf">
+            <string>Cabin-MediumItalic</string>
+        </array>
+        <array key="Cabin-Regular.ttf">
+            <string>Cabin-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Timer-->
         <scene sceneID="Mpv-ex-sVa">
@@ -24,7 +38,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="91" id="G29-oN-AQK"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -33,17 +47,17 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="91" id="gkw-Nf-BxD"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMj-qX-rcN">
-                                <rect key="frame" x="75" y="426" width="224" height="152"/>
+                                <rect key="frame" x="75" y="412" width="224" height="152"/>
                                 <color key="backgroundColor" red="1" green="0.67351214971646456" blue="0.17251184917610995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="152" id="76A-Hn-OOr"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="47"/>
                                 <state key="normal" title="START">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -52,11 +66,11 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="READY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TxP-9J-3jS">
-                                <rect key="frame" x="0.0" y="252" width="375" height="90"/>
+                                <rect key="frame" x="0.0" y="245" width="375" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="haZ-TD-jnN"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="75"/>
+                                <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="75"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -65,7 +79,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3p6-DS-vRu"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -74,7 +88,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="PYl-vR-g0m"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -85,11 +99,11 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHOCOLATE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAp-qR-iDC">
-                                <rect key="frame" x="67" y="317" width="241" height="56"/>
+                                <rect key="frame" x="67" y="303" width="241" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="700-YH-1Km"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -106,13 +120,15 @@
                             <constraint firstItem="LYK-SM-Ye7" firstAttribute="top" secondItem="qbe-2K-sMP" secondAttribute="top" constant="28" id="I3I-sS-ihe"/>
                             <constraint firstItem="lbJ-qJ-CuC" firstAttribute="top" secondItem="qbe-2K-sMP" secondAttribute="top" constant="79" id="Ljl-kQ-zCd"/>
                             <constraint firstItem="qbe-2K-sMP" firstAttribute="trailing" secondItem="lbJ-qJ-CuC" secondAttribute="trailing" constant="72" id="MK2-ui-yq1"/>
+                            <constraint firstItem="AAp-qR-iDC" firstAttribute="top" secondItem="ZOq-TO-wGk" secondAttribute="bottom" constant="-40" id="ORl-pf-fPL"/>
                             <constraint firstItem="ZOq-TO-wGk" firstAttribute="top" secondItem="lbJ-qJ-CuC" secondAttribute="bottom" constant="59" id="PrL-ld-sX4"/>
                             <constraint firstItem="TxP-9J-3jS" firstAttribute="trailing" secondItem="qbe-2K-sMP" secondAttribute="trailing" id="RzO-Tf-rH6"/>
                             <constraint firstItem="m1Q-0w-tDO" firstAttribute="trailing" secondItem="qbe-2K-sMP" secondAttribute="trailing" id="SGv-aW-kf4"/>
                             <constraint firstItem="lbJ-qJ-CuC" firstAttribute="leading" secondItem="qbe-2K-sMP" secondAttribute="leading" constant="72" id="XYC-jK-w3b"/>
                             <constraint firstItem="LYK-SM-Ye7" firstAttribute="leading" secondItem="qbe-2K-sMP" secondAttribute="leading" constant="16" id="cub-2x-Ndv"/>
                             <constraint firstItem="qbe-2K-sMP" firstAttribute="trailing" secondItem="AAp-qR-iDC" secondAttribute="trailing" constant="67" id="edf-Y1-H2M"/>
-                            <constraint firstItem="TxP-9J-3jS" firstAttribute="top" secondItem="m1Q-0w-tDO" secondAttribute="bottom" constant="21" id="f6T-QO-NnA"/>
+                            <constraint firstItem="TxP-9J-3jS" firstAttribute="top" secondItem="m1Q-0w-tDO" secondAttribute="bottom" constant="14" id="f6T-QO-NnA"/>
+                            <constraint firstItem="lbJ-qJ-CuC" firstAttribute="top" secondItem="LYK-SM-Ye7" secondAttribute="bottom" constant="-40" id="flL-2f-ZsA"/>
                             <constraint firstItem="OMj-qX-rcN" firstAttribute="leading" secondItem="qbe-2K-sMP" secondAttribute="leading" constant="75" id="k5g-6e-fLu"/>
                             <constraint firstItem="AAp-qR-iDC" firstAttribute="leading" secondItem="qbe-2K-sMP" secondAttribute="leading" constant="67" id="oID-11-5RW"/>
                             <constraint firstItem="ZsQ-f2-jCv" firstAttribute="top" secondItem="m1Q-0w-tDO" secondAttribute="bottom" constant="21" id="qeh-BX-B3G"/>
@@ -120,7 +136,6 @@
                             <constraint firstItem="qbe-2K-sMP" firstAttribute="trailing" secondItem="LYK-SM-Ye7" secondAttribute="trailing" constant="16" id="tkD-Bc-6Dc"/>
                             <constraint firstItem="m1Q-0w-tDO" firstAttribute="leading" secondItem="qbe-2K-sMP" secondAttribute="leading" id="w87-0u-8vE"/>
                             <constraint firstItem="m1Q-0w-tDO" firstAttribute="top" secondItem="lbJ-qJ-CuC" secondAttribute="bottom" constant="14" id="wyz-H5-eOC"/>
-                            <constraint firstItem="AAp-qR-iDC" firstAttribute="top" secondItem="TxP-9J-3jS" secondAttribute="bottom" constant="-25" id="xYh-L5-PPD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qbe-2K-sMP"/>
                     </view>
@@ -161,19 +176,19 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="fwX-eM-2ir"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reward: Theme: Ocean" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISv-00-L1p">
-                                            <rect key="frame" x="133" y="101" width="226" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="133" y="101" width="226" height="22"/>
+                                            <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You need 49 more brushes!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lIZ-tJ-Gde">
-                                            <rect key="frame" x="133" y="72" width="242" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                            <rect key="frame" x="133" y="72" width="242" height="22"/>
+                                            <fontDescription key="fontDescription" name="Cabin-MediumItalic" family="Cabin" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -189,7 +204,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="KLw-WC-5yi"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -251,16 +266,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timer Set For:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AY7-4S-frd">
-                                                    <rect key="frame" x="16" y="11" width="108" height="21"/>
+                                                    <rect key="frame" x="16" y="11" width="108" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2 minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJS-qm-pJ2">
                                                     <rect key="frame" x="166" y="11" width="100" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -294,13 +309,14 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Theme:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8t-Ri-9UY">
                                                     <rect key="frame" x="16" y="11" width="58" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Vz-kZ-Rz6">
                                                     <rect key="frame" x="168" y="-1" width="162" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="17"/>
                                                     <state key="normal" title="Button"/>
                                                     <connections>
                                                         <segue destination="ZYz-dr-aMo" kind="presentation" id="iOI-Ak-0TC"/>
@@ -327,16 +343,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reminder Set For:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkc-Ha-Md2">
-                                                    <rect key="frame" x="16" y="11" width="138" height="21"/>
+                                                    <rect key="frame" x="16" y="11" width="138" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10PM/10AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1T-ow-gAx">
-                                                    <rect key="frame" x="176" y="11" width="92" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -351,6 +360,7 @@
                                                     <rect key="frame" x="176" y="38" width="81" height="51"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.55922277378207019" green="0.77107788705583757" blue="0.65322375763850815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="17"/>
                                                     <state key="normal" title="Set">
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
@@ -362,6 +372,7 @@
                                                     <rect key="frame" x="278" y="38" width="81" height="51"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.77107788705583757" green="0.0" blue="0.021650380403326015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="17"/>
                                                     <state key="normal" title="Cancel">
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
@@ -369,6 +380,13 @@
                                                         <action selector="cancelPressed:" destination="DdP-Wt-SIs" eventType="touchUpInside" id="emU-GW-xqW"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10PM/10AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1T-ow-gAx">
+                                                    <rect key="frame" x="166" y="11" width="94" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -390,9 +408,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UT2-xH-XSC">
-                                                    <rect key="frame" x="16" y="11" width="82" height="21"/>
+                                                    <rect key="frame" x="16" y="11" width="83" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -442,18 +460,28 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title of Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VuL-IV-dYB">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VuL-IV-dYB">
                                             <rect key="frame" x="112" y="5" width="182" height="49"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="origpreview" translatesAutoresizingMaskIntoConstraints="NO" id="d5U-8i-TvM">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="origpreview" translatesAutoresizingMaskIntoConstraints="NO" id="d5U-8i-TvM">
                                             <rect key="frame" x="23" y="0.0" width="66" height="60"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="66" id="Qnt-cB-6c1"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="d5U-8i-TvM" secondAttribute="bottom" id="I1H-8D-y18"/>
+                                        <constraint firstItem="VuL-IV-dYB" firstAttribute="top" secondItem="iRt-Mf-ySJ" secondAttribute="top" constant="5" id="IpA-72-hOD"/>
+                                        <constraint firstAttribute="trailing" secondItem="VuL-IV-dYB" secondAttribute="trailing" constant="81" id="SXc-Xh-p2Z"/>
+                                        <constraint firstItem="d5U-8i-TvM" firstAttribute="top" secondItem="iRt-Mf-ySJ" secondAttribute="top" id="U3S-i6-nAZ"/>
+                                        <constraint firstItem="d5U-8i-TvM" firstAttribute="leading" secondItem="iRt-Mf-ySJ" secondAttribute="leading" constant="23" id="lG8-lh-3i6"/>
+                                        <constraint firstAttribute="bottom" secondItem="VuL-IV-dYB" secondAttribute="bottom" constant="5" id="sD9-X9-Zdi"/>
+                                        <constraint firstItem="VuL-IV-dYB" firstAttribute="leading" secondItem="d5U-8i-TvM" secondAttribute="trailing" constant="23" id="w8E-vY-sfK"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -487,7 +515,7 @@
                                     <constraint firstAttribute="height" constant="218" id="vOY-Ef-Wuu"/>
                                 </constraints>
                                 <string key="text">BrushNow - Toothbrush Timer is an app designed to improve dental health and dental care habits. It helps users to safely know when they have to stop brushing their teeth, with a minimum timer setting of 2 minutes (as recommended by expert), earning colourful themes as a reward for their hard work. Users can easily set reminders to remind themselves to brush their teeth, if they haven't.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -496,7 +524,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="137" id="j1U-gr-dXx"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
