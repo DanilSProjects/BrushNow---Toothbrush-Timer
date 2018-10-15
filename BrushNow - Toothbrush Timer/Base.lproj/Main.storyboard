@@ -200,9 +200,9 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complete 50 timed brushes" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="02w-pS-s50">
-                                            <rect key="frame" x="133" y="42" width="241" height="50"/>
+                                            <rect key="frame" x="133" y="42" width="241" height="22"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="50" id="KLw-WC-5yi"/>
+                                                <constraint firstAttribute="height" constant="22" id="KLw-WC-5yi"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -215,14 +215,14 @@
                                         <constraint firstItem="Xbl-SW-P9k" firstAttribute="leading" secondItem="SuE-6V-jq5" secondAttribute="trailing" constant="26" id="LGj-m5-q8W"/>
                                         <constraint firstItem="lIZ-tJ-Gde" firstAttribute="leading" secondItem="SuE-6V-jq5" secondAttribute="trailing" constant="26" id="OGE-eQ-CtD"/>
                                         <constraint firstItem="02w-pS-s50" firstAttribute="leading" secondItem="SuE-6V-jq5" secondAttribute="trailing" constant="26" id="Oz9-CC-BjA"/>
-                                        <constraint firstItem="ISv-00-L1p" firstAttribute="top" secondItem="02w-pS-s50" secondAttribute="bottom" constant="9" id="T0g-3W-BYx"/>
+                                        <constraint firstItem="ISv-00-L1p" firstAttribute="top" secondItem="02w-pS-s50" secondAttribute="bottom" constant="37" id="T0g-3W-BYx"/>
                                         <constraint firstItem="02w-pS-s50" firstAttribute="top" secondItem="Xbl-SW-P9k" secondAttribute="bottom" constant="5" id="a7L-kq-sa6"/>
                                         <constraint firstAttribute="trailing" secondItem="Xbl-SW-P9k" secondAttribute="trailing" constant="58" id="gr0-qo-4De"/>
                                         <constraint firstItem="SuE-6V-jq5" firstAttribute="top" secondItem="NqH-j3-kqm" secondAttribute="top" constant="27" id="hle-7p-p0M"/>
                                         <constraint firstAttribute="trailing" secondItem="02w-pS-s50" secondAttribute="trailing" constant="1" id="iVc-vw-zNm"/>
                                         <constraint firstItem="SuE-6V-jq5" firstAttribute="leading" secondItem="NqH-j3-kqm" secondAttribute="leading" constant="8" id="lAw-v1-rQO"/>
                                         <constraint firstItem="Xbl-SW-P9k" firstAttribute="top" secondItem="NqH-j3-kqm" secondAttribute="top" constant="7" id="lO5-iE-CyF"/>
-                                        <constraint firstItem="lIZ-tJ-Gde" firstAttribute="top" secondItem="02w-pS-s50" secondAttribute="bottom" constant="-20" id="oOI-iU-Ge6"/>
+                                        <constraint firstItem="lIZ-tJ-Gde" firstAttribute="top" secondItem="02w-pS-s50" secondAttribute="bottom" constant="8" id="oOI-iU-Ge6"/>
                                         <constraint firstItem="ISv-00-L1p" firstAttribute="trailing" secondItem="NqH-j3-kqm" secondAttribute="trailingMargin" id="rlc-pa-jYq"/>
                                     </constraints>
                                 </tableViewCellContentView>
