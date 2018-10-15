@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         timeSet = loadedTimeSet
         
         UserDefaults.standard.register(defaults: ["notifStepper": 10.0])
+        UserDefaults.standard.register(defaults: ["pmStepper": 10.0])
         return true
     }
 

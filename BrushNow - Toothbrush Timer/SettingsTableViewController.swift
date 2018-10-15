@@ -31,8 +31,10 @@ class SettingsTableViewController: UITableViewController {
     
     // Notifications
     @IBOutlet weak var setButton: UIButton!
-    @IBOutlet weak var notifTimeLabel: UILabel!
-    @IBOutlet weak var notifStepper: UIStepper!
+    @IBOutlet weak var amLabel: UILabel!
+    @IBOutlet weak var amStepper: UIStepper!
+    @IBOutlet weak var pmLabel: UILabel!
+    @IBOutlet weak var pmStepper: UIStepper!
     @IBOutlet weak var cancelButton: UIButton!
     
     var notifAM = 10
@@ -44,7 +46,9 @@ class SettingsTableViewController: UITableViewController {
         timerStepper.value = loadedStepper
         
         let loadedNotifStepper = UserDefaults.standard.double(forKey: "notifStepper")
-        notifStepper.value = loadedNotifStepper
+        let loadedPMStepper = UserDefaults.standard.double(forKey: "pmStepper")
+        amStepper.value = loadedNotifStepper
+        pmStepper.value = loadedPMStepper
         
         timerSetForLabel.text = "\(Int(timerStepper.value).description) minutes"
         UserDefaults.standard.register(defaults: ["timeSet": 120])
@@ -62,13 +66,16 @@ class SettingsTableViewController: UITableViewController {
         notifAM = loadedAM
         notifPM = loadedPM
         
-        notifTimeLabel.text = "\(notifAM)AM/\(notifPM)PM"
+        amLabel.text = "\(notifAM)AM"
+        pmLabel.text = "\(notifPM)PM"
         
         if let data = UserDefaults.standard.data(forKey: "labelColour"),
             let myColour = NSKeyedUnarchiver.unarchiveObject(with: data) as? UIColor {
-            notifTimeLabel.textColor = myColour
+            amLabel.textColor = myColour
+            pmLabel.textColor = myColour
         } else {
-            notifTimeLabel.textColor = .red
+            amLabel.textColor = .red
+            pmLabel.textColor = .red
             print("There is an issue with the label colour") // NOTE FOR VIEWER: THIS WILL DEFINITELY PRINT ON FIRST LAUNCH DUE TO NOT HAVING THEMES STORED IN IT YET, BUT DON'T WORRY - IT DOESN'T DO ANYTHING
         }
     }
@@ -161,7 +168,7 @@ class SettingsTableViewController: UITableViewController {
      // MARK: - Notifications
  */
     func save() {
-        let encodedData = NSKeyedArchiver.archivedData(withRootObject: notifTimeLabel.textColor)
+        let encodedData = NSKeyedArchiver.archivedData(withRootObject: amLabel.textColor)
         UserDefaults.standard.set(encodedData, forKey: "labelColour")
     }
     
@@ -176,28 +183,34 @@ class SettingsTableViewController: UITableViewController {
     
     
     @IBAction func setButtonPressed(_ sender: Any) {
-        if notifTimeLabel.textColor == .red {
+        if amLabel.textColor == .red {
             let setNotificationTextCol = UIColor(red:0.12, green:0.74, blue:0.13, alpha:1.0)
-            notifTimeLabel.textColor = setNotificationTextCol
+            amLabel.textColor = setNotificationTextCol
+            pmLabel.textColor = setNotificationTextCol
             save()
             
             let date = Date(timeIntervalSinceNow: 0)
             let currentDateComp = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
             
-            let newNotifAM = notifAM
-            let newNotifPM = notifAM + 12
-            
-            
             var triggerDateHour = 0
+            var pmTriggerHour = 0
             
-            if currentDateComp.hour! <= newNotifPM && currentDateComp.hour! > 12 {
-                triggerDateHour = newNotifAM - (currentDateComp.hour! - 12)
-            } else if currentDateComp.hour! <= newNotifAM {
-                triggerDateHour = newNotifAM - currentDateComp.hour!
-            } else if currentDateComp.hour! == 0 {
-                triggerDateHour = newNotifAM
-            } else if currentDateComp.hour! > newNotifAM && currentDateComp.hour! < 13 {
-                triggerDateHour = newNotifPM - currentDateComp.hour!
+            if currentDateComp.hour! < notifAM {
+                triggerDateHour = notifAM - currentDateComp.hour!
+            } else if currentDateComp.hour! > notifAM {
+                triggerDateHour = 24 - (currentDateComp.hour! - notifAM)
+            } else if currentDateComp.hour! == notifAM {
+                triggerDateHour = currentDateComp.hour!
+            }
+            
+            let usedNotifPM = notifPM + 12
+            
+            if currentDateComp.hour! < usedNotifPM {
+                pmTriggerHour = usedNotifPM - currentDateComp.hour!
+            } else if currentDateComp.hour! > usedNotifPM {
+                pmTriggerHour = 24 - (currentDateComp.hour! - usedNotifPM)
+            } else if currentDateComp.hour! == usedNotifPM {
+                pmTriggerHour = currentDateComp.hour!
             }
             
             let triggerDateTimeInterval: TimeInterval = TimeInterval((triggerDateHour * 3600) - (currentDateComp.minute! * 60) - (currentDateComp.second!))
@@ -206,6 +219,12 @@ class SettingsTableViewController: UITableViewController {
             
             print (triggerDateComp)
             
+            let pmDateTimeInterval: TimeInterval = TimeInterval((pmTriggerHour * 3600) - (currentDateComp.minute! * 60) - (currentDateComp.second!))
+            let pmDate = Date(timeIntervalSinceNow: pmDateTimeInterval)
+            let pmDateComp = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: pmDate)
+            
+            print (pmDateComp)
+            
             let content = UNMutableNotificationContent()
             content.title = "BrushNow Reminder"
             content.subtitle = "Have you brushed your teeth yet?"
@@ -213,9 +232,13 @@ class SettingsTableViewController: UITableViewController {
             content.badge = 1
             
             let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDateComp, repeats: true)
+            let pmTrigger = UNCalendarNotificationTrigger(dateMatching: pmDateComp, repeats: true)
             
             let request = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
+            let pmRequest = UNNotificationRequest(identifier: "PMTimerDone", content: content, trigger: pmTrigger)
+            
             UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+            UNUserNotificationCenter.current().add(pmRequest, withCompletionHandler: nil)
             
             notificationNo += 1
             
@@ -262,13 +285,11 @@ class SettingsTableViewController: UITableViewController {
     }
     
     @IBAction func notifStepper(_ sender: UIStepper) {
-        if notifTimeLabel.textColor == .red {
+        if amLabel.textColor == .red {
         notifAM = Int(sender.value)
-        notifPM = notifAM
-        notifTimeLabel.text = "\(notifAM)AM/\(notifPM)PM"
+        amLabel.text = "\(notifAM)AM"
         UserDefaults.standard.set(sender.value, forKey: "notifStepper")
         UserDefaults.standard.set(notifAM, forKey: "notifAM")
-        UserDefaults.standard.set(notifPM, forKey: "notifPM")
         } else {
             let alert = UIAlertController(title: "Reminder is Already Set", message: "Your reminder timing cannot be changed while it is already set. Please cancel your current timing first before changing it.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: NSLocalizedString("Okay", comment: "Default action"), style: .default, handler: { _ in
@@ -278,10 +299,25 @@ class SettingsTableViewController: UITableViewController {
         }
     }
 
+    @IBAction func pmStepper(_ sender: UIStepper) {
+        if pmLabel.textColor == .red {
+            notifPM = Int(sender.value)
+            pmLabel.text = "\(notifPM)PM"
+            UserDefaults.standard.set(sender.value, forKey: "pmStepper")
+            UserDefaults.standard.set(notifPM, forKey: "notifPM")
+        } else {
+            let alert = UIAlertController(title: "Reminder is Already Set", message: "Your reminder timing cannot be changed while it is already set. Please cancel your current timing first before changing it.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Okay", comment: "Default action"), style: .default, handler: { _ in
+                NSLog("The \"OK\" alert occured.")
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
     
     @IBAction func cancelPressed(_ sender: Any) {
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
-        notifTimeLabel.textColor = .red
+        amLabel.textColor = .red
+        pmLabel.textColor = .red
         save()
     }
     
