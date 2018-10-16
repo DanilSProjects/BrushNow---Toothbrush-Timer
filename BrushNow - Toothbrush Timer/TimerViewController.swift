@@ -150,7 +150,7 @@ class TimerViewController: ViewController {
         // Ready set go
         let animator = UIViewPropertyAnimator(duration: 1.5, curve: .linear, animations: {
             self.readySetLabel.text = "READY"
-            self.readySetLabel.textColor = .black
+            self.readySetLabel.textColor = selectedTheme.textColour
             self.readySetLabel.transform = CGAffineTransform(scaleX: 0.2, y: 0.2)
             self.readySetLabel.alpha = 0
         })
@@ -158,7 +158,6 @@ class TimerViewController: ViewController {
             self.readySetLabel.transform = CGAffineTransform.identity
             self.readySetLabel.alpha = 1
             self.readySetLabel.text = "SET"
-            self.readySetLabel.textColor = .black
             let secondAnimator = UIViewPropertyAnimator(duration: 1.5, curve: .linear, animations : {
                 self.readySetLabel.transform = CGAffineTransform(scaleX: 0.2, y: 0.2)
                 self.readySetLabel.alpha = 0
@@ -168,7 +167,6 @@ class TimerViewController: ViewController {
                 self.readySetLabel.transform = CGAffineTransform.identity
                 self.readySetLabel.alpha = 1
                 self.readySetLabel.text = "GO!"
-                self.readySetLabel.textColor = .black
                 let thirdAnimator = UIViewPropertyAnimator(duration: 1.5, curve: .linear, animations : {
                     self.readySetLabel.transform = CGAffineTransform(scaleX: 2, y: 2)
                     self.readySetLabel.alpha = 0
