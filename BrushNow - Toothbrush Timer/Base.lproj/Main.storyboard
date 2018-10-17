@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Nm-i9-RSa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Nm-i9-RSa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -405,36 +403,6 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="3" id="37j-cu-yFG">
-                                        <rect key="frame" x="0.0" y="254" width="375" height="3"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="37j-cu-yFG" id="m9J-mU-jm5">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="2.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.3481321383" green="0.3481321383" blue="0.3481321383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="25y-jw-Cpd">
-                                        <rect key="frame" x="0.0" y="257" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="25y-jw-Cpd" id="oZS-1N-w0l">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UT2-xH-XSC">
-                                                    <rect key="frame" x="16" y="11" width="83" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="18"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <segue destination="8xI-JR-DHc" kind="show" id="HG3-qd-EyI"/>
-                                        </connections>
-                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -477,13 +445,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VuL-IV-dYB">
-                                            <rect key="frame" x="112" y="5" width="182" height="49"/>
+                                            <rect key="frame" x="112" y="5" width="182" height="49.5"/>
                                             <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="origpreview" translatesAutoresizingMaskIntoConstraints="NO" id="d5U-8i-TvM">
-                                            <rect key="frame" x="23" y="0.0" width="66" height="60"/>
+                                            <rect key="frame" x="23" y="0.0" width="66" height="59.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="66" id="Qnt-cB-6c1"/>
                                             </constraints>
@@ -516,61 +484,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cP6-jO-SJR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4010.4000000000001" y="2176.4617691154426"/>
-        </scene>
-        <!--About App-->
-        <scene sceneID="yFr-rh-TOV">
-            <objects>
-                <viewController id="8xI-JR-DHc" customClass="AboutViewController" customModule="BrushNow___Toothbrush_Timer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aAA-Nm-Stb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSW-5l-ykM">
-                                <rect key="frame" x="16" y="103" width="343" height="218"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="218" id="vOY-Ef-Wuu"/>
-                                </constraints>
-                                <string key="text">BrushNow - Toothbrush Timer is an app designed to improve dental health and dental care habits. It helps users to safely know when they have to stop brushing their teeth, with a minimum timer setting of 2 minutes (as recommended by expert), earning colourful themes as a reward for their hard work. Users can easily set reminders to remind themselves to brush their teeth, if they haven't.</string>
-                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This app has been made by students as part of the Swift Accelerator course." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3K-so-uZF">
-                                <rect key="frame" x="16" y="329" width="343" height="137"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="137" id="j1U-gr-dXx"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swift" translatesAutoresizingMaskIntoConstraints="NO" id="7gK-bm-vD9">
-                                <rect key="frame" x="121" y="474" width="133" height="128"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="4vn-IY-CX5" firstAttribute="trailing" secondItem="q3K-so-uZF" secondAttribute="trailing" constant="16" id="1Dh-BE-vHr"/>
-                            <constraint firstItem="7gK-bm-vD9" firstAttribute="leading" secondItem="4vn-IY-CX5" secondAttribute="leading" constant="121" id="Dj3-aO-uhz"/>
-                            <constraint firstItem="q3K-so-uZF" firstAttribute="top" secondItem="oSW-5l-ykM" secondAttribute="bottom" constant="8" id="Hgk-0A-aAb"/>
-                            <constraint firstItem="q3K-so-uZF" firstAttribute="leading" secondItem="4vn-IY-CX5" secondAttribute="leading" constant="16" id="Ki8-HZ-bCp"/>
-                            <constraint firstItem="4vn-IY-CX5" firstAttribute="bottom" secondItem="7gK-bm-vD9" secondAttribute="bottom" constant="16" id="Lcz-5T-IrJ"/>
-                            <constraint firstItem="oSW-5l-ykM" firstAttribute="leading" secondItem="4vn-IY-CX5" secondAttribute="leading" constant="16" id="ZsU-R5-LYC"/>
-                            <constraint firstItem="4vn-IY-CX5" firstAttribute="trailing" secondItem="7gK-bm-vD9" secondAttribute="trailing" constant="121" id="jYz-hf-OAg"/>
-                            <constraint firstItem="4vn-IY-CX5" firstAttribute="trailing" secondItem="oSW-5l-ykM" secondAttribute="trailing" constant="16" id="m7h-Mc-b58"/>
-                            <constraint firstItem="oSW-5l-ykM" firstAttribute="top" secondItem="4vn-IY-CX5" secondAttribute="top" constant="39" id="xv1-eF-LBP"/>
-                            <constraint firstItem="7gK-bm-vD9" firstAttribute="top" secondItem="q3K-so-uZF" secondAttribute="bottom" constant="8" id="zI3-t8-2dq"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="4vn-IY-CX5"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="About App" id="351-1X-k8U"/>
-                    <connections>
-                        <outlet property="aboutLabel" destination="oSW-5l-ykM" id="cMm-E0-FLz"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ud9-Ly-NZH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3156" y="1433.433283358321"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Tzv-Lx-azH">
@@ -671,9 +584,8 @@
         <image name="Badges" width="28" height="29"/>
         <image name="Settings" width="28" height="28"/>
         <image name="Toothbrush" width="40" height="40"/>
-        <image name="cross" width="660" height="618"/>
+        <image name="cross" width="330" height="309"/>
         <image name="origpreview" width="80" height="80"/>
-        <image name="swift" width="256" height="256"/>
         <image name="upperleft" width="1060" height="1343"/>
     </resources>
 </document>

@@ -23,7 +23,6 @@
 		652AADFF216479D90037F5C9 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652AADFE216479D90037F5C9 /* Theme.swift */; };
 		652AAE01216483150037F5C9 /* SetThemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652AAE00216483150037F5C9 /* SetThemeTableViewController.swift */; };
 		652AAE03216483210037F5C9 /* SetThemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652AAE02216483210037F5C9 /* SetThemeTableViewCell.swift */; };
-		65475FBE215B9D0D00FD6CAC /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65475FBD215B9D0D00FD6CAC /* AboutViewController.swift */; };
 		65BC1301214E1D8D00E0B8E3 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BC1300214E1D8D00E0B8E3 /* Badge.swift */; };
 		65C1023D21469CCF000EDC56 /* BadgesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C1023C21469CCF000EDC56 /* BadgesTableViewController.swift */; };
 		65C1023F21469CE7000EDC56 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C1023E21469CE6000EDC56 /* SettingsTableViewController.swift */; };
@@ -50,7 +49,6 @@
 		652AADFE216479D90037F5C9 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		652AAE00216483150037F5C9 /* SetThemeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetThemeTableViewController.swift; sourceTree = "<group>"; };
 		652AAE02216483210037F5C9 /* SetThemeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetThemeTableViewCell.swift; sourceTree = "<group>"; };
-		65475FBD215B9D0D00FD6CAC /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		65BC1300214E1D8D00E0B8E3 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		65C1023C21469CCF000EDC56 /* BadgesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesTableViewController.swift; sourceTree = "<group>"; };
 		65C1023E21469CE6000EDC56 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 				65C1024221469D53000EDC56 /* BadgeTableViewCell.swift */,
 				65C1024021469D0B000EDC56 /* TimerViewController.swift */,
 				65C1023E21469CE6000EDC56 /* SettingsTableViewController.swift */,
-				65475FBD215B9D0D00FD6CAC /* AboutViewController.swift */,
 				65C1023C21469CCF000EDC56 /* BadgesTableViewController.swift */,
 				65039EDC2141713F008D50C3 /* Assets.xcassets */,
 				65039EDE2141713F008D50C3 /* LaunchScreen.storyboard */,
@@ -212,7 +209,6 @@
 				652AAE03216483210037F5C9 /* SetThemeTableViewCell.swift in Sources */,
 				65C1023D21469CCF000EDC56 /* BadgesTableViewController.swift in Sources */,
 				65039ED82141713D008D50C3 /* ViewController.swift in Sources */,
-				65475FBE215B9D0D00FD6CAC /* AboutViewController.swift in Sources */,
 				65039ED62141713D008D50C3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
