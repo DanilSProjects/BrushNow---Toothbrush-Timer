@@ -238,7 +238,7 @@ class SettingsTableViewController: UITableViewController {
             content.subtitle = "Have you brushed your teeth yet?"
             content.body = " If not, consider paying a visit to the bathroom."
             content.badge = 1
-            
+            content.sound = UNNotificationSound.default
             let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDateComp, repeats: true)
             let pmTrigger = UNCalendarNotificationTrigger(dateMatching: pmDateComp, repeats: true)
             
