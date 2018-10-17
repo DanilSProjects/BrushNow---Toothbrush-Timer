@@ -194,16 +194,24 @@ class SettingsTableViewController: UITableViewController {
             
             var triggerDateHour = 0
             var pmTriggerHour = 0
+            var newNotifAM = notifAM
+            if notifAM == 12 {
+                newNotifAM = 0
+            }
             
-            if currentDateComp.hour! < notifAM {
-                triggerDateHour = notifAM - currentDateComp.hour!
-            } else if currentDateComp.hour! > notifAM {
-                triggerDateHour = 24 - (currentDateComp.hour! - notifAM)
-            } else if currentDateComp.hour! == notifAM {
+            if currentDateComp.hour! < newNotifAM {
+                triggerDateHour = newNotifAM - currentDateComp.hour!
+            } else if currentDateComp.hour! > newNotifAM {
+                triggerDateHour = 24 - (currentDateComp.hour! - newNotifAM)
+            } else if currentDateComp.hour! == newNotifAM {
                 triggerDateHour = currentDateComp.hour!
             }
             
-            let usedNotifPM = notifPM + 12
+            var usedNotifPM = notifPM + 12
+            
+            if notifPM == 12 {
+                usedNotifPM = 12
+            }
             
             if currentDateComp.hour! < usedNotifPM {
                 pmTriggerHour = usedNotifPM - currentDateComp.hour!
