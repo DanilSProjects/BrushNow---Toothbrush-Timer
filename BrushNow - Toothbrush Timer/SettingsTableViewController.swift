@@ -223,13 +223,13 @@ class SettingsTableViewController: UITableViewController {
             
             let triggerDateTimeInterval: TimeInterval = TimeInterval((triggerDateHour * 3600) - (currentDateComp.minute! * 60) - (currentDateComp.second!))
             let triggerDate = Date(timeIntervalSinceNow: triggerDateTimeInterval)
-            let triggerDateComp = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: triggerDate)
+            let triggerDateComp = Calendar.current.dateComponents([.hour, .minute], from: triggerDate)
             
             print (triggerDateComp)
             
-            let pmDateTimeInterval: TimeInterval = TimeInterval((pmTriggerHour * 3600) - (currentDateComp.minute! * 60) - (currentDateComp.second!))
+            let pmDateTimeInterval: TimeInterval = TimeInterval((pmTriggerHour * 3600) - (currentDateComp.minute! * 60))
             let pmDate = Date(timeIntervalSinceNow: pmDateTimeInterval)
-            let pmDateComp = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: pmDate)
+            let pmDateComp = Calendar.current.dateComponents([.hour, .minute], from: pmDate)
             
             print (pmDateComp)
             
@@ -239,6 +239,7 @@ class SettingsTableViewController: UITableViewController {
             content.body = " If not, consider paying a visit to the bathroom."
             content.badge = 1
             content.sound = UNNotificationSound.default
+            
             let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDateComp, repeats: true)
             let pmTrigger = UNCalendarNotificationTrigger(dateMatching: pmDateComp, repeats: true)
             
