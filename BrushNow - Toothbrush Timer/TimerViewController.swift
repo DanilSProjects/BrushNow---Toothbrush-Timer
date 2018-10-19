@@ -215,6 +215,7 @@ class TimerViewController: ViewController {
                             let date = Date(timeIntervalSinceNow: 0)
                             let currentDateComp = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
                             
+                            if badges[6].isCompleted == false {
                             if currentDateComp.hour! < 6 {
                                 badges[6].isCompleted = true
                                 UserDefaults.standard.set(badges[6].isCompleted, forKey: "earlyBird")
@@ -228,6 +229,9 @@ class TimerViewController: ViewController {
                                     print ("Alert has been dimissed.")
                                 }))
                                 self.present(alert, animated: true, completion: nil)
+                            }
+                            } else {
+                                print ("Achievement already completed.")
                             }
                             
                             // Switch statement for unlocking achievements
