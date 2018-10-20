@@ -8,6 +8,7 @@
 
 import UIKit
 import UserNotifications
+import AVFoundation
 
 var numberOfBrushes = 0
 
@@ -25,6 +26,14 @@ class TimerViewController: ViewController {
     @IBOutlet weak var brushHintLabel: UILabel!
     @IBOutlet weak var teethView: UIImageView!
     
+    // Music
+    var audioPlayer: AVAudioPlayer?
+    @IBOutlet weak var trackLabel: UILabel!
+    @IBOutlet weak var pauseButton: UIButton!
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var frameImageView: UIImageView!
+    var isPaused = false
+    
     var time = 120
     var timer: Timer?
     var teethTimer: Timer?
@@ -32,6 +41,8 @@ class TimerViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        playBackgroundMusic(filename: "silence.mp3")
         
         // Asking for permission for notifications
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in
@@ -63,6 +74,7 @@ class TimerViewController: ViewController {
         if let data = UserDefaults.standard.data(forKey: "selectedTheme"),
             let myTheme = NSKeyedUnarchiver.unarchiveObject(with: data) as? Theme {
             selectedTheme = myTheme
+            
         } else {
             print("There is an issue with the selected theme") // NOTE FOR VIEWER: THIS WILL DEFINITELY PRINT ON FIRST LAUNCH DUE TO NOT HAVING THEMES STORED IN IT YET, BUT DON'T WORRY - IT DOESN'T DO ANYTHING
         }
@@ -100,6 +112,10 @@ class TimerViewController: ViewController {
         readySetLabel.isHidden = true
         brushHintLabel.isHidden = true
         teethView.isHidden = true
+        frameImageView.isHidden = true
+        trackLabel.isHidden = true
+        playButton.isHidden = true
+        pauseButton.isHidden = true
         
         minutesLabel.text = "\(time / 60) MINUTES"
         time = timeSet
@@ -114,6 +130,8 @@ class TimerViewController: ViewController {
         minutesLabel.text = "\(time / 60) MINUTES"
         brushHintLabel.text = "BRUSH UPPER LEFT TEETH (FRONT)"
         teethView.image = UIImage(named: "upperleft")
+        audioPlayer?.stop()
+        isPaused = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -125,6 +143,40 @@ class TimerViewController: ViewController {
         let encodedData = NSKeyedArchiver.archivedData(withRootObject: themes)
         UserDefaults.standard.set(encodedData, forKey: "themes")
     }
+    
+    /* MARK: Play sound
+     */
+    func playBackgroundMusic(filename: String) {
+        let url = Bundle.main.url(forResource: filename, withExtension: nil)
+        guard let newURL = url else {
+            print("Could not find file: \(filename)")
+            return
+        }
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: newURL)
+            audioPlayer?.numberOfLoops = 0
+            audioPlayer?.prepareToPlay()
+            audioPlayer?.play()
+        } catch let error as NSError {
+            print(error.description)
+        }
+    }
+    
+    @IBAction func playButtonPressed(_ sender: Any) {
+        if isPaused == false {
+        playBackgroundMusic(filename: "Track 1.mp3")
+        } else {
+            audioPlayer?.play()
+        }
+    }
+    
+    
+    @IBAction func pauseButtonPressed(_ sender: Any) {
+        audioPlayer?.pause()
+        isPaused = true
+    }
+    
+    
     
     func goToBadges (alert: UIAlertAction) {
         tabBarController?.selectedIndex = 1
@@ -202,10 +254,20 @@ class TimerViewController: ViewController {
                         self.minutesLabel.isHidden = false
                         self.brushHintLabel.isHidden = false
                         self.teethView.isHidden = false
+                        self.frameImageView.isHidden = false
+                        self.trackLabel.isHidden = false
+                        self.playButton.isHidden = false
+                        self.pauseButton.isHidden = false
                             
                         } else if self.time == 0 {
                             self.timer?.invalidate()
                             self.teethTimer?.invalidate()
+                            self.audioPlayer?.stop()
+                            self.frameImageView.isHidden = true
+                            self.trackLabel.isHidden = true
+                            self.playButton.isHidden = true
+                            self.pauseButton.isHidden = true
+                            self.isPaused = false
                             
                             self.brushHintLabel.text = "BRUSH UPPER LEFT TEETH (FRONT)"
                             self.teethView.image = UIImage(named: "upperleft")

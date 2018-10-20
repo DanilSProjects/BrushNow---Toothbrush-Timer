@@ -23,6 +23,14 @@
 		652AADFF216479D90037F5C9 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652AADFE216479D90037F5C9 /* Theme.swift */; };
 		652AAE01216483150037F5C9 /* SetThemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652AAE00216483150037F5C9 /* SetThemeTableViewController.swift */; };
 		652AAE03216483210037F5C9 /* SetThemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652AAE02216483210037F5C9 /* SetThemeTableViewCell.swift */; };
+		652DB91C217B557D0047A697 /* Track 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 652DB915217B557B0047A697 /* Track 3.mp3 */; };
+		652DB91D217B557D0047A697 /* Track 5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 652DB916217B557C0047A697 /* Track 5.mp3 */; };
+		652DB91E217B557D0047A697 /* Track 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 652DB917217B557C0047A697 /* Track 2.mp3 */; };
+		652DB91F217B557D0047A697 /* Track 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 652DB918217B557C0047A697 /* Track 1.mp3 */; };
+		652DB920217B557D0047A697 /* Track 6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 652DB919217B557D0047A697 /* Track 6.mp3 */; };
+		652DB921217B557D0047A697 /* Track 4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 652DB91A217B557D0047A697 /* Track 4.mp3 */; };
+		652DB922217B557D0047A697 /* Track 7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 652DB91B217B557D0047A697 /* Track 7.mp3 */; };
+		652DB924217B61830047A697 /* silence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 652DB923217B61820047A697 /* silence.mp3 */; };
 		65BC1301214E1D8D00E0B8E3 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BC1300214E1D8D00E0B8E3 /* Badge.swift */; };
 		65C1023D21469CCF000EDC56 /* BadgesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C1023C21469CCF000EDC56 /* BadgesTableViewController.swift */; };
 		65C1023F21469CE7000EDC56 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C1023E21469CE6000EDC56 /* SettingsTableViewController.swift */; };
@@ -49,6 +57,14 @@
 		652AADFE216479D90037F5C9 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		652AAE00216483150037F5C9 /* SetThemeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetThemeTableViewController.swift; sourceTree = "<group>"; };
 		652AAE02216483210037F5C9 /* SetThemeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetThemeTableViewCell.swift; sourceTree = "<group>"; };
+		652DB915217B557B0047A697 /* Track 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Track 3.mp3"; sourceTree = "<group>"; };
+		652DB916217B557C0047A697 /* Track 5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Track 5.mp3"; sourceTree = "<group>"; };
+		652DB917217B557C0047A697 /* Track 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Track 2.mp3"; sourceTree = "<group>"; };
+		652DB918217B557C0047A697 /* Track 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Track 1.mp3"; sourceTree = "<group>"; };
+		652DB919217B557D0047A697 /* Track 6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Track 6.mp3"; sourceTree = "<group>"; };
+		652DB91A217B557D0047A697 /* Track 4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Track 4.mp3"; sourceTree = "<group>"; };
+		652DB91B217B557D0047A697 /* Track 7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Track 7.mp3"; sourceTree = "<group>"; };
+		652DB923217B61820047A697 /* silence.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = silence.mp3; sourceTree = "<group>"; };
 		65BC1300214E1D8D00E0B8E3 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		65C1023C21469CCF000EDC56 /* BadgesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesTableViewController.swift; sourceTree = "<group>"; };
 		65C1023E21469CE6000EDC56 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +114,7 @@
 				65C1023E21469CE6000EDC56 /* SettingsTableViewController.swift */,
 				65C1023C21469CCF000EDC56 /* BadgesTableViewController.swift */,
 				65039EDC2141713F008D50C3 /* Assets.xcassets */,
+				652DB914217B556B0047A697 /* Tracks */,
 				65039EDE2141713F008D50C3 /* LaunchScreen.storyboard */,
 				65039EE12141713F008D50C3 /* Info.plist */,
 				650F7F822174618A0055DC1B /* Cabin */,
@@ -118,6 +135,21 @@
 				650F7F88217461AB0055DC1B /* Cabin-SemiBoldItalic.ttf */,
 			);
 			path = Cabin;
+			sourceTree = "<group>";
+		};
+		652DB914217B556B0047A697 /* Tracks */ = {
+			isa = PBXGroup;
+			children = (
+				652DB923217B61820047A697 /* silence.mp3 */,
+				652DB918217B557C0047A697 /* Track 1.mp3 */,
+				652DB917217B557C0047A697 /* Track 2.mp3 */,
+				652DB915217B557B0047A697 /* Track 3.mp3 */,
+				652DB91A217B557D0047A697 /* Track 4.mp3 */,
+				652DB916217B557C0047A697 /* Track 5.mp3 */,
+				652DB919217B557D0047A697 /* Track 6.mp3 */,
+				652DB91B217B557D0047A697 /* Track 7.mp3 */,
+			);
+			path = Tracks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,8 +212,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				650F7F8B217461AB0055DC1B /* Cabin-Italic.ttf in Resources */,
+				652DB91D217B557D0047A697 /* Track 5.mp3 in Resources */,
+				652DB921217B557D0047A697 /* Track 4.mp3 in Resources */,
+				652DB91E217B557D0047A697 /* Track 2.mp3 in Resources */,
 				650F7F8C217461AB0055DC1B /* Cabin-MediumItalic.ttf in Resources */,
 				650F7F8E217461AB0055DC1B /* Cabin-Bold.ttf in Resources */,
+				652DB922217B557D0047A697 /* Track 7.mp3 in Resources */,
+				652DB924217B61830047A697 /* silence.mp3 in Resources */,
+				652DB920217B557D0047A697 /* Track 6.mp3 in Resources */,
 				65039EE02141713F008D50C3 /* LaunchScreen.storyboard in Resources */,
 				650F7F90217461AB0055DC1B /* Cabin-SemiBoldItalic.ttf in Resources */,
 				650F7F92217461AB0055DC1B /* Cabin-Medium.ttf in Resources */,
@@ -189,7 +227,9 @@
 				65039EDD2141713F008D50C3 /* Assets.xcassets in Resources */,
 				65039EDB2141713D008D50C3 /* Main.storyboard in Resources */,
 				650F7F8D217461AB0055DC1B /* Cabin-Regular.ttf in Resources */,
+				652DB91C217B557D0047A697 /* Track 3.mp3 in Resources */,
 				650F7F8F217461AB0055DC1B /* Cabin-SemiBold.ttf in Resources */,
+				652DB91F217B557D0047A697 /* Track 1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
