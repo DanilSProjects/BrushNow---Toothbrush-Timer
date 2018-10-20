@@ -33,6 +33,7 @@
 		652DB924217B61830047A697 /* silence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 652DB923217B61820047A697 /* silence.mp3 */; };
 		652DB926217B68C10047A697 /* TrackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DB925217B68C10047A697 /* TrackTableViewController.swift */; };
 		652DB928217B69510047A697 /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DB927217B69510047A697 /* TrackTableViewCell.swift */; };
+		652DB92A217B6F410047A697 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DB929217B6F410047A697 /* CreditsViewController.swift */; };
 		65BC1301214E1D8D00E0B8E3 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BC1300214E1D8D00E0B8E3 /* Badge.swift */; };
 		65C1023D21469CCF000EDC56 /* BadgesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C1023C21469CCF000EDC56 /* BadgesTableViewController.swift */; };
 		65C1023F21469CE7000EDC56 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C1023E21469CE6000EDC56 /* SettingsTableViewController.swift */; };
@@ -69,6 +70,7 @@
 		652DB923217B61820047A697 /* silence.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = silence.mp3; sourceTree = "<group>"; };
 		652DB925217B68C10047A697 /* TrackTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewController.swift; sourceTree = "<group>"; };
 		652DB927217B69510047A697 /* TrackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
+		652DB929217B6F410047A697 /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 		65BC1300214E1D8D00E0B8E3 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		65C1023C21469CCF000EDC56 /* BadgesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesTableViewController.swift; sourceTree = "<group>"; };
 		65C1023E21469CE6000EDC56 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 		65039EC92141713D008D50C3 = {
 			isa = PBXGroup;
 			children = (
+				652DB929217B6F410047A697 /* CreditsViewController.swift */,
 				65039ED42141713D008D50C3 /* BrushNow - Toothbrush Timer */,
 				65039ED32141713D008D50C3 /* Products */,
 			);
@@ -246,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				652DB92A217B6F410047A697 /* CreditsViewController.swift in Sources */,
 				652AAE01216483150037F5C9 /* SetThemeTableViewController.swift in Sources */,
 				652AADFF216479D90037F5C9 /* Theme.swift in Sources */,
 				65BC1301214E1D8D00E0B8E3 /* Badge.swift in Sources */,
