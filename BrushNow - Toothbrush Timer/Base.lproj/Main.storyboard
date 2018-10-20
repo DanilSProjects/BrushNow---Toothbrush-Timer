@@ -528,10 +528,19 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vh1-02-mBb">
+                                            <rect key="frame" x="260" y="3" width="60" height="53"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button" image="play"/>
+                                            <connections>
+                                                <action selector="playPressed:" destination="Nq0-Qd-679" eventType="touchUpInside" id="VjY-lB-4Ua"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.88225668668746948" green="0.88240832090377808" blue="0.88224714994430542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
+                                    <outlet property="playButton" destination="vh1-02-mBb" id="J6W-w1-ruF"/>
                                     <outlet property="trackNameLabel" destination="RPd-Rl-lmb" id="vVQ-pn-Rxb"/>
                                 </connections>
                             </tableViewCell>
@@ -546,7 +555,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m82-ik-qna" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2154" y="2217"/>
+            <point key="canvasLocation" x="2152.8000000000002" y="2216.9415292353824"/>
         </scene>
         <!--Credits View Controller-->
         <scene sceneID="GCz-Vw-cUL">
@@ -575,6 +584,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="20"/>
                                 <state key="normal" title="Ozzed.net"/>
+                                <connections>
+                                    <action selector="linkButton:" destination="nlf-VL-tcX" eventType="touchUpInside" id="E7R-AY-HGl"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Track 1 - Failien Funk " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPg-gK-YrR">
                                 <rect key="frame" x="16" y="284" width="343" height="33"/>

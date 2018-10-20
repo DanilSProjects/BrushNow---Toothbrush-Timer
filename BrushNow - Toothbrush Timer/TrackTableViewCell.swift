@@ -11,6 +11,7 @@ import UIKit
 class TrackTableViewCell: UITableViewCell {
 
     @IBOutlet weak var trackNameLabel: UILabel!
+    @IBOutlet weak var playButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

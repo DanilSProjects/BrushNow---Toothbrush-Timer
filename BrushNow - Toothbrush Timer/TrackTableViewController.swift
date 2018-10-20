@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 var selectedTrack = "Track 1"
 
@@ -14,6 +15,7 @@ class TrackTableViewController: UITableViewController {
     
     let trackArray = ["Track 1", "Track 2", "Track 3", "Track 4", "Track 5", "Track 6", "Track 7"]
     
+    var audioPlayer: AVAudioPlayer?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,13 +47,38 @@ class TrackTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "trackCell", for: indexPath) as! TrackTableViewCell
         
         cell.trackNameLabel.text = trackArray[indexPath.row]
-        
+        cell.playButton.tag = indexPath.row
         if cell.trackNameLabel.text == selectedTrack {
             cell.trackNameLabel.textColor = .red
         } else {
             cell.trackNameLabel.textColor = .black
         }
         return cell
+    }
+    
+    @IBAction func playPressed(_ sender: UIButton) {
+        if audioPlayer?.isPlaying == true {
+            audioPlayer?.stop()
+            let path = Bundle.main.path(forResource: "\(trackArray[sender.tag]).mp3", ofType:nil)!
+            let url = URL(fileURLWithPath: path)
+            
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+                audioPlayer?.play()
+            } catch {
+                // couldn't load file :(
+            }
+        } else {
+            let path = Bundle.main.path(forResource: "\(trackArray[sender.tag]).mp3", ofType:nil)!
+            let url = URL(fileURLWithPath: path)
+            
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+                audioPlayer?.play()
+            } catch {
+                // couldn't load file :(
+            }
+        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
