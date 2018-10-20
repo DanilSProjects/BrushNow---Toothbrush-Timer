@@ -37,6 +37,9 @@ class SettingsTableViewController: UITableViewController {
     @IBOutlet weak var pmStepper: UIStepper!
     @IBOutlet weak var cancelButton: UIButton!
     
+    // Music
+    @IBOutlet weak var trackButton: UIButton!
+    
     var notifAM = 10
     var notifPM = 10
     
@@ -78,10 +81,12 @@ class SettingsTableViewController: UITableViewController {
             pmLabel.textColor = .red
             print("There is an issue with the label colour") // NOTE FOR VIEWER: THIS WILL DEFINITELY PRINT ON FIRST LAUNCH DUE TO NOT HAVING THEMES STORED IN IT YET, BUT DON'T WORRY - IT DOESN'T DO ANYTHING
         }
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
         themeButton.setTitle(selectedTheme.name, for: .normal)
+        trackButton.setTitle(selectedTrack, for: .normal)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -97,7 +102,7 @@ class SettingsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return 7
     }
 
 

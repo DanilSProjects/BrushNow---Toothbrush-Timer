@@ -61,7 +61,9 @@ class TimerViewController: ViewController {
         let loadedAmnesiac = UserDefaults.standard.bool(forKey: "amnesiac")
         let loadedNotif = UserDefaults.standard.integer(forKey: "notifNo")
         let loadedEarly = UserDefaults.standard.bool(forKey: "earlyBird")
+        let loadedTrack = UserDefaults.standard.string(forKey: "selectedTrack")
         
+        selectedTrack = loadedTrack ?? "Track 1"
         notificationNo = loadedNotif
         numberOfBrushes = loadedBrushes
         badges[0].isCompleted = loadedFirst
@@ -117,6 +119,7 @@ class TimerViewController: ViewController {
         playButton.isHidden = true
         pauseButton.isHidden = true
         
+        trackLabel.text = selectedTrack
         minutesLabel.text = "\(time / 60) MINUTES"
         time = timeSet
   
@@ -164,7 +167,7 @@ class TimerViewController: ViewController {
     
     @IBAction func playButtonPressed(_ sender: Any) {
         if isPaused == false {
-        playBackgroundMusic(filename: "Track 1.mp3")
+        playBackgroundMusic(filename: "\(selectedTrack).mp3")
         } else {
             audioPlayer?.play()
         }
