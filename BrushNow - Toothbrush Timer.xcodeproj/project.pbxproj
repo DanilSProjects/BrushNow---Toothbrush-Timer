@@ -92,7 +92,6 @@
 		65039EC92141713D008D50C3 = {
 			isa = PBXGroup;
 			children = (
-				652DB929217B6F410047A697 /* CreditsViewController.swift */,
 				65039ED42141713D008D50C3 /* BrushNow - Toothbrush Timer */,
 				65039ED32141713D008D50C3 /* Products */,
 			);
@@ -117,6 +116,7 @@
 				652AAE00216483150037F5C9 /* SetThemeTableViewController.swift */,
 				652AAE02216483210037F5C9 /* SetThemeTableViewCell.swift */,
 				652AADFE216479D90037F5C9 /* Theme.swift */,
+				652DB929217B6F410047A697 /* CreditsViewController.swift */,
 				65BC1300214E1D8D00E0B8E3 /* Badge.swift */,
 				65C1024221469D53000EDC56 /* BadgeTableViewCell.swift */,
 				65C1024021469D0B000EDC56 /* TimerViewController.swift */,
