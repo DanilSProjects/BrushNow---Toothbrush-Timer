@@ -20,6 +20,7 @@ class TimerViewController: ViewController {
     @IBOutlet weak var themeHeadingLabel: UILabel!
     @IBOutlet weak var themeNameLabel: UILabel!
     @IBOutlet weak var readySetLabel: UILabel!
+    @IBOutlet weak var timerLabel: UILabel!
     
     @IBOutlet weak var startButton: UIButton!
     
@@ -31,7 +32,6 @@ class TimerViewController: ViewController {
     @IBOutlet weak var trackLabel: UILabel!
     @IBOutlet weak var pauseButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
-    @IBOutlet weak var frameImageView: UIImageView!
     var isPaused = false
     
     var time = 120
@@ -98,6 +98,7 @@ class TimerViewController: ViewController {
         view.backgroundColor = selectedTheme.backgroundColour
         timerHeadingLabel.textColor = selectedTheme.textColour
         minutesLabel.textColor = selectedTheme.textColour
+        timerLabel.textColor = selectedTheme.textColour
         themeHeadingLabel.textColor = selectedTheme.textColour
         themeNameLabel.textColor = selectedTheme.textColour
         themeNameLabel.text = selectedTheme.name
@@ -114,10 +115,10 @@ class TimerViewController: ViewController {
         readySetLabel.isHidden = true
         brushHintLabel.isHidden = true
         teethView.isHidden = true
-        frameImageView.isHidden = true
         trackLabel.isHidden = true
         playButton.isHidden = true
         pauseButton.isHidden = true
+        timerLabel.isHidden = true
         
         trackLabel.text = selectedTrack
         minutesLabel.text = "\(time / 60) MINUTES"
@@ -194,6 +195,7 @@ class TimerViewController: ViewController {
         themeNameLabel.isHidden = true
         startButton.isHidden = true
         readySetLabel.isHidden = false
+        timerLabel.isHidden = true
         
         func timeFormatted(_ totalSeconds: Int) -> String {
             let seconds: Int = totalSeconds % 60
@@ -251,13 +253,12 @@ class TimerViewController: ViewController {
                     }
                     
                     self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (_) in
-                        self.minutesLabel.text = "\(timeFormatted(self.time))"
+                        self.timerLabel.text = "\(timeFormatted(self.time))"
                         if self.time > 0 {
                         self.time -= 1
-                        self.minutesLabel.isHidden = false
+                        self.timerLabel.isHidden = false
                         self.brushHintLabel.isHidden = false
                         self.teethView.isHidden = false
-                        self.frameImageView.isHidden = false
                         self.trackLabel.isHidden = false
                         self.playButton.isHidden = false
                         self.pauseButton.isHidden = false
@@ -266,7 +267,6 @@ class TimerViewController: ViewController {
                             self.timer?.invalidate()
                             self.teethTimer?.invalidate()
                             self.audioPlayer?.stop()
-                            self.frameImageView.isHidden = true
                             self.trackLabel.isHidden = true
                             self.playButton.isHidden = true
                             self.pauseButton.isHidden = true
@@ -306,7 +306,9 @@ class TimerViewController: ViewController {
                             case 1:
                                 badges[0].isCompleted = true
                                 UserDefaults.standard.set(badges[0].isCompleted, forKey: "firstBrush")
-                                themes.append(Theme(name: "OCEAN", textColour: .white, backgroundColour: .blue, buttonColour: .yellow, previewImage: "oceanpreview"))
+                                let oceanCol = UIColor(red:0.50, green:0.80, blue:1.00, alpha:1.0)
+                                let sandCol = UIColor(red:1.00, green:0.96, blue:0.51, alpha:1.0)
+                                themes.append(Theme(name: "OCEAN", textColour: .black, backgroundColour: oceanCol, buttonColour: sandCol, previewImage: "oceanpreview"))
                                 self.save()
                                 
                                 let alert = UIAlertController(title: "Badge Unlocked", message: "You have unlocked 'First Brush'! View your reward at the badges page.", preferredStyle: .alert)
@@ -365,6 +367,7 @@ class TimerViewController: ViewController {
                             
                             self.timerHeadingLabel.isHidden = false
                             self.minutesLabel.isHidden = false
+                            self.timerLabel.isHidden = true
                             self.themeHeadingLabel.isHidden = false
                             self.themeNameLabel.isHidden = false
                             self.startButton.isHidden = false
