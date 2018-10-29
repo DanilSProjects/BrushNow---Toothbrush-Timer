@@ -186,11 +186,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="badgeCell" rowHeight="130" id="AGx-q1-Mg5" customClass="BadgeTableViewCell" customModule="BrushNow___Toothbrush_Timer" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="130"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="badgeCell" rowHeight="179" id="AGx-q1-Mg5" customClass="BadgeTableViewCell" customModule="BrushNow___Toothbrush_Timer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="179"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AGx-q1-Mg5" id="NqH-j3-kqm">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="178.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Achievement Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xbl-SW-P9k">
@@ -202,12 +202,6 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reward: Theme: Ocean" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ISv-00-L1p">
-                                            <rect key="frame" x="133" y="101" width="226" height="22"/>
-                                            <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="18"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You need 49 more brushes!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lIZ-tJ-Gde">
                                             <rect key="frame" x="133" y="72" width="242" height="22"/>
                                             <fontDescription key="fontDescription" name="Cabin-MediumItalic" family="Cabin" pointSize="18"/>
@@ -215,7 +209,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cross" translatesAutoresizingMaskIntoConstraints="NO" id="SuE-6V-jq5">
-                                            <rect key="frame" x="8" y="27" width="99" height="95"/>
+                                            <rect key="frame" x="10" y="42" width="99" height="95"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="95" id="BYi-nl-x1M"/>
                                                 <constraint firstAttribute="width" constant="99" id="JP8-yh-SKY"/>
@@ -230,19 +224,32 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="G28-Gf-Dvh">
+                                            <rect key="frame" x="133" y="110" width="207" height="2"/>
+                                        </progressView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reward: Theme: Ocean" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ISv-00-L1p">
+                                            <rect key="frame" x="133" y="131" width="226" height="22"/>
+                                            <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="ISv-00-L1p" firstAttribute="top" secondItem="G28-Gf-Dvh" secondAttribute="bottom" constant="19" id="0fX-uj-qlC"/>
+                                        <constraint firstItem="G28-Gf-Dvh" firstAttribute="leading" secondItem="SuE-6V-jq5" secondAttribute="trailing" constant="24" id="Bl8-Rt-Nxc"/>
                                         <constraint firstAttribute="trailing" secondItem="lIZ-tJ-Gde" secondAttribute="trailing" id="Jwx-1H-OYq"/>
-                                        <constraint firstItem="ISv-00-L1p" firstAttribute="leading" secondItem="SuE-6V-jq5" secondAttribute="trailing" constant="26" id="KT4-Wz-r4c"/>
-                                        <constraint firstItem="Xbl-SW-P9k" firstAttribute="leading" secondItem="SuE-6V-jq5" secondAttribute="trailing" constant="26" id="LGj-m5-q8W"/>
-                                        <constraint firstItem="lIZ-tJ-Gde" firstAttribute="leading" secondItem="SuE-6V-jq5" secondAttribute="trailing" constant="26" id="OGE-eQ-CtD"/>
-                                        <constraint firstItem="02w-pS-s50" firstAttribute="leading" secondItem="SuE-6V-jq5" secondAttribute="trailing" constant="26" id="Oz9-CC-BjA"/>
-                                        <constraint firstItem="ISv-00-L1p" firstAttribute="top" secondItem="02w-pS-s50" secondAttribute="bottom" constant="37" id="T0g-3W-BYx"/>
+                                        <constraint firstItem="ISv-00-L1p" firstAttribute="leading" secondItem="SuE-6V-jq5" secondAttribute="trailing" constant="24" id="KT4-Wz-r4c"/>
+                                        <constraint firstItem="Xbl-SW-P9k" firstAttribute="leading" secondItem="SuE-6V-jq5" secondAttribute="trailing" constant="24" id="LGj-m5-q8W"/>
+                                        <constraint firstItem="lIZ-tJ-Gde" firstAttribute="leading" secondItem="SuE-6V-jq5" secondAttribute="trailing" constant="24" id="OGE-eQ-CtD"/>
+                                        <constraint firstItem="02w-pS-s50" firstAttribute="leading" secondItem="SuE-6V-jq5" secondAttribute="trailing" constant="24" id="Oz9-CC-BjA"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="G28-Gf-Dvh" secondAttribute="trailing" constant="19" id="Q4h-Ix-vc7"/>
+                                        <constraint firstItem="ISv-00-L1p" firstAttribute="top" secondItem="02w-pS-s50" secondAttribute="bottom" constant="67" id="T0g-3W-BYx"/>
                                         <constraint firstItem="02w-pS-s50" firstAttribute="top" secondItem="Xbl-SW-P9k" secondAttribute="bottom" constant="5" id="a7L-kq-sa6"/>
+                                        <constraint firstItem="G28-Gf-Dvh" firstAttribute="top" secondItem="lIZ-tJ-Gde" secondAttribute="bottom" constant="16" id="d5e-l0-3of"/>
                                         <constraint firstAttribute="trailing" secondItem="Xbl-SW-P9k" secondAttribute="trailing" constant="58" id="gr0-qo-4De"/>
-                                        <constraint firstItem="SuE-6V-jq5" firstAttribute="top" secondItem="NqH-j3-kqm" secondAttribute="top" constant="27" id="hle-7p-p0M"/>
+                                        <constraint firstItem="SuE-6V-jq5" firstAttribute="top" secondItem="NqH-j3-kqm" secondAttribute="top" constant="42" id="hle-7p-p0M"/>
                                         <constraint firstAttribute="trailing" secondItem="02w-pS-s50" secondAttribute="trailing" constant="1" id="iVc-vw-zNm"/>
-                                        <constraint firstItem="SuE-6V-jq5" firstAttribute="leading" secondItem="NqH-j3-kqm" secondAttribute="leading" constant="8" id="lAw-v1-rQO"/>
+                                        <constraint firstItem="SuE-6V-jq5" firstAttribute="leading" secondItem="NqH-j3-kqm" secondAttribute="leading" constant="10" id="lAw-v1-rQO"/>
                                         <constraint firstItem="Xbl-SW-P9k" firstAttribute="top" secondItem="NqH-j3-kqm" secondAttribute="top" constant="7" id="lO5-iE-CyF"/>
                                         <constraint firstItem="lIZ-tJ-Gde" firstAttribute="top" secondItem="02w-pS-s50" secondAttribute="bottom" constant="8" id="oOI-iU-Ge6"/>
                                         <constraint firstItem="ISv-00-L1p" firstAttribute="trailing" secondItem="NqH-j3-kqm" secondAttribute="trailingMargin" id="rlc-pa-jYq"/>
@@ -253,6 +260,7 @@
                                     <outlet property="completeView" destination="SuE-6V-jq5" id="SAn-Nz-Awk"/>
                                     <outlet property="descLabel" destination="02w-pS-s50" id="SO2-ca-y4R"/>
                                     <outlet property="nameLabel" destination="Xbl-SW-P9k" id="8OD-Gx-X5W"/>
+                                    <outlet property="progressView" destination="G28-Gf-Dvh" id="PkT-GQ-oiI"/>
                                     <outlet property="rewardLabel" destination="ISv-00-L1p" id="c7e-5v-pSH"/>
                                     <outlet property="tipLabel" destination="lIZ-tJ-Gde" id="SBW-ln-5FC"/>
                                 </connections>

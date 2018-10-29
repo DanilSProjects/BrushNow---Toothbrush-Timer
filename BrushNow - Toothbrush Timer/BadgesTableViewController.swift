@@ -59,6 +59,21 @@ class BadgesTableViewController: UITableViewController {
         cell.descLabel.text = badges[indexPath.row].desc
         cell.rewardLabel.text = "Reward: \(badges[indexPath.row].reward)"
         
+        // Progress view setup
+        if badges[indexPath.row].name == "Early Bird" {
+            if badges[indexPath.row].isCompleted == true {
+                cell.progressView.progress = 1
+            } else {
+                cell.progressView.progress = 0
+            }
+        } else if badges[indexPath.row].name == "Forgetful" || badges[indexPath.row].name == "Amnesiac" {
+            let notifVal: Float = Float(notificationNo) / Float(badges[indexPath.row].brushesNeeded)
+            cell.progressView.progress = notifVal
+        } else {
+        let val: Float = Float(numberOfBrushes) / Float(badges[indexPath.row].brushesNeeded)
+        cell.progressView.progress = val
+        }
+        
         // If completed, show tick, if not, show cross
         if badges[indexPath.row].isCompleted == false {
         cell.completeView.image = UIImage(named: "cross")
@@ -98,7 +113,7 @@ class BadgesTableViewController: UITableViewController {
     
     // Set up cell height
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 130.0
+        return 179.0
     }
 
     /*

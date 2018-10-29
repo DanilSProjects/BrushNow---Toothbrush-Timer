@@ -15,6 +15,7 @@ class BadgeTableViewCell: UITableViewCell {
     @IBOutlet weak var completeView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
+    @IBOutlet weak var progressView: UIProgressView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
