@@ -322,7 +322,9 @@ class TimerViewController: ViewController {
                             case 10:
                                 badges[1].isCompleted = true
                                 UserDefaults.standard.set(badges[1].isCompleted, forKey: "rookieBrush")
-                                themes.append(Theme(name: "GRASS", textColour: .black, backgroundColour: .green, buttonColour: .brown, previewImage: "grasspreview"))
+                                let grassCol = UIColor(red:0.53, green:0.81, blue:0.37, alpha:1.0)
+                                let brownCol = UIColor(red:0.55, green:0.44, blue:0.12, alpha:1.0)
+                                themes.append(Theme(name: "GRASS", textColour: .black, backgroundColour: grassCol, buttonColour: brownCol, previewImage: "grasspreview"))
                                 self.save()
                                 
                                 let alert = UIAlertController(title: "Badge Unlocked", message: "You have unlocked 'Rookie Brusher'! View your reward at the badges page.", preferredStyle: .alert)
