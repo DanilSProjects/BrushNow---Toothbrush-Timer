@@ -238,7 +238,7 @@ class TimerViewController: ViewController {
                     let timeTakenToChange = Double(timeSet / 13)
                     let brushHints = ["BRUSH UPPER MIDDLE TEETH (FRONT)", "BRUSH UPPER RIGHT TEETH (FRONT)", "BRUSH LOWER LEFT TEETH (FRONT)", "BRUSH LOWER MIDDLE TEETH (FRONT)", "BRUSH LOWER RIGHT TEETH (FRONT)", "BRUSH UPPER LEFT TEETH (BACK)", "BRUSH UPPER MIDDLE TEETH (BACK)", "BRUSH UPPER RIGHT TEETH (BACK)", "BRUSH LOWER LEFT TEETH (BACK)", "BRUSH LOWER MIDDLE TEETH (BACK)", "BRUSH LOWER RIGHT TEETH (BACK)", "BRUSH TONGUE"]
                     
-                    let teethImages = ["uppermiddle", "upperright", "lowerleft", "lowermiddle", "lowerright", "upperleft", "uppermiddle", "upperright", "lowerleft", "lowermiddle", "lowerright", "normal"]
+                    let teethImages = ["uppermiddle", "upperright", "bottomleft", "bottommiddle", "bottomright", "upperleft", "uppermiddle", "upperright", "bottomleft", "bottommiddle", "bottomright", "normal"]
                     
                     var arrayNo = -1
                     
