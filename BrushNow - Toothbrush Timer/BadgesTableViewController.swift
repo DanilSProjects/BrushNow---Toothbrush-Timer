@@ -13,7 +13,7 @@ var badges = [
     Badge(name: "First Brush", desc: "Complete first timed brush.", isCompleted: false, reward: "Theme: Ocean", brushesNeeded: 1),
     Badge(name: "Rookie Brusher", desc: "Complete 10 timed brushes.", isCompleted: false, reward: "Theme: Grass", brushesNeeded: 10),
     Badge(name: "Dentist's BFF", desc: "Complete 25 timed brushes.", isCompleted: false, reward: "Theme: Tropical", brushesNeeded: 25),
-    Badge(name: "Maniac", desc: "Complete 50 timed brushes.", isCompleted: false, reward: "Theme: Paper", brushesNeeded: 50),
+    Badge(name: "Maniac", desc: "Complete 50 timed brushes.", isCompleted: false, reward: "Theme: Winter", brushesNeeded: 50),
     Badge(name: "Forgetful", desc: "Set a reminder 20 times.", isCompleted: false, reward: "Theme: Night", brushesNeeded: 20 /* Reminders instead of brushes */),
     Badge(name: "Amnesiac", desc: "Set a reminder 50 times.", isCompleted: false, reward: "Theme: Chocolate", brushesNeeded: 50 /* Reminders instead of brushes */),
     Badge(name: "Early Bird", desc: "Complete a brush before 6am.", isCompleted: false, reward: "Theme: Morning", brushesNeeded: 1)

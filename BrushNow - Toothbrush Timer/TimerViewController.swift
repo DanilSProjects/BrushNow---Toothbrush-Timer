@@ -285,7 +285,8 @@ class TimerViewController: ViewController {
                                 badges[6].isCompleted = true
                                 UserDefaults.standard.set(badges[6].isCompleted, forKey: "earlyBird")
                                 let mornColour = UIColor(red:0.97, green:0.83, blue:0.34, alpha:1.0)
-                                themes.append(Theme(name: "MORNING", textColour: .black, backgroundColour: mornColour, buttonColour: .white, previewImage: "morningpreview"))
+                                let mornButton = UIColor(red:0.89, green:0.90, blue:0.63, alpha:1.0)
+                                themes.append(Theme(name: "MORNING", textColour: .black, backgroundColour: mornColour, buttonColour: mornButton, previewImage: "morningpreview"))
                                 self.save()
                                 
                                 let alert = UIAlertController(title: "Badge Unlocked", message: "You have unlocked 'Early Bird'! View your reward at the badges page.", preferredStyle: .alert)
@@ -337,7 +338,9 @@ class TimerViewController: ViewController {
                             case 25:
                                 badges[2].isCompleted = true
                                 UserDefaults.standard.set(badges[2].isCompleted, forKey: "dentistsBFF")
-                                themes.append(Theme(name: "TROPICAL", textColour: .black, backgroundColour: .yellow, buttonColour: .green, previewImage: "tropicalpreview"))
+                                let tropBack = UIColor(red:0.96, green:0.96, blue:0.51, alpha:1.0)
+                                let tropButton = UIColor(red:0.71, green:0.82, blue:0.60, alpha:1.0)
+                                themes.append(Theme(name: "TROPICAL", textColour: .black, backgroundColour: tropBack, buttonColour: tropButton, previewImage: "tropicalpreview"))
                                 self.save()
                                 
                                 let alert = UIAlertController(title: "Badge Unlocked", message: "You have unlocked 'Dentist's BFF'! View your reward at the badges page.", preferredStyle: .alert)
@@ -351,7 +354,11 @@ class TimerViewController: ViewController {
                             case 50:
                                 badges[3].isCompleted = true
                                 UserDefaults.standard.set(badges[3].isCompleted, forKey: "maniac")
-                                themes.append(Theme(name: "PAPER", textColour: .black, backgroundColour: .white, buttonColour: .red, previewImage: "paperpreview"))
+                                
+                                let winterCol = UIColor(red:0.91, green:0.89, blue:0.89, alpha:1.0)
+                                let winterButton = UIColor(red:0.54, green:0.78, blue:0.82, alpha:1.0)
+                                
+                                themes.append(Theme(name: "WINTER", textColour: .black, backgroundColour: winterCol, buttonColour: winterButton, previewImage: "winterpreview"))
                                 self.save()
                                 
                                 let alert = UIAlertController(title: "Badge Unlocked", message: "You have unlocked 'Maniac'! View your reward at the badges page.", preferredStyle: .alert)

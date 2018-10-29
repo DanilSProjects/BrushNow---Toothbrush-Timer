@@ -260,7 +260,9 @@ class SettingsTableViewController: UITableViewController {
             case 20:
                 badges[4].isCompleted = true
                 UserDefaults.standard.set(badges[4].isCompleted, forKey: "forgetful")
-                themes.append(Theme(name: "NIGHT", textColour: .yellow, backgroundColour: .black, buttonColour: .white, previewImage: "nightpreview"))
+                let nightCol = UIColor(red:0.91, green:0.89, blue:0.28, alpha:1.0)
+                let nightBack = UIColor(red:0.76, green:0.36, blue:0.57, alpha:1.0)
+                themes.append(Theme(name: "NIGHT", textColour: .black, backgroundColour: nightBack, buttonColour: nightCol, previewImage: "nightpreview"))
                 UserDefaults.standard.set(notificationNo, forKey: "notifNo")
                 self.saveTheme()
                 
@@ -274,8 +276,9 @@ class SettingsTableViewController: UITableViewController {
             case 50:
                 badges[5].isCompleted = true
                 UserDefaults.standard.set(badges[5].isCompleted, forKey: "amnesiac")
+                
                 let chocColour = UIColor(red:0.86, green:0.71, blue:0.55, alpha:1.0)
-                themes.append(Theme(name: "CHOCOLATE", textColour: .white, backgroundColour: .brown, buttonColour: chocColour, previewImage: "chocolatepreview"))
+                themes.append(Theme(name: "CHOCOLATE", textColour: .black, backgroundColour: .brown, buttonColour: chocColour, previewImage: "chocolatepreview"))
                 UserDefaults.standard.set(notificationNo, forKey: "notifNo")
                 self.saveTheme()
                 
