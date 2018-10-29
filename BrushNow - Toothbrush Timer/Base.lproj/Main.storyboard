@@ -38,7 +38,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Theme:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOq-TO-wGk">
-                                <rect key="frame" x="0.0" y="283.5" width="375" height="23.5"/>
+                                <rect key="frame" x="0.0" y="291.5" width="375" height="22.5"/>
                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -116,7 +116,7 @@
                             <constraint firstItem="OMj-qX-rcN" firstAttribute="top" secondItem="AAp-qR-iDC" secondAttribute="bottom" constant="52" id="2iZ-51-SgH"/>
                             <constraint firstItem="M8P-r7-wDZ" firstAttribute="leading" secondItem="qbe-2K-sMP" secondAttribute="leading" constant="71" id="6TI-xg-vpV"/>
                             <constraint firstItem="ZOq-TO-wGk" firstAttribute="trailing" secondItem="qbe-2K-sMP" secondAttribute="trailing" id="6UL-zO-VA7"/>
-                            <constraint firstItem="AAp-qR-iDC" firstAttribute="top" secondItem="ZOq-TO-wGk" secondAttribute="bottom" constant="10" id="8gp-PL-uB7"/>
+                            <constraint firstItem="AAp-qR-iDC" firstAttribute="top" secondItem="ZOq-TO-wGk" secondAttribute="bottom" constant="5" id="8gp-PL-uB7"/>
                             <constraint firstItem="DSq-1V-8jj" firstAttribute="leading" secondItem="M8P-r7-wDZ" secondAttribute="trailing" constant="-105" id="8xb-KU-2DC"/>
                             <constraint firstItem="TxP-9J-3jS" firstAttribute="top" secondItem="m1Q-0w-tDO" secondAttribute="bottom" constant="19" id="9ue-hU-m01"/>
                             <constraint firstItem="qbe-2K-sMP" firstAttribute="trailing" secondItem="qbN-xD-9Fp" secondAttribute="trailing" constant="211" id="D52-Ph-GzJ"/>
@@ -740,6 +740,156 @@
             </objects>
             <point key="canvasLocation" x="4010.4000000000001" y="2176.4617691154426"/>
         </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="ZYQ-pP-Z4z">
+            <objects>
+                <viewController storyboardIdentifier="tutorial" id="UdK-5L-Yqo" customClass="WelcomeViewController" customModule="BrushNow___Toothbrush_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DlU-oU-Ay1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello and Welcome to BrushNow." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDb-Ip-exd">
+                                <rect key="frame" x="76" y="32" width="223" height="182"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Here is a small tutorial to get you started." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fY8-uY-RZ3">
+                                <rect key="frame" x="76" y="281" width="223" height="187"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconforotheruse" translatesAutoresizingMaskIntoConstraints="NO" id="XRf-U2-Clr">
+                                <rect key="frame" x="116" y="177" width="148" height="145"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXf-eB-GDq">
+                                <rect key="frame" x="94" y="451" width="186" height="114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="30"/>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <segue destination="ZJe-Vu-dP6" kind="presentation" id="bC2-oG-GUz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.88225668668746948" green="0.88240832090377808" blue="0.88224714994430542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="tBV-u6-tAk"/>
+                    </view>
+                    <connections>
+                        <outlet property="continueButton" destination="IXf-eB-GDq" id="PUn-tg-80k"/>
+                        <outlet property="helloLabel" destination="QDb-Ip-exd" id="LvI-6C-bdk"/>
+                        <outlet property="iconView" destination="XRf-U2-Clr" id="sUx-GU-USC"/>
+                        <outlet property="tutorialLabel" destination="fY8-uY-RZ3" id="c2l-su-s0j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oYK-6I-oIl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-615.20000000000005" y="765.96701649175418"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xpY-0p-kwv">
+            <objects>
+                <viewController id="GX0-Z3-xEY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qix-5O-52g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="timerScreen" translatesAutoresizingMaskIntoConstraints="NO" id="Pb5-Ay-WVU">
+                                <rect key="frame" x="53" y="109" width="269" height="448"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is the app's timer screen." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NC-AR-30b">
+                                <rect key="frame" x="52" y="-25" width="271" height="182"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The player lets you pause and play a selected music track." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWS-iJ-TGC">
+                                <rect key="frame" x="266" y="136" width="121" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
+                                <color key="textColor" red="0.77107788710000003" green="0.0" blue="0.021650380399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6EC-wj-0Qx">
+                                <rect key="frame" x="94" y="553" width="186" height="114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="30"/>
+                                <state key="normal" title="Continue"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The illustration shows you where to brush, as well as the text." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1G-Xe-LkH">
+                                <rect key="frame" x="-2" y="190" width="129" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
+                                <color key="textColor" red="0.77107788710000003" green="0.0" blue="0.021650380399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.88225668670000001" green="0.88240832089999999" blue="0.88224714989999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="oQ7-Ol-7dp"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SBg-Bu-Qfz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1570.4000000000001" y="1558.4707646176912"/>
+        </scene>
+        <!--Tutorial View Controller-->
+        <scene sceneID="re4-Ci-uJc">
+            <objects>
+                <viewController id="ZJe-Vu-dP6" customClass="TutorialViewController" customModule="BrushNow___Toothbrush_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D2P-Kb-yH4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="firstScreen" translatesAutoresizingMaskIntoConstraints="NO" id="edR-5z-5DW">
+                                <rect key="frame" x="53" y="109" width="269" height="448"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is the first screen you will encounter in the app." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgK-98-J4O">
+                                <rect key="frame" x="52" y="-25" width="271" height="182"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGv-yH-ooR">
+                                <rect key="frame" x="0.0" y="217" width="375" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">The above value shows how many minutes the timer is currently set for, while the below value displays what theme is currently equipped.</string>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
+                                <color key="textColor" red="0.77107788710000003" green="0.0" blue="0.021650380399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The above button should be tapped in order to begin the timer." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCp-bL-h3Y">
+                                <rect key="frame" x="0.0" y="464" width="375" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
+                                <color key="textColor" red="0.77107788710000003" green="0.0" blue="0.021650380399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qqv-aW-hJ7">
+                                <rect key="frame" x="94" y="553" width="186" height="114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="30"/>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <segue destination="GX0-Z3-xEY" kind="presentation" id="uU0-Um-R6y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.88225668670000001" green="0.88240832089999999" blue="0.88224714989999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="icf-aj-yn8"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AVV-KX-M1C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-602.39999999999998" y="1552.1739130434785"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Tzv-Lx-azH">
             <objects>
@@ -859,9 +1009,12 @@
         <image name="Settings" width="28" height="28"/>
         <image name="Toothbrush" width="40" height="40"/>
         <image name="cross" width="330" height="309"/>
+        <image name="firstScreen" width="221" height="381"/>
+        <image name="iconforotheruse" width="286" height="286"/>
         <image name="origpreview" width="80" height="80"/>
         <image name="pause" width="105" height="105"/>
         <image name="play" width="268" height="236"/>
+        <image name="timerScreen" width="222" height="395"/>
         <image name="upperleft" width="1060" height="1343"/>
     </resources>
 </document>

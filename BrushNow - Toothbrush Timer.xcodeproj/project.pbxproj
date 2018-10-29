@@ -34,6 +34,8 @@
 		652DB926217B68C10047A697 /* TrackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DB925217B68C10047A697 /* TrackTableViewController.swift */; };
 		652DB928217B69510047A697 /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DB927217B69510047A697 /* TrackTableViewCell.swift */; };
 		652DB92A217B6F410047A697 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DB929217B6F410047A697 /* CreditsViewController.swift */; };
+		658F8D502186BB3E005D331E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658F8D4F2186BB3E005D331E /* WelcomeViewController.swift */; };
+		658F8D522186C80B005D331E /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658F8D512186C80B005D331E /* TutorialViewController.swift */; };
 		65BC1301214E1D8D00E0B8E3 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BC1300214E1D8D00E0B8E3 /* Badge.swift */; };
 		65C1023D21469CCF000EDC56 /* BadgesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C1023C21469CCF000EDC56 /* BadgesTableViewController.swift */; };
 		65C1023F21469CE7000EDC56 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C1023E21469CE6000EDC56 /* SettingsTableViewController.swift */; };
@@ -71,6 +73,8 @@
 		652DB925217B68C10047A697 /* TrackTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewController.swift; sourceTree = "<group>"; };
 		652DB927217B69510047A697 /* TrackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
 		652DB929217B6F410047A697 /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
+		658F8D4F2186BB3E005D331E /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		658F8D512186C80B005D331E /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		65BC1300214E1D8D00E0B8E3 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		65C1023C21469CCF000EDC56 /* BadgesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesTableViewController.swift; sourceTree = "<group>"; };
 		65C1023E21469CE6000EDC56 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 				65039ED52141713D008D50C3 /* AppDelegate.swift */,
 				65039ED72141713D008D50C3 /* ViewController.swift */,
 				65039ED92141713D008D50C3 /* Main.storyboard */,
+				658F8D512186C80B005D331E /* TutorialViewController.swift */,
+				658F8D4F2186BB3E005D331E /* WelcomeViewController.swift */,
 				652DB927217B69510047A697 /* TrackTableViewCell.swift */,
 				652DB925217B68C10047A697 /* TrackTableViewController.swift */,
 				652AAE00216483150037F5C9 /* SetThemeTableViewController.swift */,
@@ -256,7 +262,9 @@
 				65C1024121469D0B000EDC56 /* TimerViewController.swift in Sources */,
 				65C1024321469D53000EDC56 /* BadgeTableViewCell.swift in Sources */,
 				65C1023F21469CE7000EDC56 /* SettingsTableViewController.swift in Sources */,
+				658F8D522186C80B005D331E /* TutorialViewController.swift in Sources */,
 				652AAE03216483210037F5C9 /* SetThemeTableViewCell.swift in Sources */,
+				658F8D502186BB3E005D331E /* WelcomeViewController.swift in Sources */,
 				652DB928217B69510047A697 /* TrackTableViewCell.swift in Sources */,
 				65C1023D21469CCF000EDC56 /* BadgesTableViewController.swift in Sources */,
 				65039ED82141713D008D50C3 /* ViewController.swift in Sources */,
