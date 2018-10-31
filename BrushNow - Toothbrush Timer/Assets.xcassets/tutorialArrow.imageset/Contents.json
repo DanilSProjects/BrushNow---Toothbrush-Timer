@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Screenshot 2018-10-31 at 8.51.32 PM.png",
+      "filename" : "tutorialArrow.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "tutorialArrow@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "tutorialArrow@3x.png",
       "scale" : "3x"
     }
   ],
