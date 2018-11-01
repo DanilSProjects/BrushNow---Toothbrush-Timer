@@ -754,7 +754,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is the app's badges screen." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sff-Rr-10E">
-                                <rect key="frame" x="52" y="-25" width="271" height="182"/>
+                                <rect key="frame" x="52" y="0.0" width="271" height="157"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -797,35 +797,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello and Welcome to BrushNow." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDb-Ip-exd">
-                                <rect key="frame" x="76" y="32" width="223" height="182"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello and Welcome to BrushNow." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDb-Ip-exd">
+                                <rect key="frame" x="76" y="32" width="223" height="137"/>
                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Here is a small tutorial to get you started." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fY8-uY-RZ3">
-                                <rect key="frame" x="76" y="281" width="223" height="187"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconforotheruse" translatesAutoresizingMaskIntoConstraints="NO" id="XRf-U2-Clr">
-                                <rect key="frame" x="116" y="177" width="148" height="145"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconforotheruse" translatesAutoresizingMaskIntoConstraints="NO" id="XRf-U2-Clr">
+                                <rect key="frame" x="111" y="177" width="153" height="170"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXf-eB-GDq">
-                                <rect key="frame" x="94" y="451" width="186" height="114"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXf-eB-GDq">
+                                <rect key="frame" x="94" y="461" width="187" height="104"/>
                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="30"/>
                                 <state key="normal" title="Continue"/>
                                 <connections>
                                     <segue destination="ZJe-Vu-dP6" kind="presentation" id="bC2-oG-GUz"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here is a small tutorial to get you started." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fY8-uY-RZ3">
+                                <rect key="frame" x="76" y="330" width="223" height="138"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.88225668668746948" green="0.88240832090377808" blue="0.88224714994430542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tBV-u6-tAk" firstAttribute="bottom" secondItem="IXf-eB-GDq" secondAttribute="bottom" constant="102" id="35c-xh-bbG"/>
+                            <constraint firstItem="fY8-uY-RZ3" firstAttribute="top" secondItem="tBV-u6-tAk" secondAttribute="top" constant="310" id="3Ai-xs-Kjj"/>
+                            <constraint firstItem="XRf-U2-Clr" firstAttribute="top" secondItem="tBV-u6-tAk" secondAttribute="top" constant="157" id="4c5-mf-SwE"/>
+                            <constraint firstItem="tBV-u6-tAk" firstAttribute="trailing" secondItem="QDb-Ip-exd" secondAttribute="trailing" constant="76" id="663-21-gUm"/>
+                            <constraint firstItem="XRf-U2-Clr" firstAttribute="leading" secondItem="tBV-u6-tAk" secondAttribute="leading" constant="111" id="71l-El-7fN"/>
+                            <constraint firstItem="QDb-Ip-exd" firstAttribute="top" secondItem="tBV-u6-tAk" secondAttribute="top" constant="12" id="9Wp-0r-45Y"/>
+                            <constraint firstItem="tBV-u6-tAk" firstAttribute="trailing" secondItem="IXf-eB-GDq" secondAttribute="trailing" constant="94" id="K7z-pz-K0Q"/>
+                            <constraint firstItem="XRf-U2-Clr" firstAttribute="top" secondItem="QDb-Ip-exd" secondAttribute="bottom" constant="8" id="KDI-zr-rC6"/>
+                            <constraint firstItem="IXf-eB-GDq" firstAttribute="top" secondItem="fY8-uY-RZ3" secondAttribute="bottom" constant="-7" id="KDe-Bq-PsD"/>
+                            <constraint firstItem="tBV-u6-tAk" firstAttribute="trailing" secondItem="XRf-U2-Clr" secondAttribute="trailing" constant="111" id="Nn5-0N-zxT"/>
+                            <constraint firstItem="IXf-eB-GDq" firstAttribute="leading" secondItem="tBV-u6-tAk" secondAttribute="leading" constant="94" id="Oad-CT-Gev"/>
+                            <constraint firstItem="fY8-uY-RZ3" firstAttribute="top" secondItem="XRf-U2-Clr" secondAttribute="bottom" constant="-17" id="bZg-l7-LZ8"/>
+                            <constraint firstItem="fY8-uY-RZ3" firstAttribute="leading" secondItem="tBV-u6-tAk" secondAttribute="leading" constant="76" id="cxh-lF-yV5"/>
+                            <constraint firstItem="IXf-eB-GDq" firstAttribute="top" secondItem="tBV-u6-tAk" secondAttribute="top" constant="441" id="dRH-uD-GLY"/>
+                            <constraint firstItem="tBV-u6-tAk" firstAttribute="trailing" secondItem="fY8-uY-RZ3" secondAttribute="trailing" constant="76" id="hPX-Yk-MNu"/>
+                            <constraint firstItem="QDb-Ip-exd" firstAttribute="leading" secondItem="tBV-u6-tAk" secondAttribute="leading" constant="76" id="jSf-Uo-Ogz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="tBV-u6-tAk"/>
                     </view>
                     <connections>
@@ -837,7 +851,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oYK-6I-oIl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-615.20000000000005" y="765.96701649175418"/>
+            <point key="canvasLocation" x="-615.94202898550725" y="765.48913043478262"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="xpY-0p-kwv">
@@ -847,42 +861,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is the app's timer screen." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NC-AR-30b">
-                                <rect key="frame" x="52" y="-25" width="271" height="182"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the app's timer screen." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NC-AR-30b">
+                                <rect key="frame" x="52" y="0.0" width="271" height="146"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="146" id="esZ-xd-tun"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6EC-wj-0Qx">
-                                <rect key="frame" x="94" y="519" width="186" height="114"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6EC-wj-0Qx">
+                                <rect key="frame" x="94" y="519" width="187" height="114"/>
                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="30"/>
                                 <state key="normal" title="Continue"/>
                                 <connections>
                                     <segue destination="JYz-TS-CeD" kind="presentation" id="D6j-qU-Lzx"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The illustration, as well as the above text, shows you where to brush your teeth." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1G-Xe-LkH">
-                                <rect key="frame" x="11" y="165" width="135" height="106"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
-                                <color key="textColor" red="0.77107788710000003" green="0.0" blue="0.021650380399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="timerScreen" translatesAutoresizingMaskIntoConstraints="NO" id="Pb5-Ay-WVU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timerScreen" translatesAutoresizingMaskIntoConstraints="NO" id="Pb5-Ay-WVU">
                                 <rect key="frame" x="154" y="154" width="205" height="357"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="357" id="cjU-KS-RlR"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The player lets you pause and play a selected music track." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWS-iJ-TGC">
-                                <rect key="frame" x="16" y="345" width="130" height="104"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
-                                <color key="textColor" red="0.77107788710000003" green="0.0" blue="0.021650380399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="lpD-gP-g32">
+                                <rect key="frame" x="10" y="196" width="149" height="256"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The illustration, as well as the above text, shows you where to brush your teeth." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1G-Xe-LkH">
+                                        <rect key="frame" x="0.0" y="0.0" width="149" height="97.5"/>
+                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
+                                        <color key="textColor" red="0.77107788710000003" green="0.0" blue="0.021650380399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The player lets you pause and play a selected music track." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWS-iJ-TGC">
+                                        <rect key="frame" x="0.0" y="197.5" width="149" height="58.5"/>
+                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
+                                        <color key="textColor" red="0.77107788710000003" green="0.0" blue="0.021650380399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.88225668670000001" green="0.88240832089999999" blue="0.88224714989999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1NC-AR-30b" firstAttribute="top" secondItem="qix-5O-52g" secondAttribute="top" id="4XO-3h-0es"/>
+                            <constraint firstItem="lpD-gP-g32" firstAttribute="top" secondItem="1NC-AR-30b" secondAttribute="bottom" constant="50" id="9BP-Yl-Cst"/>
+                            <constraint firstItem="Pb5-Ay-WVU" firstAttribute="top" secondItem="1NC-AR-30b" secondAttribute="bottom" constant="8" symbolic="YES" id="Aio-41-jz1"/>
+                            <constraint firstItem="6EC-wj-0Qx" firstAttribute="top" secondItem="Pb5-Ay-WVU" secondAttribute="bottom" constant="8" symbolic="YES" id="NDX-Vr-Kit"/>
+                            <constraint firstItem="1NC-AR-30b" firstAttribute="leading" secondItem="oQ7-Ol-7dp" secondAttribute="leading" constant="52" id="SM5-MQ-4MS"/>
+                            <constraint firstItem="lpD-gP-g32" firstAttribute="trailing" secondItem="Pb5-Ay-WVU" secondAttribute="trailing" constant="-200" id="WlU-kZ-SPJ"/>
+                            <constraint firstItem="lpD-gP-g32" firstAttribute="leading" secondItem="oQ7-Ol-7dp" secondAttribute="leading" constant="10" id="YV9-AV-6nK"/>
+                            <constraint firstItem="1NC-AR-30b" firstAttribute="centerX" secondItem="qix-5O-52g" secondAttribute="centerX" id="eJg-fd-46N"/>
+                            <constraint firstItem="oQ7-Ol-7dp" firstAttribute="bottom" secondItem="6EC-wj-0Qx" secondAttribute="bottom" constant="34" id="fL1-yD-b7p"/>
+                            <constraint firstItem="oQ7-Ol-7dp" firstAttribute="trailing" secondItem="6EC-wj-0Qx" secondAttribute="trailing" constant="94" id="gUa-hV-gCj"/>
+                            <constraint firstItem="oQ7-Ol-7dp" firstAttribute="trailing" secondItem="Pb5-Ay-WVU" secondAttribute="trailing" constant="16" id="rkv-QR-atS"/>
+                            <constraint firstItem="6EC-wj-0Qx" firstAttribute="leading" secondItem="oQ7-Ol-7dp" secondAttribute="leading" constant="94" id="tND-Zb-qpX"/>
+                            <constraint firstItem="6EC-wj-0Qx" firstAttribute="centerX" secondItem="1NC-AR-30b" secondAttribute="centerX" id="wFL-gx-vyW"/>
+                            <constraint firstItem="Pb5-Ay-WVU" firstAttribute="leading" secondItem="oQ7-Ol-7dp" secondAttribute="leading" constant="154" id="yZM-he-DHs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oQ7-Ol-7dp"/>
                     </view>
                 </viewController>
@@ -898,41 +934,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="firstScreen" translatesAutoresizingMaskIntoConstraints="NO" id="edR-5z-5DW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="firstScreen" translatesAutoresizingMaskIntoConstraints="NO" id="edR-5z-5DW">
                                 <rect key="frame" x="154" y="154" width="205" height="357"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="357" id="wTS-cI-hG6"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is the first screen you will encounter in the app." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgK-98-J4O">
-                                <rect key="frame" x="52" y="-25" width="271" height="182"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the first screen you will encounter in the app." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgK-98-J4O">
+                                <rect key="frame" x="52" y="0.0" width="271" height="146"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="146" id="ksL-Rx-2s4"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How many minutes the timer is set for" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGv-yH-ooR">
-                                <rect key="frame" x="10" y="188" width="150" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
-                                <color key="textColor" red="0.77107788710000003" green="0.0" blue="0.021650380399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Button to start the timer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCp-bL-h3Y">
-                                <rect key="frame" x="14" y="366" width="150" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
-                                <color key="textColor" red="0.77107788710000003" green="0.0" blue="0.021650380399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The current selected theme" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgP-GK-cac">
-                                <rect key="frame" x="10" y="266" width="154" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
-                                <color key="textColor" red="0.77107788710000003" green="0.0" blue="0.021650380399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qqv-aW-hJ7">
-                                <rect key="frame" x="94" y="519" width="186" height="114"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="yfP-Jq-ejl">
+                                <rect key="frame" x="10" y="196" width="139" height="235"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many minutes the timer is set for" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGv-yH-ooR">
+                                        <rect key="frame" x="0.0" y="0.0" width="139" height="39"/>
+                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
+                                        <color key="textColor" red="0.77107788710000003" green="0.0" blue="0.021650380399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The current selected theme" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgP-GK-cac">
+                                        <rect key="frame" x="0.0" y="98" width="139" height="39"/>
+                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
+                                        <color key="textColor" red="0.77107788710000003" green="0.0" blue="0.021650380399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Button to start the timer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCp-bL-h3Y">
+                                        <rect key="frame" x="0.0" y="196" width="139" height="39"/>
+                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
+                                        <color key="textColor" red="0.77107788710000003" green="0.0" blue="0.021650380399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qqv-aW-hJ7">
+                                <rect key="frame" x="95" y="519" width="185" height="114"/>
                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="30"/>
                                 <state key="normal" title="Continue"/>
                                 <connections>
@@ -941,6 +982,22 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.88225668670000001" green="0.88240832089999999" blue="0.88224714989999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qqv-aW-hJ7" firstAttribute="leading" secondItem="icf-aj-yn8" secondAttribute="leading" constant="95" id="3I2-R0-f6r"/>
+                            <constraint firstItem="icf-aj-yn8" firstAttribute="bottom" secondItem="Qqv-aW-hJ7" secondAttribute="bottom" constant="34" id="4lb-Zf-mpn"/>
+                            <constraint firstItem="edR-5z-5DW" firstAttribute="top" secondItem="RgK-98-J4O" secondAttribute="bottom" constant="8" symbolic="YES" id="7pc-Gb-W23"/>
+                            <constraint firstItem="RgK-98-J4O" firstAttribute="centerX" secondItem="Qqv-aW-hJ7" secondAttribute="centerX" id="D8E-0k-um8"/>
+                            <constraint firstItem="RgK-98-J4O" firstAttribute="leading" secondItem="icf-aj-yn8" secondAttribute="leading" constant="52" id="DRJ-8D-OgB"/>
+                            <constraint firstItem="yfP-Jq-ejl" firstAttribute="top" secondItem="RgK-98-J4O" secondAttribute="bottom" constant="50" id="Hzt-Vn-Th4"/>
+                            <constraint firstItem="edR-5z-5DW" firstAttribute="leading" secondItem="yfP-Jq-ejl" secondAttribute="trailing" constant="5" id="Thd-1y-ILu"/>
+                            <constraint firstItem="yfP-Jq-ejl" firstAttribute="leading" secondItem="icf-aj-yn8" secondAttribute="leading" constant="10" id="Y9x-5P-lRf"/>
+                            <constraint firstItem="edR-5z-5DW" firstAttribute="leading" secondItem="icf-aj-yn8" secondAttribute="leading" constant="154" id="ZWq-Vo-Fes"/>
+                            <constraint firstItem="RgK-98-J4O" firstAttribute="top" secondItem="D2P-Kb-yH4" secondAttribute="top" id="cJ2-LW-KXr"/>
+                            <constraint firstItem="RgK-98-J4O" firstAttribute="centerX" secondItem="D2P-Kb-yH4" secondAttribute="centerX" id="fyN-Qz-fFU"/>
+                            <constraint firstItem="Qqv-aW-hJ7" firstAttribute="top" secondItem="edR-5z-5DW" secondAttribute="bottom" constant="8" symbolic="YES" id="ldx-GS-bTA"/>
+                            <constraint firstItem="icf-aj-yn8" firstAttribute="trailing" secondItem="Qqv-aW-hJ7" secondAttribute="trailing" constant="95" id="pmR-al-5Um"/>
+                            <constraint firstItem="edR-5z-5DW" firstAttribute="trailing" secondItem="D2P-Kb-yH4" secondAttribute="trailingMargin" id="uVO-1q-TDX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="icf-aj-yn8"/>
                     </view>
                 </viewController>
@@ -1086,7 +1143,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is the app's settings screen." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkO-Mo-eEg">
-                                <rect key="frame" x="52" y="-25" width="271" height="182"/>
+                                <rect key="frame" x="52" y="0.0" width="271" height="157"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="20"/>
                                 <nil key="textColor"/>
