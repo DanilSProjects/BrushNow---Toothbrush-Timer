@@ -607,80 +607,93 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Credits to:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyj-Qm-xip">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credits to:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyj-Qm-xip">
                                 <rect key="frame" x="16" y="72" width="124" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ozzed.net for composing and providing the music tracks used in this app under the Creative Commons license" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0A-sA-WZj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ozzed.net for composing and providing the music tracks used in this app under the Creative Commons license" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0A-sA-WZj">
                                 <rect key="frame" x="16" y="147" width="343" height="113"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ntg-ff-scs">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ntg-ff-scs">
                                 <rect key="frame" x="16" y="157" width="162" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="20"/>
                                 <state key="normal" title="Ozzed.net"/>
                                 <connections>
                                     <action selector="linkButton:" destination="nlf-VL-tcX" eventType="touchUpInside" id="E7R-AY-HGl"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Track 1 - Failien Funk " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPg-gK-YrR">
-                                <rect key="frame" x="16" y="284" width="343" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Track 2 - I'm a Fighter" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngp-A6-ePr">
-                                <rect key="frame" x="16" y="317" width="343" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Track 3 - Going Down Tune" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpP-FC-GFD">
-                                <rect key="frame" x="16" y="351" width="343" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Track 4 - Cloud Crash" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7F-TK-1Yh">
-                                <rect key="frame" x="16" y="385" width="343" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Track 5 - It's Not My Ship" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IwQ-xO-uNS">
-                                <rect key="frame" x="16" y="419" width="343" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Track 6 - Perihelium" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHo-IM-Q8m">
-                                <rect key="frame" x="16" y="453" width="343" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Track 7 - Shingle Tingle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6HS-Yu-7Ow">
-                                <rect key="frame" x="16" y="488" width="343" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5hA-aJ-td0">
+                                <rect key="frame" x="16" y="284" width="228" height="231.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track 1 - Failien Funk " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPg-gK-YrR">
+                                        <rect key="frame" x="0.0" y="0.0" width="228" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track 2 - I'm a Fighter" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngp-A6-ePr">
+                                        <rect key="frame" x="0.0" y="34.5" width="228" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track 3 - Going Down Tune" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpP-FC-GFD">
+                                        <rect key="frame" x="0.0" y="69" width="228" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track 4 - Cloud Crash" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7F-TK-1Yh">
+                                        <rect key="frame" x="0.0" y="103.5" width="228" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track 5 - It's Not My Ship" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IwQ-xO-uNS">
+                                        <rect key="frame" x="0.0" y="138" width="228" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track 6 - Perihelium" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHo-IM-Q8m">
+                                        <rect key="frame" x="0.0" y="172.5" width="228" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track 7 - Shingle Tingle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6HS-Yu-7Ow">
+                                        <rect key="frame" x="0.0" y="207" width="228" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.88225668668746948" green="0.88240832090377808" blue="0.88224714994430542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Y7N-Q2-xMy" firstAttribute="trailing" secondItem="Ntg-ff-scs" secondAttribute="trailing" constant="197" id="4sT-6k-9CW"/>
+                            <constraint firstItem="Oyj-Qm-xip" firstAttribute="leading" secondItem="Y7N-Q2-xMy" secondAttribute="leading" constant="16" id="5sK-SH-OCa"/>
+                            <constraint firstItem="Y7N-Q2-xMy" firstAttribute="bottom" secondItem="Ntg-ff-scs" secondAttribute="bottom" constant="417" id="M9z-re-lno"/>
+                            <constraint firstItem="Oyj-Qm-xip" firstAttribute="top" secondItem="Y7N-Q2-xMy" secondAttribute="top" constant="8" id="Nx8-78-xV8"/>
+                            <constraint firstItem="Y7N-Q2-xMy" firstAttribute="bottom" secondItem="s0A-sA-WZj" secondAttribute="bottom" constant="358" id="QJv-FF-m79"/>
+                            <constraint firstItem="Y7N-Q2-xMy" firstAttribute="bottom" secondItem="5hA-aJ-td0" secondAttribute="bottom" constant="102.5" id="VOV-hV-ckI"/>
+                            <constraint firstItem="5hA-aJ-td0" firstAttribute="leading" secondItem="Y7N-Q2-xMy" secondAttribute="leading" constant="16" id="XLV-76-1Rm"/>
+                            <constraint firstItem="5hA-aJ-td0" firstAttribute="top" secondItem="s0A-sA-WZj" secondAttribute="bottom" constant="24" id="Ykv-jq-37M"/>
+                            <constraint firstItem="s0A-sA-WZj" firstAttribute="leading" secondItem="Y7N-Q2-xMy" secondAttribute="leading" constant="16" id="guY-XR-wVs"/>
+                            <constraint firstItem="Y7N-Q2-xMy" firstAttribute="bottom" secondItem="Oyj-Qm-xip" secondAttribute="bottom" constant="467" id="mUQ-eV-EQX"/>
+                            <constraint firstItem="s0A-sA-WZj" firstAttribute="top" secondItem="Oyj-Qm-xip" secondAttribute="bottom" constant="-4" id="nRP-MN-OdQ"/>
+                            <constraint firstItem="Ntg-ff-scs" firstAttribute="top" secondItem="Oyj-Qm-xip" secondAttribute="bottom" constant="6" id="oFD-9I-q0C"/>
+                            <constraint firstItem="Y7N-Q2-xMy" firstAttribute="trailing" secondItem="Oyj-Qm-xip" secondAttribute="trailing" constant="235" id="p3b-Um-5KU"/>
+                            <constraint firstItem="Y7N-Q2-xMy" firstAttribute="trailing" secondItem="5hA-aJ-td0" secondAttribute="trailing" constant="131" id="pzn-6s-lou"/>
+                            <constraint firstItem="Ntg-ff-scs" firstAttribute="leading" secondItem="Y7N-Q2-xMy" secondAttribute="leading" constant="16" id="qEJ-jQ-SS9"/>
+                            <constraint firstItem="Y7N-Q2-xMy" firstAttribute="trailing" secondItem="s0A-sA-WZj" secondAttribute="trailing" constant="16" id="z3q-C3-qJ0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Y7N-Q2-xMy"/>
                     </view>
                 </viewController>
