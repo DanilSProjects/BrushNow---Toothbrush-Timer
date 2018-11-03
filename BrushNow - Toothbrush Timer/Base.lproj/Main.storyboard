@@ -523,14 +523,17 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Credits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSB-Bc-59L">
-                                                    <rect key="frame" x="160" y="10" width="54" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSB-Bc-59L">
+                                                    <rect key="frame" x="160.5" y="11" width="54" height="22"/>
                                                     <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="aSB-Bc-59L" firstAttribute="centerY" secondItem="eBd-tz-CGd" secondAttribute="centerY" id="0Sk-ZV-29B"/>
+                                                <constraint firstItem="aSB-Bc-59L" firstAttribute="centerX" secondItem="eBd-tz-CGd" secondAttribute="centerX" id="brz-b6-29P"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
