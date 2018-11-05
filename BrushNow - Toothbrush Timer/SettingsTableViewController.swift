@@ -309,6 +309,7 @@ class SettingsTableViewController: UITableViewController {
         UserDefaults.standard.set(sender.value, forKey: "notifStepper")
         UserDefaults.standard.set(notifAM, forKey: "notifAM")
         } else {
+            amStepper.value = Double(notifAM)
             let alert = UIAlertController(title: "Reminder is Already Set", message: "Your reminder timing cannot be changed while it is already set. Please cancel your current timing first before changing it.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: NSLocalizedString("Okay", comment: "Default action"), style: .default, handler: { _ in
                 NSLog("The \"OK\" alert occured.")
@@ -324,6 +325,7 @@ class SettingsTableViewController: UITableViewController {
             UserDefaults.standard.set(sender.value, forKey: "pmStepper")
             UserDefaults.standard.set(notifPM, forKey: "notifPM")
         } else {
+            pmStepper.value = Double(notifPM)
             let alert = UIAlertController(title: "Reminder is Already Set", message: "Your reminder timing cannot be changed while it is already set. Please cancel your current timing first before changing it.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: NSLocalizedString("Okay", comment: "Default action"), style: .default, handler: { _ in
                 NSLog("The \"OK\" alert occured.")
