@@ -75,7 +75,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMj-qX-rcN">
                                 <rect key="frame" x="56" y="420" width="263" height="146"/>
-                                <color key="backgroundColor" red="1" green="0.2627450980392157" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.36642230308219181" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="47"/>
                                 <state key="normal" title="START">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -116,7 +116,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.94117647058823528" green="0.93725490196078431" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.85882352941176465" green="0.8666666666666667" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qbe-2K-sMP" firstAttribute="trailing" secondItem="aFg-QA-k9S" secondAttribute="trailing" constant="51" id="0iu-E8-t9Z"/>
                             <constraint firstItem="lrA-Lf-eTz" firstAttribute="leading" secondItem="qbe-2K-sMP" secondAttribute="leading" constant="125" id="1SC-cR-mjT"/>

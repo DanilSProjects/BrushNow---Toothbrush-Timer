@@ -11,7 +11,7 @@ import UserNotifications
 
 // Theme Setup
 var origBackgroundCol = UIColor(red:0.94, green:0.94, blue:0.94, alpha:1.0)
-let origButtonCol = UIColor(red:1.00, green:0.26, blue:0.28, alpha:1.0)
+let origButtonCol = UIColor(red:0.64, green:0.74, blue:0.98, alpha:1.0)
 var themes = [Theme(name: "ORIGINAL", textColour: .black, backgroundColour: origBackgroundCol, buttonColour: origButtonCol, previewImage: "origpreview")
 ]
 var selectedTheme = themes[0]
