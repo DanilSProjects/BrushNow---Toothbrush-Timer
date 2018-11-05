@@ -10,13 +10,13 @@ import UIKit
 
 // Global variable list of achievements
 var badges = [
-    Badge(name: "First Brush", desc: "Complete first timed brush.", isCompleted: false, reward: "Theme: Ocean", brushesNeeded: 1),
-    Badge(name: "Rookie Brusher", desc: "Complete 10 timed brushes.", isCompleted: false, reward: "Theme: Grass", brushesNeeded: 10),
-    Badge(name: "Dentist's BFF", desc: "Complete 25 timed brushes.", isCompleted: false, reward: "Theme: Tropical", brushesNeeded: 25),
-    Badge(name: "Maniac", desc: "Complete 50 timed brushes.", isCompleted: false, reward: "Theme: Winter", brushesNeeded: 50),
-    Badge(name: "Forgetful", desc: "Set a reminder 20 times.", isCompleted: false, reward: "Theme: Night", brushesNeeded: 20 /* Reminders instead of brushes */),
-    Badge(name: "Amnesiac", desc: "Set a reminder 50 times.", isCompleted: false, reward: "Theme: Chocolate", brushesNeeded: 50 /* Reminders instead of brushes */),
-    Badge(name: "Early Bird", desc: "Complete a brush before 6am.", isCompleted: false, reward: "Theme: Morning", brushesNeeded: 1)
+    Badge(name: "First Brush", desc: "Complete first timed brush.", isCompleted: false, reward: "Theme: Ocean", brushesNeeded: 1, icon: "firstbrush"),
+    Badge(name: "Rookie Brusher", desc: "Complete 10 timed brushes.", isCompleted: false, reward: "Theme: Grass", brushesNeeded: 10, icon: "rookiebrusher"),
+    Badge(name: "Dentist's BFF", desc: "Complete 25 timed brushes.", isCompleted: false, reward: "Theme: Tropical", brushesNeeded: 25, icon: "dentistsbff"),
+    Badge(name: "Maniac", desc: "Complete 50 timed brushes.", isCompleted: false, reward: "Theme: Winter", brushesNeeded: 50, icon: "maniac"),
+    Badge(name: "Forgetful", desc: "Set a reminder 20 times.", isCompleted: false, reward: "Theme: Night", brushesNeeded: 20 /* Reminders instead of brushes */, icon: "forgetful"),
+    Badge(name: "Amnesiac", desc: "Set a reminder 50 times.", isCompleted: false, reward: "Theme: Chocolate", brushesNeeded: 50 /* Reminders instead of brushes */, icon: "amnesiac"),
+    Badge(name: "Early Bird", desc: "Complete a brush before 6am.", isCompleted: false, reward: "Theme: Morning", brushesNeeded: 1,icon: "earlybird")
 ]
 
 class BadgesTableViewController: UITableViewController {
@@ -101,7 +101,7 @@ class BadgesTableViewController: UITableViewController {
             }
             
         } else {
-            cell.completeView.image = UIImage(named: "tick")
+            cell.completeView.image = UIImage(named: badges[indexPath.row].icon)
             let completeTColour = UIColor(red:0.12, green:0.74, blue:0.13, alpha:1.0)
             cell.rewardLabel.textColor = completeTColour
             cell.tipLabel.text = "Well done! You achieved it!"
