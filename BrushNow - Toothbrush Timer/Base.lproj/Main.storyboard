@@ -403,9 +403,9 @@
                                                         <action selector="notifStepper:" destination="DdP-Wt-SIs" eventType="valueChanged" id="Pgh-h0-HHq"/>
                                                     </connections>
                                                 </stepper>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWd-Xy-VfE">
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWd-Xy-VfE">
                                                     <rect key="frame" x="152" y="88" width="71" height="51"/>
-                                                    <color key="backgroundColor" red="0.55922277378207019" green="0.77107788705583757" blue="0.65322375763850815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.1248394691780822" green="0.77107788705583757" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="71" id="HJI-QP-nhg"/>
                                                         <constraint firstAttribute="height" constant="51" id="VYR-Op-bf1"/>
@@ -419,17 +419,17 @@
                                                     </connections>
                                                 </button>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="wnO-df-1b4">
-                                                    <rect key="frame" x="167" y="11" width="41" height="59"/>
+                                                    <rect key="frame" x="167" y="11" width="46" height="59"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="O1T-ow-gAx">
-                                                            <rect key="frame" x="0.0" y="0.0" width="41" height="21"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="46" height="21"/>
                                                             <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zWU-Bg-rhV">
-                                                            <rect key="frame" x="0.0" y="38" width="41" height="21"/>
-                                                            <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="16"/>
+                                                            <rect key="frame" x="0.0" y="38" width="46" height="21"/>
+                                                            <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -443,7 +443,7 @@
                                                 </stepper>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cA-w3-E8Z">
                                                     <rect key="frame" x="256" y="88" width="81" height="51"/>
-                                                    <color key="backgroundColor" red="0.77107788705583757" green="0.0" blue="0.021650380403326015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.83218661993254994" green="0.0" blue="0.021650380403326015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="51" id="6vu-bl-NP0"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="81" id="SWa-RL-yaH"/>
@@ -464,7 +464,6 @@
                                                 <constraint firstItem="2cA-w3-E8Z" firstAttribute="centerY" secondItem="yWd-Xy-VfE" secondAttribute="centerY" id="CLB-5Y-Mae"/>
                                                 <constraint firstItem="1cu-Yf-7yZ" firstAttribute="top" secondItem="jb0-1L-0JW" secondAttribute="bottom" constant="9.5" id="DEo-lS-KsP"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="2cA-w3-E8Z" secondAttribute="trailing" constant="22" id="HUY-IQ-NxQ"/>
-                                                <constraint firstItem="wnO-df-1b4" firstAttribute="centerX" secondItem="yWd-Xy-VfE" secondAttribute="centerX" id="HxR-sc-FJt"/>
                                                 <constraint firstItem="2cA-w3-E8Z" firstAttribute="top" secondItem="1cu-Yf-7yZ" secondAttribute="bottom" constant="13" id="IZp-2d-OdY"/>
                                                 <constraint firstItem="pkc-Ha-Md2" firstAttribute="centerY" secondItem="jb0-1L-0JW" secondAttribute="centerY" id="OgK-Eg-RVi"/>
                                                 <constraint firstAttribute="bottom" secondItem="wnO-df-1b4" secondAttribute="bottom" constant="89.5" id="TjW-xy-I6I"/>
