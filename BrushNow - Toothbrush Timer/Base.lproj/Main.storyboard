@@ -341,32 +341,32 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="146" translatesAutoresizingMaskIntoConstraints="NO" id="QI6-5G-jwV">
-                                                    <rect key="frame" x="14.5" y="5.5" width="346" height="33"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Theme:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8t-Ri-9UY">
-                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="33"/>
-                                                            <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="18"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Vz-kZ-Rz6">
-                                                            <rect key="frame" x="246" y="0.0" width="100" height="33"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="6vW-rg-v9q"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="17"/>
-                                                            <state key="normal" title="Button"/>
-                                                            <connections>
-                                                                <segue destination="ZYz-dr-aMo" kind="presentation" id="iOI-Ak-0TC"/>
-                                                            </connections>
-                                                        </button>
-                                                    </subviews>
-                                                </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Vz-kZ-Rz6">
+                                                    <rect key="frame" x="154.5" y="5" width="100.5" height="33.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="6vW-rg-v9q"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="17"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <segue destination="ZYz-dr-aMo" kind="presentation" id="iOI-Ak-0TC"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Theme:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8t-Ri-9UY">
+                                                    <rect key="frame" x="16" y="5" width="58" height="33.5"/>
+                                                    <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="QI6-5G-jwV" firstAttribute="centerX" secondItem="D2M-sS-bEe" secondAttribute="centerX" id="8Rg-f8-VYR"/>
-                                                <constraint firstItem="QI6-5G-jwV" firstAttribute="centerY" secondItem="D2M-sS-bEe" secondAttribute="centerY" id="wp8-Jy-tNY"/>
+                                                <constraint firstAttribute="bottom" secondItem="7Vz-kZ-Rz6" secondAttribute="bottom" constant="5" id="7Qb-kL-Duh"/>
+                                                <constraint firstAttribute="bottom" secondItem="Y8t-Ri-9UY" secondAttribute="bottom" constant="5" id="CPi-FD-p1k"/>
+                                                <constraint firstItem="7Vz-kZ-Rz6" firstAttribute="top" secondItem="D2M-sS-bEe" secondAttribute="top" constant="5" id="E4u-kx-tFB"/>
+                                                <constraint firstItem="Y8t-Ri-9UY" firstAttribute="leading" secondItem="D2M-sS-bEe" secondAttribute="leading" constant="16" id="Wfu-iW-LhK"/>
+                                                <constraint firstItem="7Vz-kZ-Rz6" firstAttribute="leading" secondItem="Y8t-Ri-9UY" secondAttribute="trailing" constant="80.5" id="kAr-fz-jNz"/>
+                                                <constraint firstItem="Y8t-Ri-9UY" firstAttribute="top" secondItem="D2M-sS-bEe" secondAttribute="top" constant="5" id="q8w-1s-RSm"/>
+                                                <constraint firstAttribute="trailing" secondItem="7Vz-kZ-Rz6" secondAttribute="trailing" constant="120" id="t5b-sE-YB8"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -495,32 +495,32 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="146" translatesAutoresizingMaskIntoConstraints="NO" id="XAm-lx-HFb">
-                                                    <rect key="frame" x="7.5" y="5.5" width="360.5" height="33"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Track:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZx-5S-OeK">
-                                                            <rect key="frame" x="0.0" y="0.0" width="114.5" height="33"/>
-                                                            <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="18"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRo-Rf-fbF">
-                                                            <rect key="frame" x="260.5" y="0.0" width="100" height="33"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="9pD-Bh-n9L"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="17"/>
-                                                            <state key="normal" title="Button"/>
-                                                            <connections>
-                                                                <segue destination="NXx-f1-2L3" kind="presentation" id="ddB-RE-bup"/>
-                                                            </connections>
-                                                        </button>
-                                                    </subviews>
-                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Track:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZx-5S-OeK">
+                                                    <rect key="frame" x="16" y="5" width="114.5" height="33.5"/>
+                                                    <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRo-Rf-fbF">
+                                                    <rect key="frame" x="163" y="5" width="100" height="33.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="9pD-Bh-n9L"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="17"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <segue destination="NXx-f1-2L3" kind="presentation" id="ddB-RE-bup"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="XAm-lx-HFb" firstAttribute="centerY" secondItem="fTY-Ar-rwX" secondAttribute="centerY" id="KPQ-nW-Scl"/>
-                                                <constraint firstItem="XAm-lx-HFb" firstAttribute="centerX" secondItem="fTY-Ar-rwX" secondAttribute="centerX" id="LvC-Xl-01z"/>
+                                                <constraint firstAttribute="trailing" secondItem="TRo-Rf-fbF" secondAttribute="trailing" constant="112" id="3aZ-Ji-Thr"/>
+                                                <constraint firstItem="TRo-Rf-fbF" firstAttribute="leading" secondItem="PZx-5S-OeK" secondAttribute="trailing" constant="32.5" id="Hsx-ml-ukb"/>
+                                                <constraint firstItem="PZx-5S-OeK" firstAttribute="leading" secondItem="fTY-Ar-rwX" secondAttribute="leading" constant="16" id="ieA-lz-rcS"/>
+                                                <constraint firstItem="TRo-Rf-fbF" firstAttribute="top" secondItem="fTY-Ar-rwX" secondAttribute="top" constant="5" id="pL8-sH-YA9"/>
+                                                <constraint firstAttribute="bottom" secondItem="PZx-5S-OeK" secondAttribute="bottom" constant="5" id="tiO-Kc-vJF"/>
+                                                <constraint firstAttribute="bottom" secondItem="TRo-Rf-fbF" secondAttribute="bottom" constant="5" id="w0g-MR-3oD"/>
+                                                <constraint firstItem="PZx-5S-OeK" firstAttribute="top" secondItem="fTY-Ar-rwX" secondAttribute="top" constant="5" id="y5c-En-YQT"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
