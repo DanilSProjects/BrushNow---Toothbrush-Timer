@@ -1214,7 +1214,7 @@
         <image name="Settings" width="28" height="28"/>
         <image name="Toothbrush" width="40" height="40"/>
         <image name="badgesScreen" width="500" height="500"/>
-        <image name="cross" width="330" height="309"/>
+        <image name="cross" width="346" height="346"/>
         <image name="firstScreen" width="500" height="500"/>
         <image name="iconforotheruse" width="286" height="286"/>
         <image name="origpreview" width="80" height="80"/>
