@@ -250,11 +250,13 @@ class TimerViewController: ViewController {
                         }
                         self.brushHintLabel.text = brushHints[arrayNo]
                         self.teethView.image = UIImage(named: teethImages[arrayNo])
+                        
                     }
                     
                     self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (_) in
                         self.timerLabel.text = "\(timeFormatted(self.time))"
                         if self.time > 0 {
+                        UIApplication.shared.isIdleTimerDisabled = true
                         self.time -= 1
                         self.timerLabel.isHidden = false
                         self.brushHintLabel.isHidden = false
@@ -266,6 +268,7 @@ class TimerViewController: ViewController {
                         } else if self.time == 0 {
                             self.timer?.invalidate()
                             self.teethTimer?.invalidate()
+                            UIApplication.shared.isIdleTimerDisabled = false
                             self.audioPlayer?.stop()
                             self.trackLabel.isHidden = true
                             self.playButton.isHidden = true
