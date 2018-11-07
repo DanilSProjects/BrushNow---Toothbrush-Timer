@@ -56,13 +56,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BRUSH UPPER LEFT TEETH (FRONT)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1Q-0w-tDO">
-                                <rect key="frame" x="0.0" y="83" width="375" height="22"/>
-                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="18"/>
+                                <rect key="frame" x="0.0" y="83" width="375" height="24.5"/>
+                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track 1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7e-Sg-REW">
-                                <rect key="frame" x="136" y="495" width="102" height="28"/>
+                                <rect key="frame" x="136" y="513" width="102" height="28"/>
                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -97,7 +97,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lrA-Lf-eTz">
-                                <rect key="frame" x="125" y="533" width="125" height="60"/>
+                                <rect key="frame" x="125" y="551" width="125" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RdP-ZU-nVz">
                                         <rect key="frame" x="0.0" y="0.0" width="57.5" height="60"/>
@@ -114,17 +114,18 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="NQR-xM-02B"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.85882352941176465" green="0.8666666666666667" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qbe-2K-sMP" firstAttribute="trailing" secondItem="aFg-QA-k9S" secondAttribute="trailing" constant="51" id="0iu-E8-t9Z"/>
                             <constraint firstItem="lrA-Lf-eTz" firstAttribute="leading" secondItem="qbe-2K-sMP" secondAttribute="leading" constant="125" id="1SC-cR-mjT"/>
-                            <constraint firstItem="qbe-2K-sMP" firstAttribute="bottom" secondItem="U7e-Sg-REW" secondAttribute="bottom" constant="95" id="1k8-xY-PfP"/>
                             <constraint firstItem="OMj-qX-rcN" firstAttribute="top" secondItem="AAp-qR-iDC" secondAttribute="bottom" constant="79" id="2m5-yh-bSw"/>
                             <constraint firstItem="ZOq-TO-wGk" firstAttribute="trailing" secondItem="qbe-2K-sMP" secondAttribute="trailing" id="6Kp-mm-7l6"/>
                             <constraint firstItem="m1Q-0w-tDO" firstAttribute="trailing" secondItem="qbe-2K-sMP" secondAttribute="trailing" id="97y-fy-j0q"/>
-                            <constraint firstItem="lrA-Lf-eTz" firstAttribute="bottom" secondItem="qbe-2K-sMP" secondAttribute="bottom" constant="-25" id="BBL-rl-8XW"/>
                             <constraint firstItem="qbe-2K-sMP" firstAttribute="trailing" secondItem="OMj-qX-rcN" secondAttribute="trailing" constant="56" id="Bks-Ew-vIB"/>
                             <constraint firstItem="m1Q-0w-tDO" firstAttribute="top" secondItem="qbe-2K-sMP" secondAttribute="top" constant="19" id="EZw-GY-MAx"/>
                             <constraint firstItem="lbJ-qJ-CuC" firstAttribute="top" secondItem="LYK-SM-Ye7" secondAttribute="bottom" constant="-4" id="F8J-Ny-tbz"/>
@@ -142,6 +143,7 @@
                             <constraint firstItem="qbe-2K-sMP" firstAttribute="trailing" secondItem="U7e-Sg-REW" secondAttribute="trailing" constant="137" id="ccp-hY-yjk"/>
                             <constraint firstItem="lrA-Lf-eTz" firstAttribute="top" secondItem="U7e-Sg-REW" secondAttribute="bottom" constant="10" id="chh-Oa-KHM"/>
                             <constraint firstItem="aFg-QA-k9S" firstAttribute="leading" secondItem="qbe-2K-sMP" secondAttribute="leading" constant="51" id="cpe-2g-DCW"/>
+                            <constraint firstItem="U7e-Sg-REW" firstAttribute="top" secondItem="aFg-QA-k9S" secondAttribute="bottom" constant="15" id="dPI-0G-ab7"/>
                             <constraint firstItem="TxP-9J-3jS" firstAttribute="trailing" secondItem="qbe-2K-sMP" secondAttribute="trailing" id="dqY-u8-T6n"/>
                             <constraint firstItem="U7e-Sg-REW" firstAttribute="leading" secondItem="qbe-2K-sMP" secondAttribute="leading" constant="136" id="h0i-Mt-z7R"/>
                             <constraint firstItem="ZOq-TO-wGk" firstAttribute="top" secondItem="qbe-2K-sMP" secondAttribute="top" constant="224.5" id="hB8-vc-xMI"/>
