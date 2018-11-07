@@ -116,6 +116,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="NQR-xM-02B"/>
+                                    <constraint firstAttribute="width" constant="125" id="jdu-zM-AwJ"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -622,7 +623,7 @@
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vh1-02-mBb">
                                             <rect key="frame" x="260.5" y="3" width="55.5" height="56"/>
-                                            <state key="normal" title="Button" image="play"/>
+                                            <state key="normal" image="play"/>
                                             <connections>
                                                 <action selector="playPressed:" destination="Nq0-Qd-679" eventType="touchUpInside" id="VjY-lB-4Ua"/>
                                             </connections>
