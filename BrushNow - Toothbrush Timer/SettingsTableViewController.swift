@@ -44,6 +44,9 @@ class SettingsTableViewController: UITableViewController {
     var notifAM = 10
     var notifPM = 10
     
+    var notifAM12 = 0
+    var notifPM12 = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let loadedStepper = UserDefaults.standard.double(forKey: "timerStepper")
@@ -67,11 +70,23 @@ class SettingsTableViewController: UITableViewController {
         UserDefaults.standard.register(defaults: ["notifPM": 10])
         let loadedAM = UserDefaults.standard.integer(forKey: "notifAM")
         let loadedPM = UserDefaults.standard.integer(forKey: "notifPM")
+        let loadedAM12 = UserDefaults.standard.integer(forKey: "notifAM12")
+        let loadedPM12 = UserDefaults.standard.integer(forKey: "notifAM12")
+        notifAM12 = loadedAM12
+        notifPM12 = loadedPM12
         notifAM = loadedAM
         notifPM = loadedPM
         
+        if notifPM12 == 0 {
         amLabel.text = "\(notifAM)AM"
+        } else {
+            amLabel.text = "\(notifPM12)PM"
+        }
+        if notifAM12 == 0 {
         pmLabel.text = "\(notifPM)PM"
+        } else {
+            pmLabel.text = "\(notifAM12)AM"
+        }
         
         if let data = UserDefaults.standard.data(forKey: "labelColour"),
             let myColour = NSKeyedUnarchiver.unarchiveObject(with: data) as? UIColor {
@@ -201,9 +216,11 @@ class SettingsTableViewController: UITableViewController {
             var triggerDateHour = 0
             var pmTriggerHour = 0
             var newNotifAM = notifAM
-            if notifAM == 12 {
-                newNotifAM = 0
+            
+            if notifPM12 == 12 {
+                newNotifAM = 12
             }
+            
             
             if currentDateComp.hour! < newNotifAM {
                 triggerDateHour = newNotifAM - currentDateComp.hour!
@@ -215,10 +232,10 @@ class SettingsTableViewController: UITableViewController {
             
             var usedNotifPM = notifPM + 12
             
-            if notifPM == 12 {
-                usedNotifPM = 12
+            if notifAM12 == 12 {
+                usedNotifPM = 0
             }
-            
+
             if currentDateComp.hour! < usedNotifPM {
                 pmTriggerHour = usedNotifPM - currentDateComp.hour!
             } else if currentDateComp.hour! > usedNotifPM {
@@ -304,10 +321,18 @@ class SettingsTableViewController: UITableViewController {
     
     @IBAction func notifStepper(_ sender: UIStepper) {
         if amLabel.textColor == .red {
+            if Int(sender.value) < 12 {
+        notifPM12 = 0
         notifAM = Int(sender.value)
         amLabel.text = "\(notifAM)AM"
         UserDefaults.standard.set(sender.value, forKey: "notifStepper")
         UserDefaults.standard.set(notifAM, forKey: "notifAM")
+            } else {
+                notifPM12 = Int(sender.value)
+                amLabel.text = "\(notifPM12)PM"
+                UserDefaults.standard.set(sender.value, forKey: "notifStepper")
+                UserDefaults.standard.set(notifPM12, forKey: "notifPM12")
+            }
         } else {
             amStepper.value = Double(notifAM)
             let alert = UIAlertController(title: "Reminder is Already Set", message: "Your reminder timing cannot be changed while it is already set. Please cancel your current timing first before changing it.", preferredStyle: .alert)
@@ -320,10 +345,18 @@ class SettingsTableViewController: UITableViewController {
 
     @IBAction func pmStepper(_ sender: UIStepper) {
         if pmLabel.textColor == .red {
+            if Int(sender.value) < 12 {
+            notifAM12 = 0
             notifPM = Int(sender.value)
             pmLabel.text = "\(notifPM)PM"
             UserDefaults.standard.set(sender.value, forKey: "pmStepper")
             UserDefaults.standard.set(notifPM, forKey: "notifPM")
+            } else {
+                notifAM12 = Int(sender.value)
+                pmLabel.text = "\(notifAM12)AM"
+                UserDefaults.standard.set(sender.value, forKey: "pmStepper")
+                UserDefaults.standard.set(notifAM12, forKey: "notifAM12")
+            }
         } else {
             pmStepper.value = Double(notifPM)
             let alert = UIAlertController(title: "Reminder is Already Set", message: "Your reminder timing cannot be changed while it is already set. Please cancel your current timing first before changing it.", preferredStyle: .alert)
