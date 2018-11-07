@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Nm-i9-RSa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Nm-i9-RSa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -74,7 +74,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMj-qX-rcN">
-                                <rect key="frame" x="56" y="420" width="263" height="146"/>
+                                <rect key="frame" x="56" y="430" width="263" height="128"/>
                                 <color key="backgroundColor" red="1" green="0.36642230308219181" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="47"/>
                                 <state key="normal" title="START">
@@ -121,6 +121,7 @@
                             <constraint firstItem="qbe-2K-sMP" firstAttribute="trailing" secondItem="aFg-QA-k9S" secondAttribute="trailing" constant="51" id="0iu-E8-t9Z"/>
                             <constraint firstItem="lrA-Lf-eTz" firstAttribute="leading" secondItem="qbe-2K-sMP" secondAttribute="leading" constant="125" id="1SC-cR-mjT"/>
                             <constraint firstItem="qbe-2K-sMP" firstAttribute="bottom" secondItem="U7e-Sg-REW" secondAttribute="bottom" constant="95" id="1k8-xY-PfP"/>
+                            <constraint firstItem="OMj-qX-rcN" firstAttribute="top" secondItem="AAp-qR-iDC" secondAttribute="bottom" constant="79" id="2m5-yh-bSw"/>
                             <constraint firstItem="ZOq-TO-wGk" firstAttribute="trailing" secondItem="qbe-2K-sMP" secondAttribute="trailing" id="6Kp-mm-7l6"/>
                             <constraint firstItem="m1Q-0w-tDO" firstAttribute="trailing" secondItem="qbe-2K-sMP" secondAttribute="trailing" id="97y-fy-j0q"/>
                             <constraint firstItem="lrA-Lf-eTz" firstAttribute="bottom" secondItem="qbe-2K-sMP" secondAttribute="bottom" constant="-25" id="BBL-rl-8XW"/>
@@ -132,7 +133,7 @@
                             <constraint firstItem="aFg-QA-k9S" firstAttribute="top" secondItem="ZsQ-f2-jCv" secondAttribute="bottom" constant="33" id="Iq0-mI-bbf"/>
                             <constraint firstItem="AAp-qR-iDC" firstAttribute="top" secondItem="ZOq-TO-wGk" secondAttribute="bottom" constant="-4" id="LHI-Te-P5Q"/>
                             <constraint firstItem="qbe-2K-sMP" firstAttribute="trailing" secondItem="ZsQ-f2-jCv" secondAttribute="trailing" constant="37" id="Squ-8G-j6x"/>
-                            <constraint firstItem="qbe-2K-sMP" firstAttribute="bottom" secondItem="OMj-qX-rcN" secondAttribute="bottom" constant="52" id="StR-BJ-mlV"/>
+                            <constraint firstItem="qbe-2K-sMP" firstAttribute="bottom" secondItem="OMj-qX-rcN" secondAttribute="bottom" constant="60" id="StR-BJ-mlV"/>
                             <constraint firstItem="OMj-qX-rcN" firstAttribute="leading" secondItem="qbe-2K-sMP" secondAttribute="leading" constant="56" id="U1S-1f-A1f"/>
                             <constraint firstItem="ZsQ-f2-jCv" firstAttribute="top" secondItem="qbe-2K-sMP" secondAttribute="top" constant="51" id="U4b-HB-wt2"/>
                             <constraint firstItem="LYK-SM-Ye7" firstAttribute="leading" secondItem="qbe-2K-sMP" secondAttribute="leading" id="XVv-uH-PlK"/>
@@ -146,7 +147,6 @@
                             <constraint firstItem="ZOq-TO-wGk" firstAttribute="top" secondItem="qbe-2K-sMP" secondAttribute="top" constant="224.5" id="hB8-vc-xMI"/>
                             <constraint firstItem="LYK-SM-Ye7" firstAttribute="trailing" secondItem="qbe-2K-sMP" secondAttribute="trailing" id="hUC-ji-CYS"/>
                             <constraint firstItem="qbe-2K-sMP" firstAttribute="trailing" secondItem="lbJ-qJ-CuC" secondAttribute="trailing" constant="53" id="jJD-Qt-g2D"/>
-                            <constraint firstItem="OMj-qX-rcN" firstAttribute="top" secondItem="qbe-2K-sMP" secondAttribute="top" constant="356" id="jNf-P5-fzU"/>
                             <constraint firstItem="qbe-2K-sMP" firstAttribute="trailing" secondItem="AAp-qR-iDC" secondAttribute="trailing" constant="48" id="mq7-fw-bqf"/>
                             <constraint firstItem="TxP-9J-3jS" firstAttribute="centerY" secondItem="qbe-2K-sMP" secondAttribute="centerY" id="rbb-aE-VvT"/>
                             <constraint firstItem="lbJ-qJ-CuC" firstAttribute="leading" secondItem="qbe-2K-sMP" secondAttribute="leading" constant="52" id="tbM-wy-qeZ"/>
