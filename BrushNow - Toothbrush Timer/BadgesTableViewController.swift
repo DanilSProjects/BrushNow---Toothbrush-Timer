@@ -76,7 +76,7 @@ class BadgesTableViewController: UITableViewController {
         
         // If completed, show tick, if not, show cross
         if badges[indexPath.row].isCompleted == false {
-        cell.completeView.image = UIImage(named: "cross")
+        cell.completeView.image = UIImage(named: "\(badges[indexPath.row].icon)lock")
         cell.rewardLabel.textColor = .red
             
             if badges[indexPath.row].name == "Forgetful" {
