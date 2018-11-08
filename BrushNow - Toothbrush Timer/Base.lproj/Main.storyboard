@@ -97,7 +97,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lrA-Lf-eTz">
-                                <rect key="frame" x="125" y="551" width="125" height="60"/>
+                                <rect key="frame" x="124.5" y="551" width="125" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RdP-ZU-nVz">
                                         <rect key="frame" x="0.0" y="0.0" width="57.5" height="60"/>
@@ -123,7 +123,6 @@
                         <color key="backgroundColor" red="0.85882352941176465" green="0.8666666666666667" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qbe-2K-sMP" firstAttribute="trailing" secondItem="aFg-QA-k9S" secondAttribute="trailing" constant="51" id="0iu-E8-t9Z"/>
-                            <constraint firstItem="lrA-Lf-eTz" firstAttribute="leading" secondItem="qbe-2K-sMP" secondAttribute="leading" constant="125" id="1SC-cR-mjT"/>
                             <constraint firstItem="OMj-qX-rcN" firstAttribute="top" secondItem="AAp-qR-iDC" secondAttribute="bottom" constant="79" id="2m5-yh-bSw"/>
                             <constraint firstItem="ZOq-TO-wGk" firstAttribute="trailing" secondItem="qbe-2K-sMP" secondAttribute="trailing" id="6Kp-mm-7l6"/>
                             <constraint firstItem="m1Q-0w-tDO" firstAttribute="trailing" secondItem="qbe-2K-sMP" secondAttribute="trailing" id="97y-fy-j0q"/>
@@ -131,13 +130,13 @@
                             <constraint firstItem="m1Q-0w-tDO" firstAttribute="top" secondItem="qbe-2K-sMP" secondAttribute="top" constant="19" id="EZw-GY-MAx"/>
                             <constraint firstItem="lbJ-qJ-CuC" firstAttribute="top" secondItem="LYK-SM-Ye7" secondAttribute="bottom" constant="-4" id="F8J-Ny-tbz"/>
                             <constraint firstItem="AAp-qR-iDC" firstAttribute="leading" secondItem="qbe-2K-sMP" secondAttribute="leading" constant="47" id="GX8-iT-tTX"/>
-                            <constraint firstAttribute="trailing" secondItem="lrA-Lf-eTz" secondAttribute="trailing" constant="125" id="I1x-zq-oAV"/>
                             <constraint firstItem="aFg-QA-k9S" firstAttribute="top" secondItem="ZsQ-f2-jCv" secondAttribute="bottom" constant="33" id="Iq0-mI-bbf"/>
                             <constraint firstItem="AAp-qR-iDC" firstAttribute="top" secondItem="ZOq-TO-wGk" secondAttribute="bottom" constant="-4" id="LHI-Te-P5Q"/>
                             <constraint firstItem="qbe-2K-sMP" firstAttribute="trailing" secondItem="ZsQ-f2-jCv" secondAttribute="trailing" constant="37" id="Squ-8G-j6x"/>
                             <constraint firstItem="qbe-2K-sMP" firstAttribute="bottom" secondItem="OMj-qX-rcN" secondAttribute="bottom" constant="60" id="StR-BJ-mlV"/>
                             <constraint firstItem="OMj-qX-rcN" firstAttribute="leading" secondItem="qbe-2K-sMP" secondAttribute="leading" constant="56" id="U1S-1f-A1f"/>
                             <constraint firstItem="ZsQ-f2-jCv" firstAttribute="top" secondItem="qbe-2K-sMP" secondAttribute="top" constant="51" id="U4b-HB-wt2"/>
+                            <constraint firstItem="lrA-Lf-eTz" firstAttribute="centerX" secondItem="U7e-Sg-REW" secondAttribute="centerX" id="U5u-52-Q5q"/>
                             <constraint firstItem="LYK-SM-Ye7" firstAttribute="leading" secondItem="qbe-2K-sMP" secondAttribute="leading" id="XVv-uH-PlK"/>
                             <constraint firstItem="ZOq-TO-wGk" firstAttribute="leading" secondItem="qbe-2K-sMP" secondAttribute="leading" id="Xxu-xC-O1A"/>
                             <constraint firstItem="ZsQ-f2-jCv" firstAttribute="leading" secondItem="qbe-2K-sMP" secondAttribute="leading" constant="37" id="ZAG-cv-2N0"/>
@@ -304,19 +303,19 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="344" height="28.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Timer Set For:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AY7-4S-frd">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="114.5" height="28.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="108" height="28.5"/>
                                                                     <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="18"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2 minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJS-qm-pJ2">
-                                                                    <rect key="frame" x="147.5" y="0.0" width="79" height="28.5"/>
+                                                                    <rect key="frame" x="141" y="0.0" width="76" height="28.5"/>
                                                                     <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="18"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minimumValue="2" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="b0v-r8-cdz">
-                                                                    <rect key="frame" x="259.5" y="0.0" width="94" height="29"/>
+                                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minimumValue="2" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="b0v-r8-cdz">
+                                                                    <rect key="frame" x="250" y="0.0" width="94" height="29"/>
                                                                     <connections>
                                                                         <action selector="timerStepper:" destination="DdP-Wt-SIs" eventType="valueChanged" id="8Ko-Y5-f4M"/>
                                                                     </connections>
@@ -354,7 +353,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Vz-kZ-Rz6">
-                                                    <rect key="frame" x="155" y="5" width="100" height="33.5"/>
+                                                    <rect key="frame" x="154.5" y="5" width="100.5" height="33.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="6vW-rg-v9q"/>
                                                     </constraints>
@@ -365,7 +364,7 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Theme:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8t-Ri-9UY">
-                                                    <rect key="frame" x="16" y="5" width="58.5" height="33.5"/>
+                                                    <rect key="frame" x="16" y="5" width="58" height="33.5"/>
                                                     <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -400,7 +399,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reminder Set For:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkc-Ha-Md2">
-                                                    <rect key="frame" x="16" y="11" width="146.5" height="22"/>
+                                                    <rect key="frame" x="16" y="11" width="138" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="PnJ-4d-qdZ"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="138" id="kz7-Yf-Ket"/>
@@ -431,16 +430,16 @@
                                                     </connections>
                                                 </button>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="wnO-df-1b4">
-                                                    <rect key="frame" x="175.5" y="11" width="49.5" height="59"/>
+                                                    <rect key="frame" x="167" y="11" width="46" height="59"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="O1T-ow-gAx">
-                                                            <rect key="frame" x="0.0" y="0.0" width="49.5" height="21"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="46" height="21"/>
                                                             <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zWU-Bg-rhV">
-                                                            <rect key="frame" x="0.0" y="38" width="49.5" height="21"/>
+                                                            <rect key="frame" x="0.0" y="38" width="46" height="21"/>
                                                             <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -552,7 +551,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSB-Bc-59L">
-                                                    <rect key="frame" x="158.5" y="11.5" width="58" height="21"/>
+                                                    <rect key="frame" x="160.5" y="11" width="54" height="22"/>
                                                     <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
