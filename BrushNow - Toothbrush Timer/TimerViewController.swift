@@ -176,8 +176,12 @@ class TimerViewController: ViewController {
     
     
     @IBAction func pauseButtonPressed(_ sender: Any) {
+        if audioPlayer?.isPlaying == true {
         audioPlayer?.pause()
         isPaused = true
+        } else {
+            print ("Player not playing yet.")
+        }
     }
     
     
