@@ -323,6 +323,7 @@ class SettingsTableViewController: UITableViewController {
         if amLabel.textColor == .red {
             if Int(sender.value) < 12 {
         notifPM12 = 0
+        UserDefaults.standard.set(notifPM12, forKey: "notifPM12")
         notifAM = Int(sender.value)
         amLabel.text = "\(notifAM)AM"
         UserDefaults.standard.set(sender.value, forKey: "notifStepper")
@@ -347,6 +348,7 @@ class SettingsTableViewController: UITableViewController {
         if pmLabel.textColor == .red {
             if Int(sender.value) < 12 {
             notifAM12 = 0
+            UserDefaults.standard.set(notifAM12, forKey: "notifAM12")
             notifPM = Int(sender.value)
             pmLabel.text = "\(notifPM)PM"
             UserDefaults.standard.set(sender.value, forKey: "pmStepper")
