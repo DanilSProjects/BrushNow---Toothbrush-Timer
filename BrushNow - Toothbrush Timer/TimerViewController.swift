@@ -135,6 +135,8 @@ class TimerViewController: ViewController {
         brushHintLabel.text = "BRUSH UPPER LEFT TEETH (FRONT)"
         teethView.image = UIImage(named: "upperleft")
         audioPlayer?.stop()
+        mediaPlayer.stop()
+        mediaPlayer.currentPlaybackTime = 0
         isPaused = false
     }
 
@@ -167,20 +169,29 @@ class TimerViewController: ViewController {
     }
     
     @IBAction func playButtonPressed(_ sender: Any) {
+        if selectedTrack != "User's Track" {
         if isPaused == false {
         playBackgroundMusic(filename: "\(selectedTrack).mp3")
         } else {
             audioPlayer?.play()
         }
+        } else {
+            mediaPlayer.play()
+        }
     }
     
     
     @IBAction func pauseButtonPressed(_ sender: Any) {
+        if selectedTrack != "User's Track" {
         if audioPlayer?.isPlaying == true {
         audioPlayer?.pause()
         isPaused = true
         } else {
             print ("Player not playing yet.")
+        }
+        } else {
+            mediaPlayer.pause()
+            isPaused = true
         }
     }
     
@@ -274,6 +285,8 @@ class TimerViewController: ViewController {
                             self.teethTimer?.invalidate()
                             UIApplication.shared.isIdleTimerDisabled = false
                             self.audioPlayer?.stop()
+                            mediaPlayer.stop()
+                            mediaPlayer.currentPlaybackTime = 0
                             self.trackLabel.isHidden = true
                             self.playButton.isHidden = true
                             self.pauseButton.isHidden = true

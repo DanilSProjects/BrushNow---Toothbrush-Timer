@@ -19,7 +19,6 @@
 		650F7F8F217461AB0055DC1B /* Cabin-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 650F7F87217461AB0055DC1B /* Cabin-SemiBold.ttf */; };
 		650F7F90217461AB0055DC1B /* Cabin-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 650F7F88217461AB0055DC1B /* Cabin-SemiBoldItalic.ttf */; };
 		650F7F91217461AB0055DC1B /* Cabin-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 650F7F89217461AB0055DC1B /* Cabin-BoldItalic.ttf */; };
-		650F7F92217461AB0055DC1B /* Cabin-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 650F7F8A217461AB0055DC1B /* Cabin-Medium.ttf */; };
 		652AADFF216479D90037F5C9 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652AADFE216479D90037F5C9 /* Theme.swift */; };
 		652AAE01216483150037F5C9 /* SetThemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652AAE00216483150037F5C9 /* SetThemeTableViewController.swift */; };
 		652AAE03216483210037F5C9 /* SetThemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652AAE02216483210037F5C9 /* SetThemeTableViewCell.swift */; };
@@ -34,6 +33,7 @@
 		652DB926217B68C10047A697 /* TrackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DB925217B68C10047A697 /* TrackTableViewController.swift */; };
 		652DB928217B69510047A697 /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DB927217B69510047A697 /* TrackTableViewCell.swift */; };
 		652DB92A217B6F410047A697 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DB929217B6F410047A697 /* CreditsViewController.swift */; };
+		65769BA621970D94000DF344 /* Cabin-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 650F7F8A217461AB0055DC1B /* Cabin-Medium.ttf */; };
 		658F8D502186BB3E005D331E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658F8D4F2186BB3E005D331E /* WelcomeViewController.swift */; };
 		658F8D522186C80B005D331E /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658F8D512186C80B005D331E /* TutorialViewController.swift */; };
 		65BC1301214E1D8D00E0B8E3 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BC1300214E1D8D00E0B8E3 /* Badge.swift */; };
@@ -233,11 +233,11 @@
 				650F7F8C217461AB0055DC1B /* Cabin-MediumItalic.ttf in Resources */,
 				650F7F8E217461AB0055DC1B /* Cabin-Bold.ttf in Resources */,
 				652DB922217B557D0047A697 /* Track 7.mp3 in Resources */,
+				65769BA621970D94000DF344 /* Cabin-Medium.ttf in Resources */,
 				652DB924217B61830047A697 /* silence.mp3 in Resources */,
 				652DB920217B557D0047A697 /* Track 6.mp3 in Resources */,
 				65039EE02141713F008D50C3 /* LaunchScreen.storyboard in Resources */,
 				650F7F90217461AB0055DC1B /* Cabin-SemiBoldItalic.ttf in Resources */,
-				650F7F92217461AB0055DC1B /* Cabin-Medium.ttf in Resources */,
 				650F7F91217461AB0055DC1B /* Cabin-BoldItalic.ttf in Resources */,
 				65039EDD2141713F008D50C3 /* Assets.xcassets in Resources */,
 				65039EDB2141713D008D50C3 /* Main.storyboard in Resources */,
