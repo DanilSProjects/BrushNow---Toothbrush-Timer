@@ -71,7 +71,7 @@ class SettingsTableViewController: UITableViewController {
         let loadedAM = UserDefaults.standard.integer(forKey: "notifAM")
         let loadedPM = UserDefaults.standard.integer(forKey: "notifPM")
         let loadedAM12 = UserDefaults.standard.integer(forKey: "notifAM12")
-        let loadedPM12 = UserDefaults.standard.integer(forKey: "notifAM12")
+        let loadedPM12 = UserDefaults.standard.integer(forKey: "notifPM12")
         notifAM12 = loadedAM12
         notifPM12 = loadedPM12
         notifAM = loadedAM
