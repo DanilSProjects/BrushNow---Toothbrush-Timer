@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MediaPlayer
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        
+        
         if !UserDefaults.standard.bool(forKey: "didSee") {
             UserDefaults.standard.set(true, forKey: "didSee")
             
@@ -24,6 +27,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController = viewController
             self.window?.makeKeyAndVisible()
         }
+        
+        if let data = UserDefaults.standard.data(forKey: "mediaItemCollection"),
+            let myCollection = NSKeyedUnarchiver.unarchiveObject(with: data) as? MPMediaItemCollection {
+            mediaPlayer.setQueue(with: myCollection)
+            
+        } else {
+            print("There is an issue with the media item collection.") // NOTE FOR VIEWER: THIS WILL DEFINITELY PRINT ON FIRST LAUNCH DUE TO NOT HAVING A COLLECTION STORED IN IT YET, BUT DON'T WORRY - IT DOESN'T DO ANYTHING
+        }
+
         
         // Disabling badge for notification
         UIApplication.shared.applicationIconBadgeNumber = 0

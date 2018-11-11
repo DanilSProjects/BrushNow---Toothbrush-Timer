@@ -40,6 +40,9 @@ class TrackTableViewController: UITableViewController, MPMediaPickerControllerDe
     
     func mediaPicker(_ mediaPicker: MPMediaPickerController, didPickMediaItems mediaItemCollection: MPMediaItemCollection) {
         mediaPlayer.setQueue(with: mediaItemCollection)
+        let encodedData = NSKeyedArchiver.archivedData(withRootObject: mediaItemCollection)
+        UserDefaults.standard.set(encodedData, forKey: "mediaItemCollection")
+        
         if trackArray[7] != "User's Track" {
         mediaPicker.dismiss(animated: true, completion: nil)
         dismiss(animated: true, completion: nil)
