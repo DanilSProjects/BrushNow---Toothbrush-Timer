@@ -11,6 +11,7 @@ import UserNotifications
 import AVFoundation
 
 var numberOfBrushes = 0
+var totalTime = 0
 
 class TimerViewController: ViewController {
     // Messy part for outlets
@@ -63,6 +64,8 @@ class TimerViewController: ViewController {
         let loadedEarly = UserDefaults.standard.bool(forKey: "earlyBird")
         let loadedTrack = UserDefaults.standard.string(forKey: "selectedTrack")
         
+        let loadedTime = UserDefaults.standard.integer(forKey: "totalTime")
+        
         selectedTrack = loadedTrack ?? "Track 1"
         notificationNo = loadedNotif
         numberOfBrushes = loadedBrushes
@@ -73,6 +76,7 @@ class TimerViewController: ViewController {
         badges[4].isCompleted = loadedForgetful
         badges[5].isCompleted = loadedAmnesiac
         badges[6].isCompleted = loadedEarly
+        totalTime = loadedTime
         if let data = UserDefaults.standard.data(forKey: "selectedTheme"),
             let myTheme = NSKeyedUnarchiver.unarchiveObject(with: data) as? Theme {
             selectedTheme = myTheme
@@ -296,7 +300,9 @@ class TimerViewController: ViewController {
                             self.teethView.image = UIImage(named: "upperleft")
                             numberOfBrushes += 1
                             UserDefaults.standard.set(numberOfBrushes, forKey: "noOfBrush")
-                            
+                            totalTime += (timeSet / 60)
+                            UserDefaults.standard.set(totalTime, forKey:
+                            "totalTime")
                             let date = Date(timeIntervalSinceNow: 0)
                             let currentDateComp = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
                             

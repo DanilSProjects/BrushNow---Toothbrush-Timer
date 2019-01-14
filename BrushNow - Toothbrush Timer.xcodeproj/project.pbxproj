@@ -36,6 +36,7 @@
 		65769BA621970D94000DF344 /* Cabin-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 650F7F8A217461AB0055DC1B /* Cabin-Medium.ttf */; };
 		658F8D502186BB3E005D331E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658F8D4F2186BB3E005D331E /* WelcomeViewController.swift */; };
 		658F8D522186C80B005D331E /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658F8D512186C80B005D331E /* TutorialViewController.swift */; };
+		65B239A721EC3FBA00050114 /* StatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B239A621EC3FBA00050114 /* StatsTableViewController.swift */; };
 		65BC1301214E1D8D00E0B8E3 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BC1300214E1D8D00E0B8E3 /* Badge.swift */; };
 		65C1023D21469CCF000EDC56 /* BadgesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C1023C21469CCF000EDC56 /* BadgesTableViewController.swift */; };
 		65C1023F21469CE7000EDC56 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C1023E21469CE6000EDC56 /* SettingsTableViewController.swift */; };
@@ -75,6 +76,7 @@
 		652DB929217B6F410047A697 /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 		658F8D4F2186BB3E005D331E /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		658F8D512186C80B005D331E /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		65B239A621EC3FBA00050114 /* StatsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTableViewController.swift; sourceTree = "<group>"; };
 		65BC1300214E1D8D00E0B8E3 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		65C1023C21469CCF000EDC56 /* BadgesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesTableViewController.swift; sourceTree = "<group>"; };
 		65C1023E21469CE6000EDC56 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				65039ED52141713D008D50C3 /* AppDelegate.swift */,
 				65039ED72141713D008D50C3 /* ViewController.swift */,
 				65039ED92141713D008D50C3 /* Main.storyboard */,
+				65B239A621EC3FBA00050114 /* StatsTableViewController.swift */,
 				658F8D512186C80B005D331E /* TutorialViewController.swift */,
 				658F8D4F2186BB3E005D331E /* WelcomeViewController.swift */,
 				652DB927217B69510047A697 /* TrackTableViewCell.swift */,
@@ -270,6 +273,7 @@
 				65039ED82141713D008D50C3 /* ViewController.swift in Sources */,
 				652DB926217B68C10047A697 /* TrackTableViewController.swift in Sources */,
 				65039ED62141713D008D50C3 /* AppDelegate.swift in Sources */,
+				65B239A721EC3FBA00050114 /* StatsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
