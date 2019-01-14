@@ -12,6 +12,8 @@ import AVFoundation
 
 var numberOfBrushes = 0
 var totalTime = 0
+var todayBrushes = 0
+var firstBrushTiming = ""
 
 class TimerViewController: ViewController {
     // Messy part for outlets
@@ -38,7 +40,7 @@ class TimerViewController: ViewController {
     var time = 120
     var timer: Timer?
     var teethTimer: Timer?
-    
+    var savedDate: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +68,10 @@ class TimerViewController: ViewController {
         
         let loadedTime = UserDefaults.standard.integer(forKey: "totalTime")
         
+        let loadedDate = UserDefaults.standard.object(forKey: "savedDate") as? String ?? "00.00.0000"
+        let loadedToday = UserDefaults.standard.integer(forKey: "todayBrushes")
+        let loadedTiming = UserDefaults.standard.string(forKey: "firstBrushTiming") ?? "Don't be shy, brush on!"
+        
         selectedTrack = loadedTrack ?? "Track 1"
         notificationNo = loadedNotif
         numberOfBrushes = loadedBrushes
@@ -77,6 +83,10 @@ class TimerViewController: ViewController {
         badges[5].isCompleted = loadedAmnesiac
         badges[6].isCompleted = loadedEarly
         totalTime = loadedTime
+        savedDate = loadedDate
+        todayBrushes = loadedToday
+        firstBrushTiming = loadedTiming
+        
         if let data = UserDefaults.standard.data(forKey: "selectedTheme"),
             let myTheme = NSKeyedUnarchiver.unarchiveObject(with: data) as? Theme {
             selectedTheme = myTheme
@@ -91,6 +101,19 @@ class TimerViewController: ViewController {
             themes = myThemeList
         } else {
             print("There is an issue with the themes array") // NOTE FOR VIEWER: THIS WILL DEFINITELY PRINT ON FIRST LAUNCH DUE TO NOT HAVING THEMES STORED IN IT YET, BUT DON'T WORRY - IT DOESN'T DO ANYTHING
+        }
+        
+        
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy"
+        let result = formatter.string(from: date)
+        
+        if result != savedDate {
+            savedDate = result
+            UserDefaults.standard.set(savedDate, forKey: "savedDate")
+            todayBrushes = 0
+            UserDefaults.standard.set(todayBrushes, forKey: "todayBrushes")
         }
     }
     
@@ -300,6 +323,8 @@ class TimerViewController: ViewController {
                             self.teethView.image = UIImage(named: "upperleft")
                             numberOfBrushes += 1
                             UserDefaults.standard.set(numberOfBrushes, forKey: "noOfBrush")
+                            todayBrushes += 1
+                            UserDefaults.standard.set(todayBrushes, forKey: "todayBrushes")
                             totalTime += (timeSet / 60)
                             UserDefaults.standard.set(totalTime, forKey:
                             "totalTime")
@@ -331,6 +356,13 @@ class TimerViewController: ViewController {
                                 
                                 //First Brush
                             case 1:
+                                let date = Date()
+                                let formatter = DateFormatter()
+                                formatter.dateFormat = "MMM d, yyyy"
+                                let result = formatter.string(from: date)
+                                firstBrushTiming = result
+                                UserDefaults.standard.set(firstBrushTiming, forKey: "firstBrushTiming")
+                                
                                 badges[0].isCompleted = true
                                 UserDefaults.standard.set(badges[0].isCompleted, forKey: "firstBrush")
                                 let oceanCol = UIColor(red:0.50, green:0.80, blue:1.00, alpha:1.0)

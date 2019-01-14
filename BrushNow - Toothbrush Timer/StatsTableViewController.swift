@@ -45,6 +45,8 @@ class StatsTableViewController: UITableViewController {
                 timeSpentLabel.text = "\(totalTime) minutes"
             }
         }
+    timesBrushedLabel.text = String(todayBrushes)
+    dateFirstLabel.text = firstBrushTiming
     }
 
     // MARK: - Table view data source
