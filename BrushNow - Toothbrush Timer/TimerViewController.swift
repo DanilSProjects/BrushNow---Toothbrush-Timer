@@ -277,15 +277,15 @@ class TimerViewController: ViewController {
                     self.readySetLabel.isHidden = true
                     
                     // Extremely messy bit for mouth (sorry not sorry)
-                    let timeTakenToChange = Double(timeSet / 13)
-                    let brushHints = ["BRUSH UPPER MIDDLE TEETH (FRONT)", "BRUSH UPPER RIGHT TEETH (FRONT)", "BRUSH LOWER LEFT TEETH (FRONT)", "BRUSH LOWER MIDDLE TEETH (FRONT)", "BRUSH LOWER RIGHT TEETH (FRONT)", "BRUSH UPPER LEFT TEETH (BACK)", "BRUSH UPPER MIDDLE TEETH (BACK)", "BRUSH UPPER RIGHT TEETH (BACK)", "BRUSH LOWER LEFT TEETH (BACK)", "BRUSH LOWER MIDDLE TEETH (BACK)", "BRUSH LOWER RIGHT TEETH (BACK)", "BRUSH TONGUE"]
+                    let timeTakenToChange = Double(timeSet / 15)
+                    let brushHints = ["BRUSH UPPER MIDDLE TEETH (FRONT)", "BRUSH UPPER RIGHT TEETH (FRONT)", "BRUSH LOWER LEFT TEETH (FRONT)", "BRUSH LOWER MIDDLE TEETH (FRONT)", "BRUSH LOWER RIGHT TEETH (FRONT)", "BRUSH UPPER LEFT TEETH (BACK)", "BRUSH UPPER MIDDLE TEETH (BACK)", "BRUSH UPPER RIGHT TEETH (BACK)", "BRUSH LOWER LEFT TEETH (BACK)", "BRUSH LOWER MIDDLE TEETH (BACK)", "BRUSH LOWER RIGHT TEETH (BACK)", "BRUSH UPPER CHEWING SURFACES", "BRUSH LOWER CHEWING SURFACES","BRUSH TONGUE"]
                     
-                    let teethImages = ["uppermiddle", "upperright", "bottomleft", "bottommiddle", "bottomright", "upperleft", "uppermiddle", "upperright", "bottomleft", "bottommiddle", "bottomright", "normal"]
+                    let teethImages = ["uppermiddle", "upperright", "bottomleft", "bottommiddle", "bottomright", "upperleft", "uppermiddle", "upperright", "bottomleft", "bottommiddle", "bottomright", "chewtop", "chewbottom", "normal"]
                     
                     var arrayNo = -1
                     
                     self.teethTimer = Timer.scheduledTimer(withTimeInterval: timeTakenToChange, repeats: true) { (_) in
-                        if arrayNo != 11 {
+                        if arrayNo != 13 {
                         arrayNo += 1
                         } else {
                             print ("Max achieved")
